@@ -3,16 +3,6 @@
 @import 'font.css';
 
 
-.clearfix::before,
-.clearfix::after {
-	content: "";
-	display: table;
-}
-.clearfix::after {
-	clear: both;
-}
-
-
 /****************
  * 	  Général   *
  ****************/
@@ -28,6 +18,11 @@ a:hover {
 h1 {
 	font-size: 1.638em;
 	margin-bottom: 1em;
+}
+p {
+	padding-bottom: 20px;
+	line-height: 1.3;
+	text-align: justify;
 }
 
 
@@ -105,16 +100,12 @@ h1 {
 
 **************************************************/
 #main{
-
-	width:1290px;
-	margin:auto;
-	margin-top:80px;
-	border: 1px solid black;
+	margin-top:60px;
 }
 #contenu{
 	border:1px solid black;
 	width:700px;
-	height: 600px;
+	padding: 20px;
 	float:left;
 }
 #contenu h1{
@@ -128,9 +119,9 @@ h1 {
 #sidebar{
 	background-color: #e1e5e8;
 	width:490px;
-	height: 600px;
 	border:1px solid black;
 	float:right;
+	margin-bottom: 25px;
 }
 
 .carre{
@@ -150,7 +141,6 @@ h1 {
 }
 
 .offres{
-	width:90%;
 	height:140px;
 	border:1px solid black;
 	margin: 44px 36px 18px 30px;
@@ -310,6 +300,7 @@ h1 {
 	font: italic 20px "bebe";
 }
 
+
 /************************************************
 
 		Section offres ?
@@ -322,43 +313,31 @@ h1 {
 	border:1px solid black;
 	float:right;
 }
+
+
 /*****************************************************
  * 	  Footer   *
  ******************************************************/
-
- #footer {
- 	height: 50px;
-	position: absolute;
-	bottom: 1px;
-	width: 100%;
+#footer {
+	font: 16px "bebe";
 	background: #5b646c;
 }
-
-#footer-container {
-	margin: auto;
-	font: 16px "bebe";
-	width: 802px;
-}
-
 #footer-nav {
 	margin: auto;
 	width: 802px;
 	line-height: 50px;
 	margin-left: 2px;
 }
-
 #footer-nav a{
 	color: #bcd4ea;
   	border-bottom: 2px solid #bcd4ea;
   	transition:all 0.3s;
 }
-
 #footer-nav a:hover {
   	color: #fff;
   	padding-bottom: 5px;
   	border-color:#fff;
 }
-
 #footer-nav ul li{
 	float: left;
 	margin: 15px 0 0 0;
@@ -367,7 +346,6 @@ h1 {
 	height: 20px;
 	line-height: 1.2;
 }
-
 #footer-nav ul li:last-child {
 	border:none;
 }

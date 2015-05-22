@@ -1,6 +1,6 @@
 </main>
 	<footer id="footer">
-		<div id="footer-container">
+		<div class="container">
 			<nav id="footer-nav" class="clearfix">
 				<ul>
 					<li><a href="">Mentions légales</a></li>
