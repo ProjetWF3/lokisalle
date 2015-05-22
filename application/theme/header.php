@@ -15,8 +15,8 @@
 			</div>
 			<div class="container">
 				<nav id="header-menu">
-					<ul>
-						<li><a href="<?php echo site_url(); ?>">Accueil</a></li>
+					<ul class="clearfix">
+						<li><a href="<?php echo site_url(); ?>" class="active">Accueil</a></li>
 						<li><a href="<?php echo base_url('page/reservation'); ?>">Réservation</a></li>
 						<li><a href="<?php echo base_url('page/recherche'); ?>">Recherche</a></li>
 						<li><a href="">Se connecter</a></li>

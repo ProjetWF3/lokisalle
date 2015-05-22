@@ -16,26 +16,25 @@
 /****************
  * 	  Général   *
  ****************/
-
-body {
-	/*background: #fafcfc;
-	color: #fff;*/
-
-}
-
-a:hover{
-
+a,
+a:focus,
+a:hover {
 	text-decoration: none;
 }
-
-.container{
+.container {
 	width:1290px;
 	margin:auto;
 }
+h1 {
+	font-size: 1.638em;
+	margin-bottom: 1em;
+}
+
+
 /********************************************************************
  * 	  Header    *
  *******************************************************************/
-#header-menu{
+#header-menu {
 	margin:auto;
 	width: 100%;
 }
@@ -51,70 +50,54 @@ a:hover{
 }
 
 #logo {
-  font-size: 72px;
-  font-family: 'Lobster';
-  color: rgb(91, 100, 108);
-  line-height: 66px;
-  text-align: left;
-  margin-left: 20px;
-  text-decoration: none;
+	font-size: 72px;
+	font-family: 'Lobster';
+	color: rgb(91, 100, 108);
+	line-height: 66px;
+	text-align: left;
+	margin-left: 20px;
+	text-decoration: none;
 }
 
 /********************************************* 
 		MENU 
 *******************************************/
 #header-menu ul {
-  margin: 0 0 0 -56px;
-  width: 1290px;
-  position:absolute;
-  top:87px;
+
 }
-
-
-#header-menu li{
+#header-menu li {
 	float:left;
-	transition: all .5s;
 	overflow: hidden;
-	padding-bottom: 25px;
+	padding: 0 10px 15px;
 }
-
-
-#header-menu a{
+#header-menu a {
 	float:left;
 	color:#fff;
-	width:1450px;
 	font-family: 'Bebe';
 	line-height: 64px;
-    margin-left: 30px;
     font-size:23px;
     width:176px;
 	height:56px;
 	background:#4e99e1;
-	margin-left: 82px;
-	box-shadow:  0px 4px 16px rgba(0, 0, 0, .25);
+	margin-top: -10px;
+	box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, .15);
 	text-align:center;
 	border-radius: 0px 0px 10px 10px;
-	transition: all .5s;
-
-	
+	transition: all .25s;	
 }
-
-#header-menu li:hover a,
-#header-menu li:focus a{
-	color:#000;
-	
-    
-  
+#header-menu a:hover,
+#header-menu a:focus,
+#header-menu a.active,
+#header-menu a.active:hover,
+#header-menu a.active:focus {
+	margin-top: -1px;
+	line-height: 2.7;
 }
-
 #header-menu a.active {
+	color:#000;
 	background:#bcd4ea;
 }
 
-#header-menu a:hover,
-#header-menu a:focus{
-	margin-top: -10px;	
-}
 
 /************************************************
 
@@ -124,10 +107,100 @@ a:hover{
 #main{
 
 	width:1290px;
-	height: 500px;
 	margin:auto;
 	margin-top:80px;
 	border: 1px solid black;
+}
+#contenu{
+	border:1px solid black;
+	width:700px;
+	height: 600px;
+	float:left;
+}
+#contenu h1{
+	font-weight: 700;
+}
+/********************************************
+
+			SIDEBAR
+
+************************************************/
+#sidebar{
+	background-color: #e1e5e8;
+	width:490px;
+	height: 600px;
+	border:1px solid black;
+	float:right;
+}
+
+.carre{
+	float: left;
+	width: 20px;
+	height:20px;
+	background:#5b646c;
+	margin: 10px 10px 10px 10px;
+}
+
+#lastinf {
+	 height: 20px;
+  	 margin-top: 12px;
+  	 text-transform: uppercase;
+  	 font-weight: 700;
+  	 font-size: 20px;
+}
+
+.offres{
+	width:90%;
+	height:140px;
+	border:1px solid black;
+	margin: 44px 36px 18px 30px;
+}
+
+#cadre {
+	width: 140px;
+	background-image: url('../img/cadre_accueil.png') ;
+	background-repeat:no-repeat;
+	float:left;
+}
+
+#cadre img {
+	margin: 15px 15px;
+}
+
+#infos{
+	float:left;	
+	margin: 10px 15px;
+}
+
+#infos-details ul li{
+	margin-left: 10px;
+
+}
+
+#panier{
+	margin-top:2px;
+}
+#panier img{
+	padding: 5px;
+}
+
+#panier-img {
+  width: 25px;
+  height: 25px;
+  background: #bcd4ea;
+  float:left;
+}
+
+#ajout-panier{
+	float:left;
+	background:#5b646c;
+	border-style: none;
+	color:#bcd4ea;
+	height:25px;
+}
+
+#infos-details li {
+	font-size: 20px;
 }
 
 
