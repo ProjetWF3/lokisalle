@@ -8,7 +8,7 @@ puis taper les commandes suivantes :
 
         git clone https://github.com/projetWF3/lokisalle.git (creation du repertoire du projet ex: /lokisalle)
         git branch -a (permet de voir toutes les branches sur le projet github)
-        git checkout -b developpement origin/devdeveloppement (permet d'avoir la branche developpement en local)
+        git checkout -b nom_branche_locale origin/nom_branche_github (recuperer sa branche github sur sa branche locale)
         git branch (permet de voir les branches uniquement en local)
         git branch le_nom_de_sa_branche (se mettre sur sa branche en local)
 
