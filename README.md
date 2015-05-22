@@ -10,4 +10,15 @@ puis taper les commandes suivantes :
         git branch -a (permet de voir toutes les branches sur le projet github)
         git checkout -b developpement origin/devdeveloppement (permet d'avoir la branche developpement en local)
         git branch (permet de voir les branches uniquement en local)
-        A ce stade vous pouvez travailler sur votre poste en local
+        git branch le_nom_de_sa_branche (se mettre sur sa branche en local)
+
+
+A ce stade vous pouvez travailler sur votre poste en local...
+
+# sauvegarder son travail en local et mettre ses changements sur github
+
+        git status (permet de voir les fichiers modifiés ou supprimer ou ajouter | à faire souvent)
+        git commit -am "son_pseudo : dire ce que l'on a fait brievement"
+        git pull origin le_nom_de_sa_branche_github
+        git push origin le_nom_de_sa_branche_github
+        
