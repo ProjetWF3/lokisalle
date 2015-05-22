@@ -1,8 +1,8 @@
 </main>
 	<footer id="footer">
 		<div class="container">
-			<nav id="footer-nav" class="clearfix">
-				<ul>
+			<nav id="footer-nav">
+				<ul class="clearfix">
 					<li><a href="">Mentions légales</a></li>
 					<li><a href="">C.G.V.</a></li>
 					<li><a href="">Plan du site</a></li>

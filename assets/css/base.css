@@ -141,6 +141,7 @@ p {
 }
 
 .offres{
+	position: relative;
 	height:140px;
 	border:1px solid black;
 	margin: 44px 36px 18px 30px;
@@ -158,17 +159,18 @@ p {
 }
 
 #infos{
-	float:left;	
-	margin: 10px 15px;
+	margin: 15px 15px 0px 155px;
 }
 
 #infos-details ul li{
 	margin-left: 10px;
-
 }
 
 #panier{
-	margin-top:2px;
+	position: absolute;
+	right: -1px;
+	bottom: -10px;
+	clear: both;
 }
 #panier img{
 	padding: 5px;
@@ -322,12 +324,6 @@ p {
 	font: 16px "bebe";
 	background: #5b646c;
 }
-#footer-nav {
-	margin: auto;
-	width: 802px;
-	line-height: 50px;
-	margin-left: 2px;
-}
 #footer-nav a{
 	color: #bcd4ea;
   	border-bottom: 2px solid #bcd4ea;
@@ -338,11 +334,16 @@ p {
   	padding-bottom: 5px;
   	border-color:#fff;
 }
+#footer-nav ul {
+	padding: 10px;
+	text-align: center;
+	width: 690px;
+	margin: 0 auto;
+}
 #footer-nav ul li{
 	float: left;
-	margin: 15px 0 0 0;
   	padding: 0 15px 0 15px;
-	border-right: 2px solid #bcd4ea;
+	border-right: 1px solid #bcd4ea;
 	height: 20px;
 	line-height: 1.2;
 }
