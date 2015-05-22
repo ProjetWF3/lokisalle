@@ -100,7 +100,8 @@ p {
 
 **************************************************/
 #main{
-	margin-top:60px;
+	margin:60px auto;
+	min-height: 600px;
 }
 #contenu{
 	border:1px solid black;

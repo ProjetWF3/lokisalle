@@ -1,5 +1,5 @@
 <div id="carre-recherche"></div>
-<?php echo heading("Bienvenue sur la page $nom_page", 1, 'id="titre-recherche"'); ?>
+<?php echo heading("Page $nom_page", 1, 'id="titre-recherche"'); ?>
 <form id="formulaire-recherche">
 	<label id="mois-label" class="label-recherche">mois</label>
 	<select id="mois-select" class="champs">
