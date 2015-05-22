@@ -24,4 +24,4 @@
 			</nav>
 		</header>
 		<main id="main" class="container">
-			<?php var_dump(base_url()); ?>
+			
