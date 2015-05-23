@@ -9,56 +9,56 @@
 		<?php echo heading('Nos 3 dernieres offres', 2); ?>
 	</div>
 	<div class="offres">
-		<div id="cadre">
+		<div class="cadre">
 			<img src="<?php echo base_url(); ?>assets/img/photo.png" width="110" height="110">
 		</div>
-		<div id="infos">
-			<ul id="infos-details">
+		<div class="infos">
+			<ul class="infos-details">
 				<li><img src="<?php echo base_url(); ?>assets/img/calendrier.png" alt="calendrier">  Date:</li>
 				<li><img src="<?php echo base_url(); ?>assets/img/lieu.png" alt="lieu">  Lieu:</li>
 				<li><img src="<?php echo base_url(); ?>assets/img/prix.png" alt="prix">  Prix:</li>
 				<li><img src="<?php echo base_url(); ?>assets/img/nbrepersonnes.png" alt="nbrepersonnes">  Nbre de personnes:</li>
 			</ul>
 			<p> > Fiche detaillée:</p>
-			<div id="panier">
-				<div id="panier-img"><img src="<?php echo base_url(); ?>assets/img/panier.png" alt="panier"></div>
-				<input type="submit" id="ajout-panier" value="Ajouter au panier">
+			<div class="panier">
+				<div class="panier-img"><img src="<?php echo base_url(); ?>assets/img/panier.png" alt="panier"></div>
+				<input type="submit" class="ajout-panier" value="Ajouter au panier">
 			</div>
 		</div>	
 	</div>
 	<div class="offres">
-		<div id="cadre">
+		<div class="cadre">
 			<img src="<?php echo base_url(); ?>assets/img/photo.png" width="110" height="110">
 		</div>
-		<div id="infos">
-			<ul id="infos-details">
+		<div class="infos">
+			<ul class="infos-details">
 				<li><img src="<?php echo base_url(); ?>assets/img/calendrier.png" alt="calendrier">  Date:</li>
 				<li><img src="<?php echo base_url(); ?>assets/img/lieu.png" alt="lieu">  Lieu:</li>
 				<li><img src="<?php echo base_url(); ?>assets/img/prix.png" alt="prix">  Prix:</li>
 				<li><img src="<?php echo base_url(); ?>assets/img/nbrepersonnes.png" alt="nbrepersonnes">  Nbre de personnes:</li>
 			</ul>
 			<p> > Fiche detaillée:</p>
-			<div id="panier">
-				<div id="panier-img"><img src="<?php echo base_url(); ?>assets/img/panier.png" alt="panier"></div>
-				<input type="submit" id="ajout-panier" value="Ajouter au panier">
+			<div class="panier">
+				<div class="panier-img"><img src="<?php echo base_url(); ?>assets/img/panier.png" alt="panier"></div>
+				<input type="submit" class="ajout-panier" value="Ajouter au panier">
 			</div>
 		</div>	
 	</div>
 	<div class="offres">
-		<div id="cadre">
+		<div class="cadre">
 				<img src="<?php echo base_url(); ?>assets/img/photo.png" width="110" height="110">
 		</div>
-		<div id="infos">
-			<ul id="infos-details">
+		<div class="infos">
+			<ul class="infos-details">
 				<li><img src="<?php echo base_url(); ?>assets/img/calendrier.png" alt="calendrier">  Date:</li>
 				<li><img src="<?php echo base_url(); ?>assets/img/lieu.png" alt="lieu">  Lieu:</li>
 				<li><img src="<?php echo base_url(); ?>assets/img/prix.png" alt="prix">  Prix:</li>
 				<li><img src="<?php echo base_url(); ?>assets/img/nbrepersonnes.png" alt="nbrepersonnes">  Nbre de personnes:</li>
 			</ul>
 			<span><p> > Fiche detaillée:</p></span>
-			<div id="panier">
-				<div id="panier-img"><img src="<?php echo base_url(); ?>assets/img/panier.png" alt="panier"></div>
-				<input type="submit" id="ajout-panier" value="Ajouter au panier">
+			<div class="panier">
+				<div class="panier-img"><img src="<?php echo base_url(); ?>assets/img/panier.png" alt="panier"></div>
+				<input type="submit" class="ajout-panier" value="Ajouter au panier">
 			</div>
 		</div>	
 	</div>

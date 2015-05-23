@@ -6,6 +6,9 @@
 /****************
  * 	  Général   *
  ****************/
+body {
+	font-family: 'bebe';
+}
 a,
 a:focus,
 a:hover {
@@ -148,43 +151,43 @@ p {
 	margin: 44px 36px 18px 30px;
 }
 
-#cadre {
+.offres .cadre {
 	width: 140px;
 	background-image: url('../img/cadre_accueil.png') ;
 	background-repeat:no-repeat;
 	float:left;
 }
 
-#cadre img {
+.offres .cadre img {
 	margin: 15px 15px;
 }
 
-#infos{
+.offres .infos{
 	margin: 15px 15px 0px 155px;
 }
 
-#infos-details ul li{
+.offres .infos .infos-details ul li{
 	margin-left: 10px;
 }
 
-#panier{
+.offres .infos .panier{
 	position: absolute;
 	right: -1px;
 	bottom: -10px;
 	clear: both;
 }
-#panier img{
+.offres .infos .panier img{
 	padding: 5px;
 }
 
-#panier-img {
+.offres .infos .panier-img {
   width: 25px;
   height: 25px;
   background: #bcd4ea;
   float:left;
 }
 
-#ajout-panier{
+.offres .infos .ajout-panier{
 	float:left;
 	background:#5b646c;
 	border-style: none;
@@ -192,7 +195,7 @@ p {
 	height:25px;
 }
 
-#infos-details li {
+.offres .infos .infos-details li {
 	font-size: 20px;
 }
 
@@ -305,16 +308,205 @@ p {
 
 
 /************************************************
-
-		Section offres ?
+Xavier
+		MAIN   PAGE : "RESERVATION DETAIL"
 
 **************************************************/
-#offres{
-	background-color: #e1e5e8;
-	width:604px;
-	height:709px;
-	border:1px solid black;
-	float:right;
+
+
+/********   DIV RESERVATION  *********/
+#reservation {
+	width: 350px;
+	height: 30px;
+	float: left;
+}
+#reservation .carre,
+#informations .carre,
+#avis .carre {
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #5b646c;
+	margin: 0;
+}
+#reservation h1,
+#informations h1,
+#avis h1 {
+	float: left;
+	margin-left: 10px;
+	text-transform: uppercase;
+	font-size: 25px;
+	color: #5b646c;
+}
+#reservation h2 {
+	float: left;
+	margin-left: 10px;
+	margin-top: 5px;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #4e99e1;
+}
+
+
+/********   DIV SALLE  *********/
+#salle {
+	clear: both;
+	background: #e1e5e8 no-repeat;
+	width: 100%;
+	height: 270px;
+	border: 1px solid #5b646c;
+}
+#cadre {
+	float: left;
+	width: 187px;
+	height: 186px;
+	background-image: url('../img/cadre.png');
+}
+#cadre img {
+	margin: 20px 20px;
+}
+
+
+/******** POINT *********/
+#points {
+	float: left;
+	margin-left: 10px;
+	margin-top: 20px;
+	width: 800px;
+	height: 130px;
+}
+#points p {
+	padding-bottom: 0;
+}
+#points h1 {
+	float: left;
+}
+#points h1 span {
+	font-size: 23px;
+	color: #4e99e1;
+	margin-right: 10px;
+}
+#points-ronds {
+	float: left;
+}
+#points-ronds a {
+	display: inline-block;
+	margin: 2px 2px;
+	width: 20px;
+	height: 20px;
+	background: rgb(78, 153, 225) no-repeat ;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border: 1px solid #5b646c;
+}
+#points-ronds p {
+	float: left;
+	width: 100px;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+#points-description {
+	margin-top: 20px;
+}
+#points-description p {
+	font-size: 18px;
+	text-transform: uppercase;
+}
+#points-description p:nth-child(2) {
+	font-size: 18px;
+	text-transform: none;
+	color: #4e99e1;
+}
+
+
+/*********    SALLE CAPACITE    ***********/
+#salle-capacite {
+	clear: both;
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+	width: 200px;
+	height: 60px;
+}
+#salle-capacite p {
+	font-size: 20px;
+}
+.span-capacite, .span-categorie {
+	color: #4e99e1;
+}
+
+
+/***********    INFORMATIONS COMPLEMENTAIRES  *********/
+#informations_avis {
+	width: 100%;
+	height: 350px;
+}
+#informations {
+	clear: left;
+	margin-top: 50px;
+	width: 51.8%;
+	height: 50px;
+	float: left;
+}
+#avis {
+	margin-top: 50px;
+	width: 48.2%;
+	height: 50px;
+	float: left;
+}
+#informations-container {
+	clear: left;
+	float: left;
+	margin-top: -20px;
+	width: 600px;
+	height: 260px;
+	background: #e1e5e8 no-repeat;
+	border: 1px solid #5b646c; 
+}
+#informations-container-gauche {
+	float: left;
+	width: 60%;
+	height: 100%;
+}
+#informations-container h2 {
+	color: #5b646c;
+	text-transform: uppercase;
+	margin: 10px 20px;
+	font-size: 20px;
+}
+#informations-container ul {
+	clear: left;
+	margin-top: 50px;
+	margin-left: 20px;
+	width: 100%;
+	height: 100%;
+}
+#informations-container li {
+	font-size: 20px;
+	line-height: 25px;
+}
+.informations-container-span {
+	color: #4e99e1;
+}
+#informations-container-droite {
+	float: left;
+	width: 40%;
+	height: 100%;
+}
+#informations-container-droite img {
+	margin-top: 20px;
+	display: block;
+	border: none;
+}
+#informations-commentaires {
+	float: left;
+	margin-left: 50px;
+	margin-top: -20px;
+	width: 600px;
+	height: 260px;
+	background: #e1e5e8 no-repeat;
+	border: 1px solid #5b646c;
 }
 
 
