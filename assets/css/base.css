@@ -295,7 +295,7 @@ p {
 	top: -28px;
 }
 
-#resultats {
+#resultats-nombre {
 	border: 1px solid black;
 	width: 100px;
 	display: block;
@@ -304,6 +304,77 @@ p {
 	margin-left: 30px;
 	color: #4e99e1;
 	font: italic 20px "bebe";
+}
+
+#resultats-affichage {
+	border: 1px solid black;
+	height: 1000px;
+	margin-top: 25px;
+	width: 1150px;
+	float: left;
+	background: #e1e5e8;
+}
+
+.offres-recherche {
+	position: relative;
+	height: 175px;
+	width: 338px;
+	border:1px solid black;
+	margin:18px 21px 18px 23px;
+	float: left;
+}
+
+.cadre-recherche {
+	width: 336px;
+	height: 174px;
+	background-image: url('../img/cadre_recherche.png');
+	background-repeat:no-repeat;
+	float:left;
+	z-index: 1;
+}
+
+.offres-recherche .cadre-recherche img {
+	margin: 15px 15px;
+}
+
+.offres-recherche .infos {
+	margin: -126px 15px 0px 130px;
+	width: 180px;
+}
+
+.offres-recherche .infos .infos-details ul li {
+	margin-left: 10px;
+}
+
+.offres-recherche .infos .panier {
+	position: absolute;
+	right: 69px;
+	bottom: 32px;
+	clear: both;
+}
+
+.offres-recherche .infos .panier img {
+	padding: 5px;
+	margin: auto;
+}
+
+.offres-recherche .infos .panier-img {
+  width: 25px;
+  height: 25px;
+  background: #bcd4ea;
+  float:left;
+}
+
+.offres-recherche .infos .ajout-panier {
+	float:left;
+	background:#5b646c;
+	border-style: none;
+	color:#bcd4ea;
+	height:25px;
+}
+
+.offres-recherche .infos .infos-details li {
+	font-size: 20px;
 }
 
 
