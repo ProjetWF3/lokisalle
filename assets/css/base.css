@@ -3,39 +3,36 @@
 @import 'font.css';
 
 
-.clearfix::before,
-.clearfix::after {
-	content: "";
-	display: table;
-}
-.clearfix::after {
-	clear: both;
-}
-
-
 /****************
  * 	  Général   *
  ****************/
-
 body {
-	/*background: #fafcfc;
-	color: #fff;*/
 	font-family: 'bebe';
 }
-
-a:hover{
-
+a,
+a:focus,
+a:hover {
 	text-decoration: none;
 }
-
-.container{
+.container {
 	width:1290px;
 	margin:auto;
 }
+h1 {
+	font-size: 1.638em;
+	margin-bottom: 1em;
+}
+p {
+	padding-bottom: 20px;
+	line-height: 1.3;
+	text-align: justify;
+}
+
+
 /********************************************************************
  * 	  Header    *
  *******************************************************************/
-#header-menu{
+#header-menu {
 	margin:auto;
 	width: 100%;
 }
@@ -51,107 +48,297 @@ a:hover{
 }
 
 #logo {
-  font-size: 72px;
-  font-family: 'Lobster';
-  color: rgb(91, 100, 108);
-  line-height: 66px;
-  text-align: left;
-  margin-left: 20px;
-  text-decoration: none;
+	font-size: 72px;
+	font-family: 'Lobster';
+	color: rgb(91, 100, 108);
+	line-height: 66px;
+	text-align: left;
+	margin-left: 20px;
+	text-decoration: none;
 }
 
 /********************************************* 
 		MENU 
 *******************************************/
 #header-menu ul {
-  margin: 0 0 0 -56px;
-  width: 1290px;
-  position:absolute;
-  top:87px;
+
 }
-
-
-#header-menu li{
+#header-menu li {
 	float:left;
-	transition: all .5s;
 	overflow: hidden;
-	padding-bottom: 25px;
+	padding: 0 10px 15px;
 }
-
-
-#header-menu a{
+#header-menu a {
 	float:left;
 	color:#fff;
-	width:1450px;
 	font-family: 'Bebe';
 	line-height: 64px;
-    margin-left: 30px;
     font-size:23px;
     width:176px;
 	height:56px;
 	background:#4e99e1;
-	margin-left: 82px;
-	box-shadow:  0px 4px 16px rgba(0, 0, 0, .25);
+	margin-top: -10px;
+	box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, .15);
 	text-align:center;
 	border-radius: 0px 0px 10px 10px;
-	transition: all .5s;
-
-	
+	transition: all .25s;	
 }
-
-#header-menu li:hover a,
-#header-menu li:focus a{
-	color:#000;
-	
-    
-  
+#header-menu a:hover,
+#header-menu a:focus,
+#header-menu a.active,
+#header-menu a.active:hover,
+#header-menu a.active:focus {
+	margin-top: -1px;
+	line-height: 2.7;
 }
-
 #header-menu a.active {
+	color:#000;
 	background:#bcd4ea;
 }
 
-#header-menu a:hover,
-#header-menu a:focus{
-	margin-top: -10px;	
+
+/************************************************
+
+		MAIN
+
+**************************************************/
+#main{
+	margin:60px auto;
+	min-height: 600px;
 }
+#contenu{
+	border:1px solid black;
+	width:700px;
+	padding: 20px;
+	float:left;
+}
+#contenu h1{
+	font-weight: 700;
+}
+/********************************************
+
+			SIDEBAR
+
+************************************************/
+#sidebar{
+	background-color: #e1e5e8;
+	width:490px;
+	border:1px solid black;
+	float:right;
+	margin-bottom: 25px;
+}
+
+.carre{
+	float: left;
+	width: 20px;
+	height:20px;
+	background:#5b646c;
+	margin: 10px 10px 10px 10px;
+}
+
+#lastinf {
+	 height: 20px;
+  	 margin-top: 12px;
+  	 text-transform: uppercase;
+  	 font-weight: 700;
+  	 font-size: 20px;
+}
+
+.offres{
+	position: relative;
+	height:140px;
+	border:1px solid black;
+	margin: 44px 36px 18px 30px;
+}
+
+.offres .cadre {
+	width: 140px;
+	background-image: url('../img/cadre_accueil.png') ;
+	background-repeat:no-repeat;
+	float:left;
+}
+
+.offres .cadre img {
+	margin: 15px 15px;
+}
+
+.offres .infos{
+	margin: 15px 15px 0px 155px;
+}
+
+.offres .infos .infos-details ul li{
+	margin-left: 10px;
+}
+
+.offres .infos .panier{
+	position: absolute;
+	right: -1px;
+	bottom: -10px;
+	clear: both;
+}
+.offres .infos .panier img{
+	padding: 5px;
+}
+
+.offres .infos .panier-img {
+  width: 25px;
+  height: 25px;
+  background: #bcd4ea;
+  float:left;
+}
+
+.offres .infos .ajout-panier{
+	float:left;
+	background:#5b646c;
+	border-style: none;
+	color:#bcd4ea;
+	height:25px;
+}
+
+.offres .infos .infos-details li {
+	font-size: 20px;
+}
+
+
+/************************************************
+
+		PAGE RECHERCHE
+
+**************************************************/
+#formulaire-recherche {
+	border: 1px solid black;
+	height: 30px;
+	margin-top: 25px;
+	margin-left: 81px;
+	width: 730px;
+	float: left;
+}
+
+#carre-recherche {
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #5b646c;
+}
+
+#titre-recherche {
+	color: #818181;
+	float: left;
+	font: 25px "bebe";
+	text-transform: uppercase;
+	padding-left: 10px;
+}
+
+.champs {
+	height: 25px;
+	background: #818181;
+    color:#fff;
+    font: 20px "bebe" ;
+    position: relative;
+	border: 1px solid #5b646c;
+}
+
+.label-recherche {
+	color: #4e99e1;
+	text-transform: uppercase;
+	font: 20px "bebe";
+	margin-left: 30px;
+}
+
+#formulaire-recherche input[type=text] {
+	height: 25px;
+	width: 280px;
+	font: 20px "bebe";
+	color: #fff;
+	padding-left: 2px;	
+	background-color: #818181;
+	border: 1px solid #5b646c;
+}
+
+#formulaire-recherche input[type=text]::-webkit-input-placeholder {
+	padding-left: 2px;
+	opacity: 0.5;
+	font: 20px "bebe";
+	color: #fff;	
+}
+#formulaire-recherche input[type=text]:-moz-placeholder {
+	padding-left: 2px;
+	opacity: 0.5;
+	font: 20px "bebe";
+	color: #fff;	
+}
+#formulaire-recherche input[type=text]::-moz-placeholder {
+	padding-left: 2px;
+	opacity: 0.5;
+	font: 20px "bebe";
+	color: #fff;	
+}
+#formulaire-recherche input[type=text]::-ms-input-placeholder {
+	padding-left: 2px;
+	opacity: 0.5;
+	font: 20px "bebe";
+	color: #fff;	
+}
+
+#formulaire-recherche input[type=submit] {
+	background: url(../img/loupe.png) no-repeat center;
+	border: 0;
+	float: left;
+	height: 17px;
+	width: 17px;
+	padding: 6px;
+	/* On change le box-sizing */
+	box-sizing: content-box;
+	/* Pour placer au-dessus de l'input search */
+	position: relative;
+	left: 680px;
+	top: -28px;
+}
+
+#resultats {
+	border: 1px solid black;
+	width: 100px;
+	display: block;
+	float: left;
+	margin-top: 30px;
+	margin-left: 30px;
+	color: #4e99e1;
+	font: italic 20px "bebe";
+}
+
 
 /************************************************
 Xavier
 		MAIN   PAGE : "RESERVATION DETAIL"
 
 **************************************************/
-#main{
 
-	width:1290px;
-	height: 1000px;
-	margin:auto;
-	margin-top:80px;
-	border: 1px solid black;
-}
+
 /********   DIV RESERVATION  *********/
 #reservation {
 	width: 350px;
 	height: 30px;
 	float: left;
 }
-.carre {
+#reservation .carre,
+#informations .carre,
+#avis .carre {
 	float: left;
 	width: 20px;
 	height: 20px;
 	background: #5b646c;
-
+	margin: 0;
 }
-h1 {
+#reservation h1,
+#informations h1,
+#avis h1 {
 	float: left;
 	margin-left: 10px;
 	text-transform: uppercase;
 	font-size: 25px;
-	color: #5b646c; 
-
+	color: #5b646c;
 }
-
-h2 {
+#reservation h2 {
 	float: left;
 	margin-left: 10px;
 	margin-top: 5px;
@@ -160,8 +347,8 @@ h2 {
 	color: #4e99e1;
 }
 
-/********   DIV SALLE  *********/
 
+/********   DIV SALLE  *********/
 #salle {
 	clear: both;
 	background: #e1e5e8 no-repeat;
@@ -169,172 +356,168 @@ h2 {
 	height: 270px;
 	border: 1px solid #5b646c;
 }
-	#cadre {
-		float: left;
-		width: 187px;
-		height: 186px;
-		background-image: url('../img/cadre.png');
-	}
-	#cadre img {
-		margin: 20px 20px;
-	}
-
-	/******** POINT *********/
-	#points {
-		float: left;
-		margin-left: 10px;
-		margin-top: 20px;
-		width: 800px;
-		height: 130px;
-	}
-		h1 span {
-			font-size: 23px;
-			color: #4e99e1;
-			margin-right: 10px;
-		}
-		
-		#points-ronds {
-			float: left;
-		}
-		#points-ronds a {
-			display: inline-block;
-			margin: 2px 2px;
-			width: 20px;
-			height: 20px;
-			background: rgb(78, 153, 225) no-repeat ;
-			border-radius: 50%;
-			-moz-border-radius: 50%;
-			-webkit-border-radius: 50%;
-			border: 1px solid #5b646c;
+#cadre {
+	float: left;
+	width: 187px;
+	height: 186px;
+	background-image: url('../img/cadre.png');
+}
+#cadre img {
+	margin: 20px 20px;
+}
 
 
-		}
-		#points-ronds p {
-			float: left;
-			width: 100px;
-			margin-top: 5px;
-			margin-left: 10px;
-		}
-		#points-description {
-			margin-top: 20px;
-		}
-			#points-description p {
-				font-size: 18px;
-				text-transform: uppercase;
-			}
-			#points-description p:nth-child(2) {
-				font-size: 18px;
-				text-transform: none;
-				color: #4e99e1;
-			}
+/******** POINT *********/
+#points {
+	float: left;
+	margin-left: 10px;
+	margin-top: 20px;
+	width: 800px;
+	height: 130px;
+}
+#points p {
+	padding-bottom: 0;
+}
+#points h1 {
+	float: left;
+}
+#points h1 span {
+	font-size: 23px;
+	color: #4e99e1;
+	margin-right: 10px;
+}
+#points-ronds {
+	float: left;
+}
+#points-ronds a {
+	display: inline-block;
+	margin: 2px 2px;
+	width: 20px;
+	height: 20px;
+	background: rgb(78, 153, 225) no-repeat ;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border: 1px solid #5b646c;
+}
+#points-ronds p {
+	float: left;
+	width: 100px;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+#points-description {
+	margin-top: 20px;
+}
+#points-description p {
+	font-size: 18px;
+	text-transform: uppercase;
+}
+#points-description p:nth-child(2) {
+	font-size: 18px;
+	text-transform: none;
+	color: #4e99e1;
+}
 
 
+/*********    SALLE CAPACITE    ***********/
+#salle-capacite {
+	clear: both;
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+	width: 200px;
+	height: 60px;
+}
+#salle-capacite p {
+	font-size: 20px;
+}
+.span-capacite, .span-categorie {
+	color: #4e99e1;
+}
 
-
-
-	/*********    SALLE CAPACITE    ***********/
-
-	#salle-capacite {
-		clear: both;
-		float: left;
-		margin-left: 20px;
-		margin-top: 10px;
-		width: 200px;
-		height: 60px;
-	}
-		#salle-capacite p {
-			font-size: 20px;
-		}
-		.span-capacite, .span-categorie {
-			color: #4e99e1;
-		}
 
 /***********    INFORMATIONS COMPLEMENTAIRES  *********/
 #informations_avis {
 	width: 100%;
 	height: 350px;
-	border: 1px solid black;
+}
+#informations {
+	clear: left;
+	margin-top: 50px;
+	width: 51.8%;
+	height: 50px;
+	float: left;
+}
+#avis {
+	margin-top: 50px;
+	width: 48.2%;
+	height: 50px;
+	float: left;
+}
+#informations-container {
+	clear: left;
+	float: left;
+	margin-top: -20px;
+	width: 600px;
+	height: 260px;
+	background: #e1e5e8 no-repeat;
+	border: 1px solid #5b646c; 
+}
+#informations-container-gauche {
+	float: left;
+	width: 60%;
+	height: 100%;
+}
+#informations-container h2 {
+	color: #5b646c;
+	text-transform: uppercase;
+	margin: 10px 20px;
+	font-size: 20px;
+}
+#informations-container ul {
+	clear: left;
+	margin-top: 50px;
+	margin-left: 20px;
+	width: 100%;
+	height: 100%;
+}
+#informations-container li {
+	font-size: 20px;
+	line-height: 25px;
+}
+.informations-container-span {
+	color: #4e99e1;
+}
+#informations-container-droite {
+	float: left;
+	width: 40%;
+	height: 100%;
+}
+#informations-container-droite img {
+	margin-top: 20px;
+	display: block;
+	border: none;
+}
+#informations-commentaires {
+	float: left;
+	margin-left: 50px;
+	margin-top: -20px;
+	width: 600px;
+	height: 260px;
+	background: #e1e5e8 no-repeat;
+	border: 1px solid #5b646c;
 }
 
-
-	#informations {
-		clear: left;
-		margin-top: 50px;
-		width: 51.8%;
-		height: 50px;
-		float: left;
-	}
-	#avis {
-		margin-top: 50px;
-		width: 48.2%;
-		height: 50px;
-		float: left;
-	}
-
-	#informations-container {
-		clear: left;
-		float: left;
-		margin-top: -20px;
-		width: 606px;
-		height: 260px;
-		background: #e1e5e8 no-repeat;
-		border: 1px solid #5b646c; 
-	}
-
-
-
-		/*****  CONTAINER DE GAUCHE  *****/
-		#informations-container-gauche {
-			float: left;
-			width: 60%;
-			height: 100%;
-		}
-			#informations-container h2 {
-					color: #5b646c;
-			}
-				#informations-container ul {
-					clear: left;
-					margin-top: 50px;
-					margin-left: 20px;
-					width: 100%;
-					height: 100%;
-				}
-					#informations-container li {
-						font-size: 20px;
-						line-height: 25px;
-					}
-					.informations-container-span {
-						color: #4e99e1;
-					}
-
-		/****    CONTAINER DE DROITE  ******/
-		#informations-container-droite {
-			float: left;
-			width: 40%;
-			height: 100%;
-		}
-		#informations-container-droite img {
-			margin-top: 20px;
-			display: block;
-			border: none;
-		}
-
-
-	#informations-commentaires {
-		float: left;
-		margin-left: 50px;
-		margin-top: -20px;
-		width: 600px;
-		height: 260px;
-		background: #e1e5e8 no-repeat;
-		border: 1px solid #5b646c;
-	}
-		#informations-commentaires p {
+/********************************************
+ **     MODIFICATIONS LUNDI 25/05/2015     **
+ ********************************************/
+ 
+#informations-commentaires p {
 			float: left;
 			margin: 10px 10px;
 			color: #4e99e1;
-
-		}
+}
 		#points-ronds2 {
 		float: left;
 		margin-top: 10px;
@@ -437,69 +620,39 @@ h2 {
 		}
 
 
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*****************************************************
  * 	  Footer   *
  ******************************************************/
-
- #footer {
- 	height: 50px;
-	bottom: 1px;
-	width: 100%;
+#footer {
+	font: 16px "bebe";
 	background: #5b646c;
 }
-
-#footer-container {
-	margin: auto;
-	font: 16px "bebe";
-	width: 802px;
-}
-
-#footer-nav {
-	margin: auto;
-	width: 802px;
-	line-height: 50px;
-	margin-left: 2px;
-}
-
 #footer-nav a{
 	color: #bcd4ea;
   	border-bottom: 2px solid #bcd4ea;
   	transition:all 0.3s;
 }
-
 #footer-nav a:hover {
   	color: #fff;
   	padding-bottom: 5px;
   	border-color:#fff;
 }
-
+#footer-nav ul {
+	padding: 10px;
+	text-align: center;
+	width: 690px;
+	margin: 0 auto;
+}
 #footer-nav ul li{
 	float: left;
-	margin: 15px 0 0 0;
   	padding: 0 15px 0 15px;
-	border-right: 2px solid #bcd4ea;
+	border-right: 1px solid #bcd4ea;
 	height: 20px;
 	line-height: 1.2;
 }
-
 #footer-nav ul li:last-child {
 	border:none;
 }
-
 
 
 

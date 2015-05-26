@@ -1,17 +1,19 @@
 </main>
 	<footer id="footer">
-		<div id="footer-container">
+		<div class="container">
 			<nav id="footer-nav">
-				<a>Mentions légales</a>|
-				<a>C.G.V.</a>|
-				<a>Plan du site</a>|
-				<a>Imprimer la page</a>
-				<a>S'inscrire à la newsletter</a>
-				<a>Contact</a>
+				<ul class="clearfix">
+					<li><a href="">Mentions légales</a></li>
+					<li><a href="">C.G.V.</a></li>
+					<li><a href="">Plan du site</a></li>
+					<li><a href="">Imprimer la page</a></li>
+					<li><a href="">S'inscrire à la newsletter</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
 			</nav>
 		</div>
 	</footer>
-		<script src="<?php echo base_url(); ?>assets/js/jquery.js"></script>
-		<script src="<?php echo base_url(); ?>assets/js/app.js"></script>
+	<?php echo script_tag('assets/js/jquery.js'); ?>
+	<?php echo script_tag('assets/js/app.js'); ?>
 	</body>
 </html>
