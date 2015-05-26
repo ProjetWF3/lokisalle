@@ -54,6 +54,7 @@ class Page extends CI_Controller {
 		//$data = array();
 		$data['nom_page'] = 'mentions légales';
 		$this->layout->view('mentions', $data);
+	}	
 
 	public function contact($data = '')
 	{
