@@ -8,7 +8,7 @@
 					<li><a href="">Plan du site</a></li>
 					<li><a href="">Imprimer la page</a></li>
 					<li><a href="">S'inscrire à la newsletter</a></li>
-					<li><a href="">Contact</a></li>
+					<li><a href="<?php echo base_url('page/contact'); ?>">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
