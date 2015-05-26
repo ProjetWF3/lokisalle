@@ -201,7 +201,7 @@ p {
 
 
 /************************************************
-
+JB
 		PAGE RECHERCHE
 
 **************************************************/
@@ -378,7 +378,7 @@ p {
 }
 
 /************************************************
-
+JB
 		PAGE INSCRIPTION
 
 **************************************************/
@@ -778,6 +778,42 @@ Xavier
 #footer-nav ul li:last-child {
 	border:none;
 }
+
+/************************************************
+JB
+		PAGE MENTIONS LEGALES
+
+**************************************************/
+#titre-mentions {
+	color: #818181;
+	float: left;
+	font: 25px "bebe";
+	text-transform: uppercase;
+	padding-left: 10px;
+}
+
+#carre-mentions {
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #5b646c;
+}
+
+#mentions {
+	margin: 100px 190px;
+	width: 610px;
+}
+
+#mentions p {
+	padding-bottom: 20px;
+	line-height: 2.3;
+	text-align: left;
+	color: #4e99e1;
+	font: 25px "bebe";
+}
+
+
+
 
 
 

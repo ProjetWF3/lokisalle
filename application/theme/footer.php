@@ -3,7 +3,7 @@
 		<div class="container">
 			<nav id="footer-nav">
 				<ul class="clearfix">
-					<li><a href="">Mentions légales</a></li>
+					<li><a href="<?php echo base_url('page/mentions')?>">Mentions légales</a></li>
 					<li><a href="">C.G.V.</a></li>
 					<li><a href="">Plan du site</a></li>
 					<li><a href="">Imprimer la page</a></li>

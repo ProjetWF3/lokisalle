@@ -47,5 +47,12 @@ class Page extends CI_Controller {
 		$data['nom_page'] = 'connexion';
 		$this->layout->view('connexion', $data);
 	}
+
+	public function mentions($data = '')
+	{
+		//$data = array();
+		$data['nom_page'] = 'mentions légales';
+		$this->layout->view('mentions', $data);
+	}
 }
 
