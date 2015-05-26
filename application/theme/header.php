@@ -20,7 +20,7 @@
 						<li><a href="<?php echo base_url('page/reservation'); ?>">Réservation</a></li>
 						<li><a href="<?php echo base_url('page/recherche'); ?>">Recherche</a></li>
 						<li><a href="<?php echo base_url('page/connexion'); ?>">Se connecter</a></li>
-						<li><a href="">Nouveau compte</a></li>
+						<li><a href="<?php echo base_url('page/inscription'); ?>">Nouveau compte</a></li>
 					</ul>
 				</nav>
 			</div>

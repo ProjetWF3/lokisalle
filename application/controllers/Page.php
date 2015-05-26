@@ -31,4 +31,11 @@ class Page extends CI_Controller {
 		$data['nom_page'] = 'recherche';
 		$this->layout->view('recherche', $data);
 	}
+
+	public function inscription($data = '')
+	{
+		//$data = array();
+		$data['nom_page'] = 'inscription';
+		$this->layout->view('inscription', $data);
+	}
 }
