@@ -31,4 +31,12 @@ class Page extends CI_Controller {
 		$data['nom_page'] = 'recherche';
 		$this->layout->view('recherche', $data);
 	}
+
+	public function connexion($data = '')
+	{
+		//$data = array();
+		$data['nom_page'] = 'connexion';
+		$this->layout->view('connexion', $data);
+	}
 }
+
