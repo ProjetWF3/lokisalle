@@ -1,18 +1,30 @@
 <div id="page-contact">
-	<?php
-		echo heading("Page $nom_page", 1);
-		echo form_open('page/contact');
-	?>
-	<p>
-		<label for'username'>username</label>
-		<?= form_input(array('name'=>'email','value'=>'','class'=>'username textbox','style'=>'width:150px;')); ?>
-	</p>
-	<p>
-		<label for'password'>password</label>
-		<?= form_password(array('name'=>'password','value'=>'','class'=>'password textbox')); ?>
-	</p>
-	<p>
-		<?= form_submit('submit','Login','id="submit"'); ?>
-	</p>
-	<?= form_close("\n"); ?>
+	<div id="contenu">
+		<?php
+			echo heading("Page $nom_page", 1);
+
+			echo form_open('form/valid_form');
+
+	  		echo form_label('Sujet', 'sujet');
+	  		$sujet = array( 
+				'name'=>'sujet',				 
+				'id'=>'sujet',				 
+				'placeholder'=>'Sujet',				 
+				'value'=>set_value('sujet')				 
+			);
+	  		echo form_input($sujet);
+
+	  		echo form_label('Message', 'message');
+	  		$message = array( 
+				'name'=>'message',				 
+				'id'=>'message',				 
+				'placeholder'=>'Message',				 
+				'value'=>set_value('message')				 
+			);
+	  		echo form_input($message);
+
+
+	  		echo form_close();
+		?>
+	</div>
 </div>
