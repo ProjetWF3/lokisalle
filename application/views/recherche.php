@@ -31,10 +31,7 @@
 </form>
 <div id="resultats-nombre">6 résultats</div>
 <div id="resultats-affichage">
-	
-<?php for ($i=0; $i <6 ; $i++) { 
-
-	
+<?php for ($i=0; $i <6 ; $i++) { 	
 ?>
 	<div class="offres-recherche">
 		<div class="cadre-recherche">
