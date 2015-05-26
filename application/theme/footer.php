@@ -4,10 +4,10 @@
 			<nav id="footer-nav">
 				<ul class="clearfix">
 					<li><a href="<?php echo base_url('page/mentions')?>">Mentions légales</a></li>
-					<li><a href="">C.G.V.</a></li>
-					<li><a href="">Plan du site</a></li>
+					<li><a href="<?php echo base_url('page/cgv')?>">C.G.V.</a></li>
+					<li><a href="<?php echo base_url('page/plan')?>">Plan du site</a></li>
 					<li><a href="">Imprimer la page</a></li>
-					<li><a href="">S'inscrire à la newsletter</a></li>
+					<li><a href="<?php echo base_url('page/newsletter')?>">S'inscrire à la newsletter</a></li>
 					<li><a href="<?php echo base_url('page/contact'); ?>">Contact</a></li>
 				</ul>
 			</nav>

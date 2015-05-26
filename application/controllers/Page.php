@@ -48,19 +48,36 @@ class Page extends CI_Controller {
 		$this->layout->view('connexion', $data);
 	}
 
-
-	public function mentions($data = '')
-	{
-		//$data = array();
-		$data['nom_page'] = 'mentions légales';
-		$this->layout->view('mentions', $data);
-	}	
-
 	public function contact($data = '')
 	{
 		//$data = array();
 		$data['nom_page'] = 'contact';
 		$this->layout->view('contact', $data);
 	}
+
+	public function mentions($data = '')
+	{
+		//$data = array();
+		$data['nom_page'] = 'mentions légales';
+		$this->layout->view('mentions', $data);
+	}
+	public function cgv($data = '')
+	{
+		//$data = array();
+		$data['nom_page'] = 'cgv';
+		$this->layout->view('cgv', $data);
+	}	
+	public function plan($data = '')
+	{
+		//$data = array();
+		$data['nom_page'] = 'plan';
+		$this->layout->view('plan', $data);
+	}
+	public function newsletter($data = '')
+	{
+		//$data = array();
+		$data['nom_page'] = 'newsletter';
+		$this->layout->view('newsletter', $data);
+	}	
 }
 
