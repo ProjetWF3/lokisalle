@@ -33,6 +33,7 @@ class Page extends CI_Controller {
 		$this->layout->view('recherche', $data);
 	}
 
+
 	public function inscription($data = '')
 	{
 		//$data = array();
@@ -47,3 +48,4 @@ class Page extends CI_Controller {
 		$this->layout->view('connexion', $data);
 	}
 }
+

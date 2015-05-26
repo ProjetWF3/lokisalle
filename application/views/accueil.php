@@ -15,7 +15,7 @@
 		<div class="infos">
 			<ul class="infos-details">
 				<li><img src="<?php echo base_url(); ?>assets/img/calendrier.png" alt="calendrier">  Date:</li>
-				<li><img src="<?php echo base_url(); ?>assets/img/lieu.png" alt="lieu">  Lieu:</li>
+				<li><img src="<?php echo base_url(); ?>assets/img/lieu.png" alt="lieu">   Lieu:</li>
 				<li><img src="<?php echo base_url(); ?>assets/img/prix.png" alt="prix">  Prix:</li>
 				<li><img src="<?php echo base_url(); ?>assets/img/nbrepersonnes.png" alt="nbrepersonnes">  Nbre de personnes:</li>
 			</ul>
