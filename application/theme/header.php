@@ -16,11 +16,11 @@
 			<div class="container">
 				<nav id="header-menu">
 					<ul class="clearfix">
-						<li><a href="<?php echo site_url(); ?>" class="active">Accueil</a></li>
-						<li><a href="<?php echo base_url('page/reservation'); ?>">Réservation</a></li>
-						<li><a href="<?php echo base_url('page/recherche'); ?>">Recherche</a></li>
-						<li><a href="<?php echo base_url('page/connexion'); ?>">Se connecter</a></li>
-						<li><a href="">Nouveau compte</a></li>
+						<li><a href="<?php echo site_url(); ?>"<?php if($this->uri->segment(2) == ""){ echo ' class = "active"'; } ?>>Accueil</a></li>
+						<li><a href="<?php echo base_url('page/reservation'); ?>"<?php if($this->uri->segment(2) == "reservation"){ echo ' class = "active"'; } ?>>Réservation</a></li>
+						<li><a href="<?php echo base_url('page/recherche'); ?>"<?php if($this->uri->segment(2) == "recherche"){ echo ' class = "active"'; } ?>>Recherche</a></li>
+						<li><a href="<?php echo base_url('page/connexion'); ?>"<?php if($this->uri->segment(2) == "connexion"){ echo ' class = "active"'; } ?>>Se connecter</a></li>
+						<li><a href="<?php echo base_url('page/inscription'); ?>"<?php if($this->uri->segment(2) == "inscription"){ echo ' class = "active"'; } ?>>Nouveau compte</a></li>
 					</ul>
 				</nav>
 			</div>
