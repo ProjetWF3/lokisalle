@@ -11,6 +11,7 @@ class Page extends CI_Controller {
 		parent::__construct();
 	}
 
+	/*** nom fonction = nom de la page créée ***/
 	public function index($data = '')
 	{
 		//$data = array();
@@ -30,5 +31,19 @@ class Page extends CI_Controller {
 		//$data = array();
 		$data['nom_page'] = 'recherche';
 		$this->layout->view('recherche', $data);
+	}
+
+	public function inscription($data = '')
+	{
+		//$data = array();
+		$data['nom_page'] = 'inscription';
+		$this->layout->view('inscription', $data);
+	}
+
+	public function connexion($data = '')
+	{
+		//$data = array();
+		$data['nom_page'] = 'connexion';
+		$this->layout->view('connexion', $data);
 	}
 }
