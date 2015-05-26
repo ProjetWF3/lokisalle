@@ -1,4 +1,4 @@
-<div class="carre"></div>
+<div class="carre-recherche"></div>
 <?php echo heading("$nom_page", 1, 'id="titre-recherche"'); ?>
 <form id="formulaire-recherche">
 	<label id="mois-label" class="label-recherche">mois</label>
@@ -26,7 +26,7 @@
 		<option value="juin">2020</option>
 	</select>
 	<label id="motclef" class="label-recherche">mot clef</label>
-	<input type="text" id="pseudo" placeholder="Ex : Paris">
+	<input type="text" id="motclef" placeholder="Ex : Paris">
 	<input type="submit" value="">
 </form>
 <div id="resultats-nombre">6 résultats</div>

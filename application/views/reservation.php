@@ -1,4 +1,4 @@
-<div id="reservation">
+<div id="titre">
 	<div class="carre"></div>
 	<?php 
 		echo heading('Réservation', 1);
