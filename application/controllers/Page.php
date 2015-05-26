@@ -47,5 +47,12 @@ class Page extends CI_Controller {
 		$data['nom_page'] = 'connexion';
 		$this->layout->view('connexion', $data);
 	}
+
+	public function contact($data = '')
+	{
+		//$data = array();
+		$data['nom_page'] = 'contact';
+		$this->layout->view('contact', $data);
+	}
 }
 
