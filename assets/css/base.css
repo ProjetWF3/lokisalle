@@ -778,6 +778,27 @@ Xavier
  	 margin-top: 20px;
  	 margin-left: -212px;*/
 }
+#formulaire form {
+	margin: 50px auto;
+	width: 65%;
+}
+#formulaire form > div {
+	clear: both;
+}
+#formulaire form > div > label {
+	float: left;
+	width: 50%;
+	margin: 5px 0;
+}
+#formulaire form > div > div {
+	float: left;
+	width: 50%;
+	margin: 5px 0;
+}
+#formulaire form > div > div > a {
+	padding: 5px 0;
+	display: block;
+}
 
 /***************************************************************
 		* BLOCK DE DROITE CONNEXION *

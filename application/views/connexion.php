@@ -5,15 +5,25 @@
     		<p>deja membre</p>
     			<div id="formulaire">
     				<form method="post" action="">
-    					<label for="pseudo" id="pseudo">pseudo:</label>
-    					<input type="text" name="pseudo" />
-
-    					<label for="Mot de passe" id="Mot de passe">Mot de passe:</label>
-    					<input type="password" name="password" />
-    					<a href="">Mot de passe oublier</a>
-
-    					<label for="se souvenir de moi" id="se souvenir de moi">se souvenir de moi:</label>
-    					<input type="checkbox" name="choix" />
+    					<div>
+                            <label for="pseudo" id="pseudo">pseudo:</label>
+                            <div>
+                                <input type="text" name="pseudo" />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="Mot de passe" id="Mot de passe">Mot de passe:</label>
+                            <div>
+                                <input type="password" name="password" />
+                                <a href="">Mot de passe oublier</a>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="se souvenir de moi" id="se souvenir de moi">se souvenir de moi:</label>
+                            <div>
+                                <input type="checkbox" name="choix" />
+                            </div>
+                        </div>
     				</form>
     			</div>
     	</div>
