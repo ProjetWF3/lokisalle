@@ -172,8 +172,8 @@ p {
 
 .offres .infos .panier{
 	position: absolute;
-	right: -1px;
-	bottom: -10px;
+	right: 130px;
+	bottom: 1px;
 	clear: both;
 }
 .offres .infos .panier img{
@@ -707,7 +707,44 @@ Xavier
 	border: 1px solid #5b646c;
 }
 
+/*****************************************************
 
+*    cedric PAGE CONNEXION *
+
+
+*****************************************************/
+.carre{
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #5b646c;
+}
+
+#connexion h1{
+	color:#818181;
+	font:25px 'Bebe';
+	text-transform: uppercase;
+	/*padding-left: 10px;*/
+	padding-top:10px;
+}
+
+#membre{
+	width:575px;
+	height:482px;
+	background: #e1e5e8;
+	float: left;
+}
+
+#membre p{
+	
+}
+
+#pasMembre{
+	width:575px;
+	height:482px;
+	background: #e1e5e8;
+	float: right;
+}
 /*****************************************************
  * 	  Footer   *
  ******************************************************/
