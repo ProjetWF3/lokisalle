@@ -18,20 +18,36 @@
  ****************/
 
 body {
-	background: #fafcfc;
-	color: #fff;
+	/*background: #fafcfc;
+	color: #fff;*/
+	font-family: 'bebe';
 }
 
+a:hover{
 
-/****************
+	text-decoration: none;
+}
+
+.container{
+	width:1290px;
+	margin:auto;
+}
+/********************************************************************
  * 	  Header    *
- ****************/
-
+ *******************************************************************/
+#header-menu{
+	margin:auto;
+	width: 100%;
+}
 #header-banniere {
 	background: #bcd4ea;
 	height: 87px;
 	box-shadow: 0px 1px 16px rgba(0, 0, 0, .5) ;
-
+	/*position:relative;
+	z-index:999;
+	top:0;
+	left:0;
+	width: 100%;*/
 }
 
 #logo {
@@ -40,132 +56,450 @@ body {
   color: rgb(91, 100, 108);
   line-height: 66px;
   text-align: left;
-  position: fixed;
-  left: 20px;
+  margin-left: 20px;
   text-decoration: none;
 }
 
-/**************** menu  ***********************/
+/********************************************* 
+		MENU 
+*******************************************/
 #header-menu ul {
-  margin: auto;
-  width: 1375px;
+  margin: 0 0 0 -56px;
+  width: 1290px;
+  position:absolute;
+  top:87px;
 }
 
 
 #header-menu li{
 	float:left;
-	width:193px;
-	height:74px;
-	background:#4e99e1;
-	margin-left: 82px
+	transition: all .5s;
+	overflow: hidden;
+	padding-bottom: 25px;
 }
 
 
-#header-menu  a{
+#header-menu a{
+	float:left;
 	color:#fff;
 	width:1450px;
 	font-family: 'Bebe';
 	line-height: 64px;
-    margin-left: 50px;
-    font-size: 20px;
+    margin-left: 30px;
+    font-size:23px;
+    width:176px;
+	height:56px;
+	background:#4e99e1;
+	margin-left: 82px;
+	box-shadow:  0px 4px 16px rgba(0, 0, 0, .25);
+	text-align:center;
+	border-radius: 0px 0px 10px 10px;
+	transition: all .5s;
+
 	
 }
-<<<<<<< HEAD
-@import "reset.css";
-@import url(http://fonts.googleapis.com/css?family=Lobster);
-@import 'font.css';
 
-
-.clearfix::before,
-.clearfix::after {
-	content: "";
-	display: table;
+#header-menu li:hover a,
+#header-menu li:focus a{
+	color:#000;
+	
+    
+  
 }
-.clearfix::after {
+
+#header-menu a.active {
+	background:#bcd4ea;
+}
+
+#header-menu a:hover,
+#header-menu a:focus{
+	margin-top: -10px;	
+}
+
+/************************************************
+Xavier
+		MAIN   PAGE : "RESERVATION DETAIL"
+
+**************************************************/
+#main{
+
+	width:1290px;
+	height: 1000px;
+	margin:auto;
+	margin-top:80px;
+	border: 1px solid black;
+}
+/********   DIV RESERVATION  *********/
+#reservation {
+	width: 350px;
+	height: 30px;
+	float: left;
+}
+.carre {
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #5b646c;
+
+}
+h1 {
+	float: left;
+	margin-left: 10px;
+	text-transform: uppercase;
+	font-size: 25px;
+	color: #5b646c; 
+
+}
+
+h2 {
+	float: left;
+	margin-left: 10px;
+	margin-top: 5px;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #4e99e1;
+}
+
+/********   DIV SALLE  *********/
+
+#salle {
 	clear: both;
+	background: #e1e5e8 no-repeat;
+	width: 100%;
+	height: 270px;
+	border: 1px solid #5b646c;
+}
+	#cadre {
+		float: left;
+		width: 187px;
+		height: 186px;
+		background-image: url('../img/cadre.png');
+	}
+	#cadre img {
+		margin: 20px 20px;
+	}
+
+	/******** POINT *********/
+	#points {
+		float: left;
+		margin-left: 10px;
+		margin-top: 20px;
+		width: 800px;
+		height: 130px;
+	}
+		h1 span {
+			font-size: 23px;
+			color: #4e99e1;
+			margin-right: 10px;
+		}
+		
+		#points-ronds {
+			float: left;
+		}
+		#points-ronds a {
+			display: inline-block;
+			margin: 2px 2px;
+			width: 20px;
+			height: 20px;
+			background: rgb(78, 153, 225) no-repeat ;
+			border-radius: 50%;
+			-moz-border-radius: 50%;
+			-webkit-border-radius: 50%;
+			border: 1px solid #5b646c;
+
+
+		}
+		#points-ronds p {
+			float: left;
+			width: 100px;
+			margin-top: 5px;
+			margin-left: 10px;
+		}
+		#points-description {
+			margin-top: 20px;
+		}
+			#points-description p {
+				font-size: 18px;
+				text-transform: uppercase;
+			}
+			#points-description p:nth-child(2) {
+				font-size: 18px;
+				text-transform: none;
+				color: #4e99e1;
+			}
+
+
+
+
+
+	/*********    SALLE CAPACITE    ***********/
+
+	#salle-capacite {
+		clear: both;
+		float: left;
+		margin-left: 20px;
+		margin-top: 10px;
+		width: 200px;
+		height: 60px;
+	}
+		#salle-capacite p {
+			font-size: 20px;
+		}
+		.span-capacite, .span-categorie {
+			color: #4e99e1;
+		}
+
+/***********    INFORMATIONS COMPLEMENTAIRES  *********/
+#informations_avis {
+	width: 100%;
+	height: 350px;
+	border: 1px solid black;
 }
 
 
-/****************
- * 	  Général   *
- ****************/
+	#informations {
+		clear: left;
+		margin-top: 50px;
+		width: 51.8%;
+		height: 50px;
+		float: left;
+	}
+	#avis {
+		margin-top: 50px;
+		width: 48.2%;
+		height: 50px;
+		float: left;
+	}
 
-body {
-	background: #fafcfc;
-	color: #fff;
-}
-
-
-/****************
- * 	  Header    *
- ****************/
-
-#header-banniere {
-	background: #bcd4ea;
-	height: 87px;
-	box-shadow: 0px 1px 16px rgba(0, 0, 0, .5) ;
-
-}
-
-#logo {
-  font-size: 72px;
-  font-family: 'Lobster';
-  color: rgb(91, 100, 108);
-  line-height: 66px;
-  text-align: left;
-  position: fixed;
-  left: 20px;
-  text-decoration: none;
-}
-
-/**************** menu  ***********************/
-#header-menu ul {
-  margin: auto;
-  width: 1375px;
-}
+	#informations-container {
+		clear: left;
+		float: left;
+		margin-top: -20px;
+		width: 606px;
+		height: 260px;
+		background: #e1e5e8 no-repeat;
+		border: 1px solid #5b646c; 
+	}
 
 
-#header-menu li{
-	float:left;
-	width:193px;
-	height:74px;
-	background:#4e99e1;
-	margin-left: 82px
-}
+
+		/*****  CONTAINER DE GAUCHE  *****/
+		#informations-container-gauche {
+			float: left;
+			width: 60%;
+			height: 100%;
+		}
+			#informations-container h2 {
+					color: #5b646c;
+			}
+				#informations-container ul {
+					clear: left;
+					margin-top: 50px;
+					margin-left: 20px;
+					width: 100%;
+					height: 100%;
+				}
+					#informations-container li {
+						font-size: 20px;
+						line-height: 25px;
+					}
+					.informations-container-span {
+						color: #4e99e1;
+					}
+
+		/****    CONTAINER DE DROITE  ******/
+		#informations-container-droite {
+			float: left;
+			width: 40%;
+			height: 100%;
+		}
+		#informations-container-droite img {
+			margin-top: 20px;
+			display: block;
+			border: none;
+		}
 
 
-#header-menu  a{
-	color:#fff;
-	width:1450px;
-	font-family: 'Bebe';
-	line-height: 64px;
-    margin-left: 50px;
-    font-size: 20px;
-	
-}
+	#informations-commentaires {
+		float: left;
+		margin-left: 50px;
+		margin-top: -20px;
+		width: 600px;
+		height: 260px;
+		background: #e1e5e8 no-repeat;
+		border: 1px solid #5b646c;
+	}
+		#informations-commentaires p {
+			float: left;
+			margin: 10px 10px;
+			color: #4e99e1;
 
-/****************
+		}
+		#points-ronds2 {
+		float: left;
+		margin-top: 10px;
+		}
+			#points-ronds2 a {
+				display: inline-block;
+				margin: 2px 2px;
+				width: 10px;
+				height: 10px;
+				background: rgb(78, 153, 225) no-repeat ;
+				border-radius: 50%;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border: 1px solid #5b646c;
+			}
+
+			/****    NOUVEAU COMMENTAIRE     ****/
+		#informations-commentaires_first {
+			clear: both;
+			margin: auto;
+			background: #bcd4ea no-repeat;
+			width: 95%;
+			height: 50px;
+		}
+			#commentaire-creer {
+				clear: left;
+				margin: auto;
+				width: 95%;
+				height: 80px;
+			}
+
+			#commentaire-creer textarea {
+				width: 100%;
+				height: 60px;
+				resize: none;
+			}
+			#commentaire-creer p:nth-child(2) {
+				float: left;
+			}
+			#commentaire-creer input {
+				float: right;
+				margin-top: 10px;
+			}
+
+	/****** SUGGESTION *******/
+	#suggestions {
+		width:100%;
+		height: 125px;
+		margin: auto;
+
+	}
+	#suggestions_gauche {
+		float: left;
+		width: 10%;
+		height: 125px;
+		border:  1px solid black;
+	}
+		#suggestions_gauche a {
+			margin: 20px 50px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 30px 50px 30px 0;
+			border-color: transparent #5b646c transparent transparent;
+			  
+		}
+	#suggestions_milieu {
+		float: left;
+		width: 80%;
+		height: 125px;
+		border:  1px solid black;
+	}
+		#suggestions_offres {
+			width: 200px;
+			height: 100px;
+			border:  1px solid black;
+		}
+			#suggestions_milieu img {
+				float: left;
+			}
+			#suggestions_offres_text {
+				float: left;
+				width: 1000px;
+				height: 100px;
+				border:  1px solid black;
+			}
+	#suggestions_droite {
+		float: left;
+		width: 10%;
+		height: 125px;
+		border:  1px solid black;
+	}
+		#suggestions_droite a {
+			margin: 20px 50px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 30px 0 30px 50px;
+			border-color: transparent transparent transparent #5b646c;
+		}
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****************************************************
  * 	  Footer   *
- ****************/
+ ******************************************************/
 
  #footer {
-	position: absolute;
-	bottom: 20px;
+ 	height: 50px;
+	bottom: 1px;
 	width: 100%;
+	background: #5b646c;
 }
 
 #footer-container {
 	margin: auto;
-	width: 1160px;
-	font: 13px "bebe";
-	text-transform: uppercase;
-	background: grey;
+	font: 16px "bebe";
+	width: 802px;
 }
+
 #footer-nav {
 	margin: auto;
-	width: 750px
+	width: 802px;
+	line-height: 50px;
+	margin-left: 2px;
 }
-#footer-nav a {
-	color: #fff;
-	margin-right: 46px;
+
+#footer-nav a{
+	color: #bcd4ea;
+  	border-bottom: 2px solid #bcd4ea;
+  	transition:all 0.3s;
 }
+
+#footer-nav a:hover {
+  	color: #fff;
+  	padding-bottom: 5px;
+  	border-color:#fff;
+}
+
+#footer-nav ul li{
+	float: left;
+	margin: 15px 0 0 0;
+  	padding: 0 15px 0 15px;
+	border-right: 2px solid #bcd4ea;
+	height: 20px;
+	line-height: 1.2;
+}
+
+#footer-nav ul li:last-child {
+	border:none;
+}
+
+
+
+
