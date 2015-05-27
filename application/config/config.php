@@ -1,6 +1,6 @@
 <?php
 // chemin de base du site
-define("BASE_URL", "http://localhost/lokisalle_procedural/");
+define("BASE_URL", "http://localhost/lokisalle/");
 
 //On définit la connection selon le serveur où le script est executé.
 $pathURL = $_SERVER['HTTP_HOST'];
