@@ -17,16 +17,33 @@ if (!defined("SECU")) {
 	<body>
 		<header id="header">
 			<div id="header-banniere">
-				<a href="<?php echo BASE_URL; ?>" id="logo">Lokisalle</a>
+				<a href="?page=" id="logo">Lokisalle</a>
 			</div>
 			<div class="container">
 				<nav id="header-menu">
 					<ul class="clearfix">
-						<li><a href="<?php echo BASE_URL; ?>" class = "active">Accueil</a></li>
-						<li><a href="?page=reservation">Réservation</a></li>
-						<li><a href="?page=recherche">Recherche</a></li>
-						<li><a href="?page=connexion">Se connecter</a></li>
-						<li><a href="?page=inscription">Nouveau compte</a></li>
+						<?php
+
+							// on stocke les liens et noms du menu dans un tableau
+							$liens = array(
+								array("link" => "", "name" => "Accueil"),
+								array("link" => "reservation", "name" => "Réservation"),
+								array("link" => "recherche", "name" => "Recherche"),
+								array("link" => "connexion", "name" => "Se connecter"),
+								array("link" => "inscription", "name" => "Nouveau compte"),
+							);
+
+							// on les affiche dans une boucle
+							foreach ($liens as $lien):
+
+								$active = (isset($_GET['page']) && $_GET['page'] == $lien['link']) || ($lien['link'] == BASE_URL) ? ' class="active"' : "";
+								$urlLien = ($lien['link'] != BASE_URL) ? "?page=$lien[link]" : BASE_URL;
+							?>
+								<li><a href="<?php echo $urlLien; ?>"<?php echo $active; ?>><?php echo $lien['name']; ?></a></li>
+
+							<?php 
+							endforeach; 
+							?>
 					</ul>
 				</nav>
 			</div>
