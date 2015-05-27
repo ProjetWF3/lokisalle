@@ -1,5 +1,6 @@
 <div id="carre-recherche"></div>
-<?php echo heading("$nom_page", 1, 'id="titre-recherche"'); ?>
+<h1 id="titre-recherche">Recherche</h1>
+
 <form id="formulaire-recherche">
 	<label id="mois-label" class="label-recherche">mois</label>
 	<select id="mois-select" class="champs">

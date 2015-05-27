@@ -21,6 +21,7 @@ a:hover {
 h1 {
 	font-size: 1.638em;
 	margin-bottom: 1em;
+	color: blue;
 }
 p {
 	padding-bottom: 20px;
@@ -221,13 +222,13 @@ JB
 	background: #5b646c;
 }
 
-#titre-recherche {
+/* #titre-recherche {
 	color: #818181;
 	float: left;
 	font: 25px "bebe";
 	text-transform: uppercase;
 	padding-left: 10px;
-}
+} */
 
 .champs {
 	height: 25px;
@@ -867,7 +868,7 @@ JB
 		PAGE MENTIONS LEGALES, CGV, plan du site, newsletter
 
 *******************************************************************/
-#titre-mentions,  
+ 
 #titre-cgv, 
 #titre-plan, 
 #titre-newsletter {
