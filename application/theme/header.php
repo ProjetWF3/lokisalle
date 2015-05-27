@@ -17,7 +17,7 @@ if (!defined("SECU")) {
 	<body>
 		<header id="header">
 			<div id="header-banniere">
-				<a href="?page=" id="logo">Lokisalle</a>
+				<a href="<?php echo BASE_URL; ?>" id="logo">Lokisalle</a>
 			</div>
 			<div class="container">
 				<nav id="header-menu">
@@ -36,8 +36,8 @@ if (!defined("SECU")) {
 							// on les affiche dans une boucle
 							foreach ($liens as $lien):
 
-								$active = (isset($_GET['page']) && $_GET['page'] == $lien['link']) || ($lien['link'] == BASE_URL) ? ' class="active"' : "";
-								$urlLien = ($lien['link'] != BASE_URL) ? "?page=$lien[link]" : BASE_URL;
+								$active = (isset($_GET['page']) && $_GET['page'] == $lien['link']) || (!isset($_GET['page']) && $lien['link'] == "") ? ' class="active"' : "";
+								$urlLien = ($lien['link'] != "") ? BASE_URL . "page/" . $lien['link'] : BASE_URL;
 							?>
 								<li><a href="<?php echo $urlLien; ?>"<?php echo $active; ?>><?php echo $lien['name']; ?></a></li>
 

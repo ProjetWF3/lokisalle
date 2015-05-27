@@ -145,11 +145,11 @@ a:hover {
 		MAIN
 
 **************************************************/
-#main{
-	margin:60px auto;
+#main {
+	margin: 30px auto;
 	min-height: 700px;
 }
-#contenu{
+#contenu {
 	border:1px solid black;
 	width:700px;
 	padding: 20px;
