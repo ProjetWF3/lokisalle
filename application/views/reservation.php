@@ -32,8 +32,8 @@
 		<p>Catégorie :<span class="span-categorie"> 1</span></p>
 	</div>
 	<div id="salle-panier">
-		<a class="salle-panier_picto" href=""><img src="<?php echo base_url(); ?>assets/img/panier.png" width="22" height="25"></a>
-		<input type="submit" value="Ajouter au panier">
+		<a class="salle-panier_picto" href="panier.php"><img src="<?php echo base_url(); ?>assets/img/panier.png" width="22" height="25"></a>
+		<input type="submit" href="panier.php" value="Ajouter au panier">
 	</div>
 </div>
 
