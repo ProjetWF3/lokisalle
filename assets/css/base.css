@@ -1003,6 +1003,7 @@ Xavier
 	height:371px;
 	border:1px solid black;
 	margin:15px;
+	position: relative;
 }
 
 #formulaire label{
@@ -1018,21 +1019,39 @@ Xavier
     font-size: 20px;
 	display:block;
 	float:left;
+	color: #4e99e1;
 }
 
-#formulaire input {
-	/* height: 30px;
- 	 width: 205px;
- 	 margin-top: 20px;
- 	 margin-left: -212px;*/
+#formulaire input[type='checkbox'] {
+	height: 20px;
+ 	width: 20px;
+ 	margin: -12px;
+ 	box-shadow: none;
 }
+#formulaire input{
+	 box-shadow: inset -3px 5px 15px rgba(0,0,0,0.35);
+}
+
+#formulaire input[type='submit']{
+	text-transform: uppercase;
+	background:#5b646c;
+	color:#fff;
+	width: 180px;
+	height:42px;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
 #formulaire form {
-	margin: 50px auto;
+	margin: 100px auto;
 	width: 65%;
 }
+
 #formulaire form > div {
 	clear: both;
 }
+
 #formulaire form > div > label,
 #formulaire form > div > div {
 	float: left;
@@ -1043,6 +1062,8 @@ Xavier
 #formulaire form > div > div > a {
 	padding: 5px 0;
 	display: block;
+	font-size: 20px;
+	color:#818181;
 }
 
 /***************************************************************
@@ -1058,7 +1079,7 @@ Xavier
 	text-align: center;
 	margin-top: 160px;
 }
->>>>>>> cb22e2550c47964b15cbb71f57efdec360985e8f
+
 
 .encadrement.right a{
 	color:#818181;
