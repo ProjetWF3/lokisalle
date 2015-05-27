@@ -31,5 +31,3 @@ if (!defined("SECU")) {
 				</nav>
 			</div>
 		</header>
-		
-			

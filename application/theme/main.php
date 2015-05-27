@@ -6,6 +6,12 @@ if (!defined("SECU")){
 }
 
  //Affichage du contenu par page demandé
+$string = "../views/".$page.".php";
+
+if(file_exists($string)) {
+	include_once($string);
+}
+
 $string = "./application/views/".$page.".php";
 
 if(file_exists($string)) {
