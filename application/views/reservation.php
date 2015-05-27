@@ -26,9 +26,14 @@
 			<p>Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum.</p>
 		</div>
 	</div>
+
 	<div id="salle-capacite">
 		<p>Capacité :<span class="span-capacite"> 2</span></p>
 		<p>Catégorie :<span class="span-categorie"> 1</span></p>
+	</div>
+	<div id="salle-panier">
+		<a class="salle-panier_picto" href=""><img src="<?php echo base_url(); ?>assets/img/panier.png" width="22" height="25"></a>
+		<input type="submit" value="Ajouter au panier">
 	</div>
 </div>
 
