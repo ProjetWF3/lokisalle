@@ -18,9 +18,26 @@ puis taper les commandes suivantes :
 A ce stade vous pouvez travailler sur votre poste en local...
 
 # sauvegarder son travail en local et mettre ses changements sur github
-
+        pwd (pour visualiser ou l'on se trouve dans l'arborescence)
+        cd /c/xampp/htdocs/lokisalle (se remettre dans le dossier /htdocs ou /www)
+        git checkout nom_branche_locale (ex: git checkout tanala)
         git status (permet de voir les fichiers modifiés ou supprimer ou ajouter | à faire souvent)
+        git add . (si nouveaux fichiers créés, faire cette commande)
         git commit -am "son_pseudo : dire ce que l'on a fait brievement"
         git pull origin le_nom_de_sa_branche_github
-        git push origin le_nom_de_sa_branche_github
+        git push origin le_nom_de_sa_branche_github (puis mettre son pseudo et son mot de passe)
+        git status
+# si c'est bon on balance sur la branche développement ce qui vient d'être sauvegardé sur notre branche perso
+        git checkout developpement
+        git status
+        git pull origin developpement
+        git push origin developpement (puis mettre son pseudo et son mot de passe)
+        git status
+# si c'est toujours okayy on retourne sur sa branche et on continue dessus
+        git checkout sa_branche_locale
+        ...puis on refait l'avant dernière tétape ainsi de suite...
+        
+        
+        
+        
         
