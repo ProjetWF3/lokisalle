@@ -1,17 +1,13 @@
 <div id="titre">
 	<div class="carre"></div>
-	<?php 
-		echo heading('Réservation', 1);
-		echo heading('> en détail', 2);
-	?>
+		<h1>Réservation</h1>
+		<h2> > en détail</h2>
 </div>
 <div id="salle">
 	<div id="cadre">
-		<img src="<?php echo base_url(); ?>assets/img/photo.png" width="166" height="166">
+		<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="166" height="166">
 		<div id="points">
-			<?php 
-				echo heading('Salle <span>Cézanne</span>', 1);
-			?>
+				<h1>Salle <span>Cézanne</span></h1>
 		<div id="points-ronds">
 			<a href=""></a>
 			<a href=""></a>
@@ -32,7 +28,7 @@
 		<p>Catégorie :<span class="span-categorie"> 1</span></p>
 	</div>
 	<div id="salle-panier">
-		<a class="salle-panier_picto" href="panier.php"><img src="<?php echo base_url(); ?>assets/img/panier.png" width="22" height="25"></a>
+		<a class="salle-panier_picto" href="panier.php"><img src="<?php echo BASE_URL; ?>assets/img/panier.png" width="22" height="25"></a>
 		<input type="submit" href="panier.php" value="Ajouter au panier">
 	</div>
 </div>
@@ -42,15 +38,11 @@
 	
 	<div id="infos_titre">
 		<div class="carre"></div>
-		<?php 
-			echo heading('informations comptémentaires', 1);
-		?>
+		<h1>informations comptémentaires</h1>
 	</div>
 	<div id="infos-container">
 		<div id="infos-container_gauche">
-			<?php 
-				echo heading('adresse', 2);
-			?>
+			<h2>adresse</h2>
 			<ul>
 				<li>Pays : <span class="infos-container-span">France</span></li>
 				<li>Ville : <span class="infos-container-span">paris</span></li>
@@ -71,9 +63,7 @@
 <div id="avis_droite">	
 	<div id="infos_titre">
 		<div class="carre"></div>
-		<?php 
-			echo heading('avis', 1);
-		?>
+		<h1>avis</h1>
 	</div>
 	<div id="infos-container">
 		<div id="avis-commentaires">
@@ -86,9 +76,9 @@
 				<a href=""></a>
 			</div>
 			<div id="informations-commentaires_first">
-				<img src="<?php echo base_url(); ?>assets/img/guillemet_haut.png">
+				<img src="<?php echo BASE_URL; ?>assets/img/guillemet_haut.png">
 				<p>Je suis très content de cette salle, elle est grande, bien trop grande!</p>
-				<img src="<?php echo base_url(); ?>assets/img/guillemet_bas.png">
+				<img src="<?php echo BASE_URL; ?>assets/img/guillemet_bas.png">
 			</div>
 			<div id="commentaire-creer">
 				<p>Jean-Baptiste</p>
@@ -116,9 +106,7 @@
 <div id="autres-suggestions">
 	<div id="autres-suggestions_titre">
 		<div class="carre"></div>
-		<?php 
-			echo heading('autres suggestions', 1);
-		?>
+		<h1>autres suggestions</h1>
 	</div>
 	<div id="suggestions">
 		<div id="suggestions_gauche">
@@ -127,12 +115,12 @@
 		<div id="suggestions_milieu">
 			<?php  for ($i=0; $i <3 ; $i++) {  ?>
 			<div id="suggestions_offre">
-				<img src="<?php echo base_url(); ?>assets/img/photo.png" width="80" height="80">
+				<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="80" height="80">
 				<div id="suggestions_offre_texte">
-					<p>   SALLE</p>
-					<p>   Date: du 7 Déc au 8 Déc 2015</p>
-					<p>   Personnes : 22</p>
-					<p>   Prix : 200 €</p>
+					<p>SALLE</p>
+					<p>Date: du 7 Déc au 8 Déc 2015</p>
+					<p>Personnes : 22</p>
+					<p>Prix : 200 €</p>
 					<a href="#">   >Voir en détails</a> 
 				</div>
 			</div>
