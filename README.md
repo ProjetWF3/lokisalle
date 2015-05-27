@@ -27,6 +27,7 @@ A ce stade vous pouvez travailler sur votre poste en local...
         git pull origin le_nom_de_sa_branche_github
         git push origin le_nom_de_sa_branche_github (puis mettre son pseudo et son mot de passe)
         git status
+        puis faire les réglages via l'interface de github
 # si c'est bon on balance sur la branche développement ce qui vient d'être sauvegardé sur notre branche perso
         git checkout developpement
         git status
