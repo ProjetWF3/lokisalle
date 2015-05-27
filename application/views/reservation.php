@@ -1,6 +1,6 @@
 <div id="page-reservation">
 	<div id="titre">
-		<h1 class="titre">Réservation <small>> en détail</small></h1>
+		<h1 class="h1 titre">Réservation <small>> en détail</small></h1>
 	</div>
 	<div id="salle" class="clearfix">
 		<div class="left">
@@ -23,9 +23,9 @@
 				<p>Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum. Lorem upsum Lorem upsum.</p>
 			</div>
 		</div>
-		<div id="salle-panier">
-			<a class="salle-panier_picto" href="panier.php"><img src="<?php echo BASE_URL; ?>assets/img/panier.png" width="22" height="25"></a>
-			<input type="submit" href="panier.php" value="Ajouter au panier">
+		<div id="salle-panier" class="panier">
+			<div class="panier-img"></div>
+			<input type="submit" class="ajout-panier" value="Ajouter au panier">
 		</div>
 	</div>
 
@@ -33,7 +33,7 @@
 	<div class="clearfix">
 		<!--   2 BLOCS : INFORMATIONS & AVIS -->
 		<div id="infos_gauche">		
-			<h1 class="titre">informations comptémentaires</h1>
+			<h1 class="h1 titre">informations comptémentaires</h1>
 			<div class="infos-container">
 				<div id="infos-container_gauche">
 					<h2>adresse</h2>
@@ -55,7 +55,7 @@
 		</div>
 
 		<div id="avis_droite">	
-			<h1 class="titre">avis</h1>
+			<h1 class="h1 titre">avis</h1>
 			<div class="infos-container">
 				<div id="avis-commentaires">
 					<p>David Beckham, le 10/05/15</p>
@@ -93,7 +93,7 @@
 	<!--    AUTRES SUGGESTIONS   -->
 	<div id="autres-suggestions">
 		<div id="autres-suggestions_titre">
-			<h1 class="titre">autres suggestions</h1>
+			<h1 class="h1 titre">autres suggestions</h1>
 		</div>
 		<div id="suggestions">
 			<div id="suggestions_gauche">
