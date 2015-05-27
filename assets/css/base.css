@@ -224,10 +224,8 @@ JB
 
 **************************************************/
 #formulaire-recherche {
-	border: 1px solid black;
 	height: 30px;
 	margin-top: 50px;
-	margin-left: -80px;
 	width: 800px;
 	float: left;
 }
@@ -238,14 +236,6 @@ JB
 	height: 20px;
 	background: #5b646c;
 }
-
-/* #titre-recherche {
-	color: #818181;
-	float: left;
-	font: 25px "bebe";
-	text-transform: uppercase;
-	padding-left: 10px;
-} */
 
 .champs {
 	height: 25px;
@@ -314,7 +304,6 @@ JB
 }
 
 #resultats-nombre {
-	border: 1px solid black;
 	width: 100px;
 	display: block;
 	float: left;
@@ -325,7 +314,6 @@ JB
 }
 
 #resultats-affichage {
-	border: 1px solid black;
 	height: 1000px;
 	margin-top: 25px;
 	width: 1150px;
@@ -372,7 +360,6 @@ JB
 }
 
 .offres-recherche .infos .panier img {
-	padding: 5px;
 	margin: auto;
 }
 
@@ -1026,7 +1013,6 @@ Xavier
 	text-align: center;
 	margin-top: 160px;
 }
->>>>>>> cb22e2550c47964b15cbb71f57efdec360985e8f
 
 .encadrement a{
 	color:#818181;
@@ -1112,10 +1098,10 @@ JB
 }
 
 #plan div, #newsletter div {
-float: left;
-width: 620px;
-margin: 20px 0 0 0;
-font-size: 20px;
+	float: left;
+	width: 620px;
+	margin: 20px 0 0 0;
+	font-size: 20px;
 }
 
 #newsletter a {
