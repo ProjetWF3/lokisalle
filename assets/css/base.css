@@ -28,6 +28,22 @@ p {
 	text-align: justify;
 }
 
+.encadrement{
+	border-radius:5px;
+	width:575px;
+	height:482px;
+	background: #e1e5e8;
+	box-shadow: 5px 13px 15px rgba(0, 0, 0, .25);
+}
+
+
+.left {
+	float:left;
+}
+
+.right {
+	float: right;
+}
 
 /********************************************************************
  * 	  Header    *
@@ -733,16 +749,9 @@ Xavier
 		* BLOCK DE GAUCHE CONNEXION *
 	
 *********************************************************/
-#membre{
-	border-radius:5px;
-	width:575px;
-	height:482px;
-	background: #e1e5e8;
-	float: left;
-	box-shadow: 5px 13px 15px rgba(0, 0, 0, .25);
-}
 
-#membre p{
+
+.encadrement p{
 	text-transform: uppercase;
 	font-size:40px;
 	color:#818181;
@@ -785,16 +794,13 @@ Xavier
 #formulaire form > div {
 	clear: both;
 }
-#formulaire form > div > label {
-	float: left;
-	width: 50%;
-	margin: 5px 0;
-}
+#formulaire form > div > label,
 #formulaire form > div > div {
 	float: left;
 	width: 50%;
 	margin: 5px 0;
 }
+	
 #formulaire form > div > div > a {
 	padding: 5px 0;
 	display: block;
@@ -804,16 +810,9 @@ Xavier
 		* BLOCK DE DROITE CONNEXION *
 
 *******************************************************************/
-#pasMembre{
-	border-radius:5px;
-	width:575px;
-	height:482px;
-	background: #e1e5e8;
-	float: right;
-	box-shadow: 5px 13px 15px rgba(0, 0, 0, .25);
-}
 
-#pasMembre p{
+
+.encadrement p{
 	color:#818181;
 	font-size:50px;
 	text-transform: uppercase;
@@ -821,7 +820,7 @@ Xavier
 	margin-top: 160px;
 }
 
-#pasMembre a{
+.encadrement a{
 	color:#818181;
 	text-transform: uppercase;
 	font-size:25px;

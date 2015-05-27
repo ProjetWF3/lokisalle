@@ -1,7 +1,7 @@
 <div id="connexion">
 	<div class="carre"></div>
     <?php echo heading('connexion', 1); ?>
-    	<div id="membre">
+    	<div class="encadrement left">
     		<p>deja membre</p>
     			<div id="formulaire">
     				<form method="post" action="">
@@ -27,7 +27,7 @@
     				</form>
     			</div>
     	</div>
-    		<div id="pasMembre">
+    		<div class="encadrement right">
     			<p>Pas encore membre ?</p>
     			<a href="inscription.php">inscrivez-vous</a>
     		</div>
