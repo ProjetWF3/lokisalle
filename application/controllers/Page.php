@@ -79,5 +79,11 @@ class Page extends CI_Controller {
 		$data['nom_page'] = 'newsletter';
 		$this->layout->view('newsletter', $data);
 	}	
+	public function panier($data = '')
+	{
+		//$data = array();
+		$data['nom_page'] = 'panier';
+		$this->layout->view('panier', $data);
+	}	
 }
 
