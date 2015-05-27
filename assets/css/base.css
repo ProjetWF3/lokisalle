@@ -906,9 +906,16 @@ JB
 
 #plan div, #newsletter div {
 float: left;
-width: 300px;
+width: 620px;
 margin: 20px 0 0 0;
 font-size: 20px;
+}
+
+#newsletter a {
+	float: left;
+	width: 300px;
+	margin: 20px 0 0 0;
+	font-size: 20px;
 }
 
 
