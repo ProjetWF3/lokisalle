@@ -19,9 +19,10 @@ a:hover {
 	margin:auto;
 }
 h1 {
-	font-size: 1.638em;
 	margin-bottom: 1em;
-	color: blue;
+	color: #818181;
+	font: 1.638em "bebe";
+	text-transform: uppercase;
 }
 p {
 	padding-bottom: 20px;
