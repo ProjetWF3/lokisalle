@@ -24,12 +24,10 @@ if (!defined("SECU")) {
 					<ul class="clearfix">
 						<li><a href="<?php echo BASE_URL; ?>" class = "active">Accueil</a></li>
 						<li><a href="?page=reservation">Réservation</a></li>
-						<li><a href="">Recherche</a></li>
-						<li><a href="">Se connecter</a></li>
-						<li><a href="">Nouveau compte</a></li>
+						<li><a href="?page=recherche">Recherche</a></li>
+						<li><a href="?page=connexion">Se connecter</a></li>
+						<li><a href="?page=inscription">Nouveau compte</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
-		<main id="main" class="container">
-			
