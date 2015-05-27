@@ -18,33 +18,58 @@ a:hover {
 	width:1290px;
 	margin:auto;
 }
-h1 {
-	margin-bottom: 1em;
-	color: #818181;
-	font: 1.638em "bebe";
-	text-transform: uppercase;
+.titre {
+	position: relative;
+	margin-left: 40px;
 }
-p {
-	padding-bottom: 20px;
-	line-height: 1.3;
-	text-align: justify;
+.titre::before {
+	content: '';
+	width: 30px;
+	height: 30px;
+	background: #5b646c;
+	position: absolute;
+	left: -40px;
+	top: 3px;
 }
-
-.encadrement{
+.encadrement,
+.encadrement-central {
 	border-radius:5px;
-	width:575px;
-	height:482px;
 	background: #e1e5e8;
-	box-shadow: 5px 13px 15px rgba(0, 0, 0, .25);
+	box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, .25);
 }
-
-
+.encadrement {
+	width:575px;
+	min-height:482px;
+}
+.encadrement-central {
+	margin: 25px auto;
+	width: 1150px;
+}
 .left {
 	float:left;
 }
-
 .right {
 	float: right;
+}
+.panier {
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	overflow: hidden;
+}
+.panier-img {
+	width: 25px;
+	height: 25px;
+	background: #bcd4ea url(../img/panier.png) 50% no-repeat;
+	background-size: 63%;
+	float:left;
+}
+.ajout-panier{
+	float:left;
+	background:#5b646c;
+	border-style: none;
+	color:#bcd4ea;
+	height:25px;
 }
 
 /********************************************************************
@@ -122,7 +147,7 @@ p {
 **************************************************/
 #main{
 	margin:60px auto;
-	min-height: 600px;
+	min-height: 700px;
 }
 #contenu{
 	border:1px solid black;
@@ -130,43 +155,28 @@ p {
 	padding: 20px;
 	float:left;
 }
-#contenu h1{
-	font-weight: 700;
-}
+
+
 /********************************************
 
 			SIDEBAR
 
 ************************************************/
 #sidebar{
-	background-color: #e1e5e8;
 	width:490px;
-	border:1px solid black;
 	float:right;
 	margin-bottom: 25px;
+	padding: 20px; 
 }
-
-.carre{
-	float: left;
-	width: 20px;
-	height:20px;
-	background:#5b646c;
-	margin: 10px 10px 10px 10px;
-}
-
-#lastinf {
-	 height: 20px;
-  	 margin-top: 12px;
-  	 text-transform: uppercase;
-  	 font-weight: 700;
-  	 font-size: 20px;
-}
-
 .offres{
 	position: relative;
 	height:140px;
 	border:1px solid black;
-	margin: 44px 36px 18px 30px;
+	margin: 40px 30px;
+}
+.offres .panier {
+	bottom: 2px;
+	right: auto;
 }
 
 .offres .cadre {
@@ -188,31 +198,6 @@ p {
 	margin-left: 10px;
 }
 
-.offres .infos .panier{
-	position: absolute;
-	right: 130px;
-	bottom: 1px;
-	clear: both;
-}
-.offres .infos .panier img{
-	padding: 5px;
-}
-
-.offres .infos .panier-img {
-  width: 25px;
-  height: 25px;
-  background: #bcd4ea;
-  float:left;
-}
-
-.offres .infos .ajout-panier{
-	float:left;
-	background:#5b646c;
-	border-style: none;
-	color:#bcd4ea;
-	height:25px;
-}
-
 .offres .infos .infos-details li {
 	font-size: 20px;
 }
@@ -223,19 +208,30 @@ JB
 		PAGE RECHERCHE
 
 **************************************************/
+#page-recherche .encadrement-central {
+	min-height: 424px;
+}
+.search {
+	width: 930px;
+	margin: 0 auto;
+	overflow: hidden;
+}
 #formulaire-recherche {
 	height: 30px;
 	margin-top: 50px;
 	width: 800px;
 	float: left;
 }
-
-#carre-recherche {
+#resultats-nombre {
+	width: 100px;
+	display: block;
 	float: left;
-	width: 20px;
-	height: 20px;
-	background: #5b646c;
+	margin-top: 55px;;
+	margin-left: 30px;
+	color: #4e99e1;
+	font: italic 20px "bebe";
 }
+
 
 .champs {
 	height: 25px;
@@ -303,23 +299,9 @@ JB
 	top: -2px;
 }
 
-#resultats-nombre {
-	width: 100px;
-	display: block;
-	float: left;
-	margin-top: 55px;;
-	margin-left: 30px;
-	color: #4e99e1;
-	font: italic 20px "bebe";
-}
 
-#resultats-affichage {
-	height: 1000px;
-	margin-top: 25px;
-	width: 1150px;
-	float: left;
-	background: #e1e5e8;
-}
+
+
 
 .offres-recherche {
 	position: relative;
@@ -352,24 +334,6 @@ JB
 	margin-left: 10px;
 }
 
-.offres-recherche .infos .panier {
-	position: absolute;
-	right: 15px;
-	bottom: 15px;
-	clear: both;
-}
-
-.offres-recherche .infos .panier img {
-	margin: auto;
-}
-
-.offres-recherche .infos .panier-img {
-  width: 25px;
-  height: 25px;
-  background: #bcd4ea;
-  float:left;
-}
-
 .offres-recherche .infos .ajout-panier {
 	float:left;
 	background:#5b646c;
@@ -388,37 +352,12 @@ JB
 
 **************************************************/
 
-#carre-inscription {
-	float: left;
-	width: 20px;
-	height: 20px;
-	background: #5b646c;
+#page-inscription .encadrement-central {
+	width: 750px;
 }
-
-#titre-inscription {
-	color: #818181;
-	float: left;
-	font: 25px "bebe";
-	text-transform: uppercase;
-	padding-left: 10px;
-}
-
-.form-loki {
-	border: 1px solid #656d75;
-	height: 270px;
-	margin: 55px auto 0 auto;
-	width: 500px;
-	background: #e1e5e8;
-
-}
-
 #formulaire-inscription .form-moitie {
-	width: 225px;
-	margin: 12px 0 0 24px;
-}
-
-#formulaire-inscription div {
-	margin: 0 10px 6px 0px;
+	width: 30%;
+	margin: 15px 8% 15px;
 	float: left;
 }
 
@@ -427,14 +366,8 @@ JB
 }
 
 #formulaire-inscription .form-group {
-		float: left;
-		position: relative;
-}
-
-#formulaire-inscription .form-group div {
-		float: left;
-		position: relative;
-		margin: -9px 0 -8px 0;
+	float: left;
+	width: 100%;
 }
 
 #formulaire-inscription .label-inscription {
@@ -443,7 +376,7 @@ JB
 }
 
 #formulaire-inscription .label-sexe {
-	margin: 10px 10px 10px 10px;
+	margin: 2px 15px;
 }
 
 #formulaire-inscription .form-control:focus {
@@ -516,6 +449,25 @@ Xavier
 
 **************************************************/
 
+#page-reservation div.left {
+	width: 15%;
+}
+#page-reservation div.left > img {
+	margin-bottom: 15px;
+}
+#page-reservation div.right {
+	width: 85%;
+}
+#page-reservation div.right h2,
+#infos_gauche h2 {
+	font-size: 23px;
+}
+#page-reservation div.right h2 span {
+	font-size: 23px;
+	color: #4e99e1;
+	margin-right: 10px;
+}
+
 
 /********   DIV RESERVATION  *********/
 #reservation {
@@ -553,16 +505,14 @@ Xavier
 
 /********   DIV SALLE  *********/
 #salle {
-	clear: both;
-	background: #e1e5e8 no-repeat;
-	width: 100%;
-	height: 270px;
+	position: relative;
+	padding: 20px;
+	background: #e1e5e8 url('../img/cadre.png') no-repeat;
 }
 #cadre {
 	float: left;
 	width: 100%;
 	height: 186px;
-	background: url('../img/cadre.png') no-repeat;
 }
 #cadre img {
 	float:left;
@@ -581,20 +531,12 @@ Xavier
 #points p {
 	padding-bottom: 0;
 }
-#points h1 {
-	float: left;
-}
-#points h1 span {
-	font-size: 23px;
-	color: #4e99e1;
-	margin-right: 10px;
-}
 #points-ronds {
 	float: left;
-	
+	margin: 0 20px;
 }
-#points-ronds a {
-	display: inline-block;
+#points-ronds span {
+	float: left;
 	margin: 2px 2px;
 	width: 20px;
 	height: 20px;
@@ -608,8 +550,7 @@ Xavier
 #points-ronds p {
 	float: left;
 	width: 100px;
-	margin-top: 5px;
-	margin-left: 10px;
+	margin-left: 25px;
 }
 #points-description {
 	float: left;
@@ -642,122 +583,100 @@ Xavier
 .span-capacite, .span-categorie {
 	color: #4e99e1;
 }
-#salle-panier {
-	float: right;
-	width: 250px;
-	height: 50px;
-}
-#salle-panier a{
-	float: left;
-	float: left;
-	width: 40px;
-	height: 30px;
-	background: #bcd4ea no-repeat;
-}
-#salle-panier img {
-	margin-top: 2px;
-	margin-left: 10px;
-}
-#salle-panier input {
-	width: 180px;
-	height: 30px;
-	background: #5b646c no-repeat;
-	color: #bcd4ea;
-	text-transform: uppercase;
-	border: none;
-}
+
 
 /***********     INFORMATIONS  ---   AVIS     *********/
 
 
 /*******   INFO GAUCHE  *******/
 #infos_gauche {
-	clear: both;
 	float: left;
-	margin-top: 90px;
+	margin-top: 45px;
 	width: 45%;
-	height: 260px;
+}
+#infos_gauche .infos-container {
+	padding: 15px;
+}
+#infos_gauche .infos-container ul {
+	padding-top: 15px;
+}
+#infos_gauche .infos-container li {
+	padding-bottom: 8px;
 }
 
-#infos-container {
+.infos-container {
 	float: left;
-	margin-top: -10px;
 	width: 100%;
-	height: 100%;
+	min-height: 260px;
 	background: #e1e5e8 no-repeat;
-}
-#infos_titre {
-	clear: left;
-	float: left;
-	width: 100%;
-	height: 50px;
 }
 #infos_titre .carre {
 	margin-left: 0px;
 }
 
-	/* INFOS GAUCHE: Titre, H2, UL, Li */
-	#infos-container_gauche {
-		float: left;
-		width: 50%;
-		height: 100%;
-	}
-	#infos-container h2 {
-		color: #5b646c;
-		text-transform: uppercase;
-		margin: 10px 20px;
-		font-size: 20px;
-	}
-	#infos-container ul {
-		clear: left;
-		margin-top: 25px;
-		margin-left: 20px;
-		width: 100%;
-		height: 100%;
-	}
-	#infos-container li {
-		font-size: 20px;
-		line-height: 25px;
-	}
-	.infos-container-span {
-		color: #4e99e1;
-	}
+/* INFOS GAUCHE: Titre, H2, UL, Li */
+#infos-container_gauche {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+#infos-container h2 {
+	color: #5b646c;
+	text-transform: uppercase;
+	margin: 10px 20px;
+	font-size: 20px;
+}
+#infos-container ul {
+	clear: left;
+	margin-top: 25px;
+	margin-left: 20px;
+	width: 100%;
+	height: 100%;
+}
+#infos-container li {
+	font-size: 20px;
+	line-height: 25px;
+}
+.infos-container-span {
+	color: #4e99e1;
+}
 
-	/* INFOS DROITE: H2, UL, Li */
-	#infos-container_droite {
-		float: left;
-		width: 50%;
-		height: 100%;
-	}
-	#infos-container_droite img {
-		margin-top: 20px;
-		display: block;
-		border: none;
-	}
+/* INFOS DROITE: H2, UL, Li */
+#infos-container_droite {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+#infos-container_droite > a {
+	display: block;
+}
+#infos-container_droite img {
+	margin-top: 20px;
+	display: block;
+	border: none;
+}
 
 /*******   AVIS DROITE  *******/
 #avis_droite {
 	float: left;
-	margin-top: 90px;
+	margin-top: 45px;
 	margin-left: 125px;
 	width: 45%;
-	height: 260px;
 }
 
-<<<<<<< HEAD
-	/* INFOS DROITE: H2, UL, Li */
-	#avis-commentaires {
-		float: left;
-		width: 100%;
-		height: 100%;
-		background: #e1e5e8 no-repeat;
-	}
-	#avis-commentaires p {
-		float: left;
-		padding-right: 10px;
-		margin: 10px 10px;
-		color: #4e99e1;
-	}
+/* INFOS DROITE: H2, UL, Li */
+#avis-commentaires {
+	float: left;
+	width: 100%;
+	height: 100%;
+	background: #e1e5e8 no-repeat;
+}
+#avis-commentaires p {
+	float: left;
+	padding-right: 10px;
+	margin: 10px 10px;
+	color: #4e99e1;
+}
 	
 
 /********************************************
@@ -819,9 +738,8 @@ Xavier
 	#autres-suggestions {
 		clear: left;
 		float: left;
-		margin-top: 60px;
+		margin-top: 45px;
   		width: 100%;
-  		height: 30px; 			
 	}
 	#autres-suggestions_titre .carre {
 		margin-left: 0px;
@@ -912,30 +830,23 @@ Xavier
 
 
 
-
-
-
-
-=======
 /*****************************************************
 
 *    cedric PAGE CONNEXION *
 
 
 *****************************************************/
-.carre{
-	float: left;
-	width: 20px;
-	height: 20px;
-	background: #5b646c;
-}
 
-#connexion h1{
+/* #connexion h1{
 	color:#818181;
 	font:25px 'Bebe';
 	text-transform: uppercase;
-	/*padding-left: 10px;*/
+	padding-left: 10px;
 	padding-top:10px;
+} */
+
+#page-connexion .encadrement {
+
 }
 
 
@@ -1013,6 +924,7 @@ Xavier
 	text-align: center;
 	margin-top: 160px;
 }
+>>>>>>> cb22e2550c47964b15cbb71f57efdec360985e8f
 
 .encadrement.right a{
 	color:#818181;
@@ -1060,7 +972,7 @@ JB
 		PAGE MENTIONS LEGALES, CGV, plan du site, newsletter
 
 *******************************************************************/
- 
+#titre-mentions,  
 #titre-cgv, 
 #titre-plan, 
 #titre-newsletter {
@@ -1098,10 +1010,10 @@ JB
 }
 
 #plan div, #newsletter div {
-	float: left;
-	width: 620px;
-	margin: 20px 0 0 0;
-	font-size: 20px;
+float: left;
+width: 620px;
+margin: 20px 0 0 0;
+font-size: 20px;
 }
 
 #newsletter a {
@@ -1110,7 +1022,6 @@ JB
 	margin: 20px 0 0 0;
 	font-size: 20px;
 }
-
 
 
 

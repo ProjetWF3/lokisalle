@@ -1,6 +1,6 @@
-<div id="connexion">
-	<div class="carre"></div>
-    <h1>connexion<h1>
+<div id="page-connexion">
+    <div id="connexion">
+        <h1 class="h1 titre">Connexion<h1>
     	<div class="encadrement left">
     		<p>deja membre</p>
     			<div id="formulaire">
@@ -27,14 +27,9 @@
     				</form>
     			</div>
     	</div>
-    		<div class="encadrement right">
-    			<p>Pas encore membre ?</p>
-    			<a href="inscription.php">inscrivez-vous</a>
-            </div>
+    	<div class="encadrement right">
+    		<p>Pas encore membre ?</p>
+    		<a href="inscription.php">inscrivez-vous</a>
+        </div>
+    </div>
 </div>
-    
-
-
-
-
-
