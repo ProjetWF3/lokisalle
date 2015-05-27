@@ -1,3 +1,4 @@
+<main id="main" class="container">
 <?php
 //Securité !
 if (!defined("SECU")){
@@ -10,4 +11,11 @@ $string = "../views/".$page.".php";
 if(file_exists($string)) {
 	include_once($string);
 }
+
+$string = "./application/views/".$page.".php";
+
+if(file_exists($string)) {
+	include_once($string);
+} 
 ?>
+</main>

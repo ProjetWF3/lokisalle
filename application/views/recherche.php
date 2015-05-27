@@ -1,4 +1,4 @@
-<div class="carre-recherche"></div>
+<div id="carre-recherche"></div>
 <?php echo heading("$nom_page", 1, 'id="titre-recherche"'); ?>
 <form id="formulaire-recherche">
 	<label id="mois-label" class="label-recherche">mois</label>

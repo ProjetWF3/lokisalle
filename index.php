@@ -10,7 +10,7 @@ if(file_exists($pathConf)) include_once($pathConf);
 if (isset($_GET["page"])){
 	$page = $_GET["page"];
 } else {
-	$page = ""; // page accueil par defaut
+	$page = "accueil"; // page accueil par defaut
 }
 
 //Entêtes de la page (metas etc)...
