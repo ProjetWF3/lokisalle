@@ -956,7 +956,7 @@ Xavier
 *********************************************************/
 
 
-.encadrement p{
+.encadrement.left p{
 	text-transform: uppercase;
 	font-size:40px;
 	color:#818181;
@@ -1017,7 +1017,7 @@ Xavier
 *******************************************************************/
 
 
-.encadrement p{
+.encadrement.right p{
 	color:#818181;
 	font-size:50px;
 	text-transform: uppercase;
@@ -1026,7 +1026,7 @@ Xavier
 }
 >>>>>>> cb22e2550c47964b15cbb71f57efdec360985e8f
 
-.encadrement a{
+.encadrement.right a{
 	color:#818181;
 	text-transform: uppercase;
 	font-size:25px;

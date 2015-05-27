@@ -1,5 +1,5 @@
 <div id="carre-inscription"></div>
-<?php echo heading("$nom_page", 1, 'id="titre-inscription"'); ?>
+<h1 id="titre-inscription">inscription</h1>
 <form id="formulaire-inscription" class="form-loki">
 	<div class="form-moitie">
 		<div class="form-group">
