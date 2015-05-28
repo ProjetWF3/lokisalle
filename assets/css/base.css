@@ -953,12 +953,17 @@ Xavier
 #panier_titre {
 	width: 100%;
 }
+
+/* 1. VEILLEZ REMPLIR LE FORMULAIRE */
 #panier_valider {
 	width: 100%;
-	padding-bottom: 20px;
+  	height: 50px;
 }
 #panier_valider p {
-	float: left;
+  	position: relative;
+  	left: 55px;
+  	top: 12px;
+  	font-size: 1.2em;
 }
 .panier_titre_rond {
 	position: absolute;
@@ -968,7 +973,6 @@ Xavier
 	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
-	border: 0px solid black;
 	
 }
 .panier_titre_rond small {
@@ -978,6 +982,8 @@ Xavier
 	top: 12px;
   	left: 18px;
 }
+
+/*****     TABLEAU     ******/
 #tableau_panier {
 	clear: left;
 }

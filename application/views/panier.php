@@ -19,7 +19,7 @@
     		<th>Prix HT</th>
     		<th>TVA</th>
   		</tr>
-  		<?php  for ($i=0; $i <6 ; $i++) { ?>
+  		<?php  for ($i=0; $i <10 ; $i++) { ?>
   		<tr>
     		<td>2</td>
     		<td>Baron</td>
