@@ -18,57 +18,58 @@ a:hover {
 	width:1290px;
 	margin:auto;
 }
-h1 {
-	font-size: 1.638em;
-	margin-bottom: 1em;
-}
-
-.encadrement{
-	border-radius:5px;
-	width:575px;
-	height:482px;
-	background: #e1e5e8;
-	box-shadow: 5px 13px 15px rgba(0, 0, 0, .25);
-}
-
-
-.left {
-	float:left;
-}
-
-.right {
-	float: right;
-}
-
 .titre {
 	position: relative;
-	margin-left: 30px;
+	margin-left: 40px;
 }
 .titre::before {
 	content: '';
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 	background: #5b646c;
 	position: absolute;
-	left: -30px;
+	left: -40px;
 	top: 3px;
 }
-
-.encadrement{
+.encadrement,
+.encadrement-central {
 	border-radius:5px;
-	width:575px;
-	height:482px;
 	background: #e1e5e8;
-	box-shadow: 5px 13px 15px rgba(0, 0, 0, .25);
+	box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, .25);
 }
-
-
+.encadrement {
+	width:575px;
+	min-height:482px;
+}
+.encadrement-central {
+	margin: 25px auto;
+	width: 1150px;
+}
 .left {
 	float:left;
 }
-
 .right {
 	float: right;
+}
+.panier {
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	overflow: hidden;
+}
+.panier-img {
+	width: 25px;
+	height: 25px;
+	background: #bcd4ea url(../img/panier.png) 50% no-repeat;
+	background-size: 63%;
+	float:left;
+}
+.ajout-panier{
+	float:left;
+	background:#5b646c;
+	border-style: none;
+	color:#bcd4ea;
+	height:25px;
 }
 
 /********************************************************************
@@ -144,53 +145,38 @@ h1 {
 		MAIN
 
 **************************************************/
-#main{
-	margin:60px auto;
-	min-height: 600px;
+#main {
+	margin: 30px auto;
+	min-height: 700px;
 }
-#contenu{
+#contenu {
 	border:1px solid black;
 	width:700px;
 	padding: 20px;
 	float:left;
 }
-#contenu h1{
-	font-weight: 700;
-}
+
+
 /********************************************
 
 			SIDEBAR
 
 ************************************************/
 #sidebar{
-	background-color: #e1e5e8;
 	width:490px;
-	border:1px solid black;
 	float:right;
 	margin-bottom: 25px;
+	padding: 20px; 
 }
-
-.carre{
-	float: left;
-	width: 20px;
-	height:20px;
-	background:#5b646c;
-	margin: 10px 10px 10px 10px;
-}
-
-#lastinf {
-	 height: 20px;
-  	 margin-top: 12px;
-  	 text-transform: uppercase;
-  	 font-weight: 700;
-  	 font-size: 20px;
-}
-
 .offres{
 	position: relative;
 	height:140px;
 	border:1px solid black;
-	margin: 44px 36px 18px 30px;
+	margin: 40px 30px;
+}
+.offres .panier {
+	bottom: 2px;
+	right: auto;
 }
 
 .offres .cadre {
@@ -212,31 +198,6 @@ h1 {
 	margin-left: 10px;
 }
 
-.offres .infos .panier{
-	position: absolute;
-	right: 130px;
-	bottom: 1px;
-	clear: both;
-}
-.offres .infos .panier img{
-	padding: 5px;
-}
-
-.offres .infos .panier-img {
-  width: 25px;
-  height: 25px;
-  background: #bcd4ea;
-  float:left;
-}
-
-.offres .infos .ajout-panier{
-	float:left;
-	background:#5b646c;
-	border-style: none;
-	color:#bcd4ea;
-	height:25px;
-}
-
 .offres .infos .infos-details li {
 	font-size: 20px;
 }
@@ -247,29 +208,30 @@ JB
 		PAGE RECHERCHE
 
 **************************************************/
+#page-recherche .encadrement-central {
+	min-height: 424px;
+}
+.search {
+	width: 930px;
+	margin: 0 auto;
+	overflow: hidden;
+}
 #formulaire-recherche {
-	border: 1px solid black;
 	height: 30px;
 	margin-top: 50px;
-	margin-left: -80px;
 	width: 800px;
 	float: left;
 }
-
-#carre-recherche {
+#resultats-nombre {
+	width: 100px;
+	display: block;
 	float: left;
-	width: 20px;
-	height: 20px;
-	background: #5b646c;
+	margin-top: 55px;;
+	margin-left: 30px;
+	color: #4e99e1;
+	font: italic 20px "bebe";
 }
 
-#titre-recherche {
-	color: #818181;
-	float: left;
-	font: 25px "bebe";
-	text-transform: uppercase;
-	padding-left: 10px;
-}
 
 .champs {
 	height: 25px;
@@ -337,25 +299,9 @@ JB
 	top: -2px;
 }
 
-#resultats-nombre {
-	border: 1px solid black;
-	width: 100px;
-	display: block;
-	float: left;
-	margin-top: 55px;;
-	margin-left: 30px;
-	color: #4e99e1;
-	font: italic 20px "bebe";
-}
 
-#resultats-affichage {
-	border: 1px solid black;
-	height: 1000px;
-	margin-top: 25px;
-	width: 1150px;
-	float: left;
-	background: #e1e5e8;
-}
+
+
 
 .offres-recherche {
 	position: relative;
@@ -388,25 +334,6 @@ JB
 	margin-left: 10px;
 }
 
-.offres-recherche .infos .panier {
-	position: absolute;
-	right: 15px;
-	bottom: 15px;
-	clear: both;
-}
-
-.offres-recherche .infos .panier img {
-	padding: 5px;
-	margin: auto;
-}
-
-.offres-recherche .infos .panier-img {
-  width: 25px;
-  height: 25px;
-  background: #bcd4ea;
-  float:left;
-}
-
 .offres-recherche .infos .ajout-panier {
 	float:left;
 	background:#5b646c;
@@ -425,37 +352,12 @@ JB
 
 **************************************************/
 
-#carre-inscription {
-	float: left;
-	width: 20px;
-	height: 20px;
-	background: #5b646c;
+#page-inscription .encadrement-central {
+	width: 750px;
 }
-
-#titre-inscription {
-	color: #818181;
-	float: left;
-	font: 25px "bebe";
-	text-transform: uppercase;
-	padding-left: 10px;
-}
-
-.form-loki {
-	border: 1px solid #656d75;
-	height: 270px;
-	margin: 55px auto 0 auto;
-	width: 500px;
-	background: #e1e5e8;
-
-}
-
 #formulaire-inscription .form-moitie {
-	width: 225px;
-	margin: 12px 0 0 24px;
-}
-
-#formulaire-inscription div {
-	margin: 0 10px 6px 0px;
+	width: 30%;
+	margin: 15px 8% 15px;
 	float: left;
 }
 
@@ -464,14 +366,8 @@ JB
 }
 
 #formulaire-inscription .form-group {
-		float: left;
-		position: relative;
-}
-
-#formulaire-inscription .form-group div {
-		float: left;
-		position: relative;
-		margin: -9px 0 -8px 0;
+	float: left;
+	width: 100%;
 }
 
 #formulaire-inscription .label-inscription {
@@ -480,7 +376,7 @@ JB
 }
 
 #formulaire-inscription .label-sexe {
-	margin: 10px 10px 10px 10px;
+	margin: 2px 15px;
 }
 
 #formulaire-inscription .form-control:focus {
@@ -687,30 +583,7 @@ Xavier
 .span-capacite, .span-categorie {
 	color: #4e99e1;
 }
-#salle-panier {
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
-}
-#salle-panier a{
-	float: left;
-	float: left;
-	width: 40px;
-	height: 30px;
-	background: #bcd4ea no-repeat;
-}
-#salle-panier img {
-	margin-top: 2px;
-	margin-left: 10px;
-}
-#salle-panier input {
-	width: 180px;
-	height: 30px;
-	background: #5b646c no-repeat;
-	color: #bcd4ea;
-	text-transform: uppercase;
-	border: none;
-}
+
 
 /***********     INFORMATIONS  ---   AVIS     *********/
 
@@ -957,30 +830,23 @@ Xavier
 
 
 
-
-
-
-
-=======
 /*****************************************************
 
 *    cedric PAGE CONNEXION *
 
 
 *****************************************************/
-.carre{
-	float: left;
-	width: 20px;
-	height: 20px;
-	background: #5b646c;
-}
 
-#connexion h1{
+/* #connexion h1{
 	color:#818181;
 	font:25px 'Bebe';
 	text-transform: uppercase;
-	/*padding-left: 10px;*/
+	padding-left: 10px;
 	padding-top:10px;
+} */
+
+#page-connexion .encadrement {
+
 }
 
 
