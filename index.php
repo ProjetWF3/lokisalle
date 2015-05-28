@@ -7,7 +7,7 @@ $pathConf = "./application/config/config.php";
 if(file_exists($pathConf)) include_once($pathConf);
 
 //Les pages à afficher
-if (isset($_GET["page"])){
+if (isset($_GET["page"]) && !empty($_GET['page'])){
 	$page = $_GET["page"];
 } else {
 	$page = "accueil"; // page accueil par defaut

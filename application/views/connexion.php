@@ -23,6 +23,9 @@
                             <div>
                                 <input type="checkbox" name="choix" />
                             </div>
+                                <div>
+                                    <input type="submit"  value="connexion" />
+                                </div>
                         </div>
     				</form>
     			</div>
