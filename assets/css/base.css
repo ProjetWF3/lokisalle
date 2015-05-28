@@ -364,7 +364,6 @@ line-height: normal;
 #page-inscription .form-control {
 	display: block;
 	width: 136%;
-	height: 25px;
 	padding: 6px 12px;
 	font-size: 18px;
 	line-height: 1.42857143;
@@ -377,6 +376,10 @@ line-height: normal;
 	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
 	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+#page-inscription .form-control:focus {
+	border-color: #66afe9;
+	outline: 0;
 }
 #page-inscription .form-radio {
 	display: block;
@@ -782,7 +785,8 @@ Xavier
 	width: 100%;
   	height: 50px;
 }
-#panier_valider p {
+#panier_valider p,
+#conditions p {
   	position: relative;
   	left: 55px;
   	top: 12px;
@@ -807,12 +811,10 @@ Xavier
 }
 
 /*****     TABLEAU     ******/
-#tableau_panier {
-	clear: left;
-}
+
 #tableau_panier table {
 	background: #bcd4ea no-repeat;
-	width: 80%;
+	width: 100%;
 }
 #tableau_panier tr:nth-child(1) {
 	background: #5b646c no-repeat;
@@ -834,15 +836,81 @@ Xavier
 #prix_total {
 	text-align: center;
 }
-
-#tableau_panier td:nth-child(8) {
-	text-align: center;
-	color:red;
-	font-weight: bold;
+#tableau_panier td:nth-child(3) img {
+	width: 100%;
+	height: 50px;
 }
+/* CAPACITE SELECT */
+#tableau_panier td:nth-child(5) select {
+	padding-left: 10px;
+	margin-left: 10px;
+}
+#tableau_panier td:nth-child(8) a {
+	padding-left: 10px;
+}
+#tableau_panier td:nth-child(8) a:hover {
+	color:red;
+}
+
 #total #resultat {
 	background: #4e99e1 no-repeat;
 	text-align: center;
+}
+
+/* CONDITIONS */
+#conditions {
+	width: 100%;
+	height: 250px;
+}
+#conditions input {
+	position: relative;
+	top: -10px;
+	left: 420px;
+	width: 20px;
+	height: 20px;
+}
+#conditions a {
+	cursor: help;
+}
+#code_promo {
+	width: 100%;
+	position: absolute;
+}
+#code_promo input {
+	position:relative;
+	left: 250px; 
+	width: 190px;
+	height: 30px;
+}
+#code_promo input:nth-child(3) {
+	position:absolute;
+	left: 1070px;
+	width: 230px;
+  	height: 60px;
+	background: #4e99e1;
+	color: white;
+	font-size: 1.4em;
+	border: none;
+}
+#code_promo input:nth-child(3):hover {
+	border: 2px solid black;
+	color: black;
+}
+#conditions_texte {
+	border-top: 1px solid #4e99e1;
+	-webkit-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.38);
+	-moz-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.38);
+	box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.38);
+	padding-top: 10px;
+	width: 60%;
+	height: 100px;
+	margin: auto;
+	position: relative;
+	top: 100px;
+	text-align: center;
+}
+#conditions_texte p {
+	font-size: 1em;
 }
 
 /*****************************************************
