@@ -49,7 +49,7 @@
 <div id="conditions">
 
 	<div id="conditions_gauche">
-    <span class="panier_titre_rond"><small>2</small></span>
+    <small>2</small>
   	<p>J’accepte les conditions générales de vente <a>(voir)</a></p>
     <input type="checkbox"></input>
     <p>Utiliser un code promo :</p>

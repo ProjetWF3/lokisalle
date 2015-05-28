@@ -854,15 +854,57 @@ Xavier
 #conditions {
 	width: 100%;
 	border: 1px solid black;
-	height: 100px;
+	height: 200px;
+	position: relative;
+}
+#conditions_rond {
+	float: left;
+}
+#conditions small {
+	float: left;
+	display: block;
+	font-size: 1.4em;
+	margin-left: 10px;
+	position: absolute;
+	z-index: 999;
+
+}
+#conditions small::before {
+	content: "";
+	display: inline-block;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background: #4e99e1 no-repeat ;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	z-index: 0;
+
 }
 #conditions_gauche {
 	float: left;
 	width: 50%;
+	height: 100px;
+	border: 1px solid black;
+}
+#conditions_gauche input[type=checkbox] {
+	float: left;
+}
+#conditions_gauche p:nth-child(1) {
+	float: left;
 }
 #conditions_droite {
 	float: right;
 	width: 50%;
+	height: 100px;
+	border: 1px solid black;
+
+}
+#conditions_droite input[type=submit] {
+	position: absolute;
+	right: 0px;
+	bottom: 100px;
 }
 #conditions a {
 	cursor: help;
@@ -870,6 +912,7 @@ Xavier
 #conditions_texte {
 	clear: left;
 	height: 100px;
+	border: 1px solid black;
 }
 
 

@@ -54,15 +54,22 @@
 		</tr>
 	</table>
 </div>
-<div id="conditions"class="clearfix">
-	<span class="panier_titre_rond"><small>2</small></span>
-	<p>J’accepte les conditions générales de vente <a>(voir)</a></p>
-  <input type="checkbox"></input>
-  <div id="code_promo">
+<div id="conditions">
+
+  <div id="conditions_gauche">
+    <div id="conditions_rond">
+      <small>2</small>
+    </div>
+    <p>J’accepte les conditions générales de vente <a>(voir)</a></p>
+    <input type="checkbox"></input>
     <p>Utiliser un code promo :</p>
     <input type="text"></input>
+  </div>
+
+  <div id="conditions_droite">
     <input type="submit" value="PAYER"></input>
   </div>
+
   <div id="conditions_texte">
     <p>Tous nos articles sont calculés avec le taux de TVA à 19,6%</p>
     <p>Règlement: Par Chèque uniquement</p>
