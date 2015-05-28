@@ -778,8 +778,7 @@ Xavier
 	width: 100%;
   	height: 50px;
 }
-#panier_valider p,
-#conditions p {
+#panier_valider p {
   	position: relative;
   	left: 55px;
   	top: 12px;
@@ -853,7 +852,6 @@ Xavier
 /* CONDITIONS */
 #conditions {
 	width: 100%;
-	border: 1px solid black;
 	height: 200px;
 	position: relative;
 }
@@ -861,58 +859,94 @@ Xavier
 	float: left;
 }
 #conditions small {
-	float: left;
 	display: block;
-	font-size: 1.4em;
-	margin-left: 10px;
-	position: absolute;
-	z-index: 999;
-
-}
-#conditions small::before {
-	content: "";
-	display: inline-block;
 	position: relative;
+	padding-left: 15px;
+  	padding-top: 10px;
 	width: 40px;
 	height: 40px;
+	color: white;
+	font-size: 1.4em;
 	background: #4e99e1 no-repeat ;
 	border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	z-index: 0;
-
+}
+#conditions small::after {
+	content: "";
+	float: left;
+	display: block;
+	font-size: 1.4em;
+	margin-left: 10px;
+	position: absolute;
+}
+#conditions_gauche p {
+	margin-left: 60px;
 }
 #conditions_gauche {
 	float: left;
 	width: 50%;
 	height: 100px;
-	border: 1px solid black;
 }
 #conditions_gauche input[type=checkbox] {
-	float: left;
+	float: right;
+	width: 20px;
+	height: 20px;
+	margin-right: 160px;
+	margin-top: -30px;
 }
-#conditions_gauche p:nth-child(1) {
+#conditions_gauche .conditions_p1 {
+	line-height: 42px;
+	font-size: 1.2em;
+}
+#conditions_gauche .conditions_p2 {
+	clear: both;
 	float: left;
+	line-height: 30px;
+	font-size: 1.2em;
+}
+#conditions_gauche input[type=text] {
+	float: left;
+  	margin-left: 45px;
+  	width: 200px;
+  	height: 30px;
 }
 #conditions_droite {
 	float: right;
 	width: 50%;
 	height: 100px;
-	border: 1px solid black;
 
 }
 #conditions_droite input[type=submit] {
 	position: absolute;
 	right: 0px;
 	bottom: 100px;
+	width: 190px;
+  	height: 50px;
+  	font-size: 1.8em;
+  	color: white;
+  	background: #4e99e1 no-repeat;
+  	border: none;
+}
+#conditions_droite input[type=submit]:hover {
+	border: 1px solid black;
+	color: black;
 }
 #conditions a {
 	cursor: help;
 }
 #conditions_texte {
-	clear: left;
-	height: 100px;
-	border: 1px solid black;
+	clear: both;
+	margin: auto;
+	width: 50%;
+	height: 150px;
+}
+#conditions_texte p {
+	text-align: center;
+}
+#conditions_texte p:nth-child(1) {
+	padding-top: 45px;
 }
 
 

@@ -54,15 +54,17 @@
 		</tr>
 	</table>
 </div>
-<div id="conditions">
+<div id="conditions" class="clearfix">
 
   <div id="conditions_gauche">
+
     <div id="conditions_rond">
       <small>2</small>
     </div>
-    <p>J’accepte les conditions générales de vente <a>(voir)</a></p>
+
+    <p class="conditions_p1">J’accepte les conditions générales de vente <a>(voir)</a></p>
     <input type="checkbox"></input>
-    <p>Utiliser un code promo :</p>
+    <p class="conditions_p2">Utiliser un code promo :</p>
     <input type="text"></input>
   </div>
 
