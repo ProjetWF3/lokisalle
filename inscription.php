@@ -1,26 +1,34 @@
 <?php 
-	//fichier de configuration
-	$pathConf = "./application/config/config.php";
-	if(file_exists($pathConf)) include_once($pathConf);
+//fichier de configuration
+$pathConf = "./application/config/config.php";
+if(file_exists($pathConf)) include_once($pathConf);
 
-	// on inclut le header
-	include_once("./application/theme/header.php"); 
+// on inclut le header
+include_once("./application/theme/header.php"); 
 
-$msg = '';
-$inscription = $db->prepare("INSERT INTO membre (prenom, nom, ville, cp, adresse, email, pseudo, mdp, sexe)
-			VALUES (:prenom, :nom, :ville, :cp, :adresse, :email, :pseudo, :mdp, :sexe)");
+
+
+
+
+// gestion de l'inscription
 if(!empty($_POST)) {
 	if(!empty($_POST['prenom']) && !empty($_POST['nom']) && !empty($_POST['ville']) && !empty($_POST['cp']) && !empty($_POST['adresse']) && !empty($_POST['email']) && !empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['sexe'])) {
-		$inscription->bindValue(':prenom', $_POST['prenom'], PDO::PARAM_STR);
-		$inscription->bindValue(':nom', $_POST['nom'], PDO::PARAM_STR);
-		$inscription->bindValue(':ville', $_POST['ville'], PDO::PARAM_STR);
-		$inscription->bindValue(':cp', $_POST['cp'], PDO::PARAM_INT);
-		$inscription->bindValue(':adresse', $_POST['adresse'], PDO::PARAM_STR);
-		$inscription->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
-		$inscription->bindValue(':pseudo', $_POST['pseudo'], PDO::PARAM_STR);
-		$inscription->bindValue(':mdp', $_POST['mdp'], PDO::PARAM_STR);
-		$inscription->bindValue(':sexe', $_POST['sexe'], PDO::PARAM_STR);
-		$inscription->execute();
+
+$msg = '';
+			$inscription = $db->prepare(
+				"INSERT INTO membre (prenom, nom, ville, cp, adresse, email, pseudo, mdp, sexe)
+				VALUES (:prenom, :nom, :ville, :cp, :adresse, :email, :pseudo, :mdp, :sexe)"
+				);
+			$inscription->bindValue(':prenom', $_POST['prenom'], PDO::PARAM_STR);
+			$inscription->bindValue(':nom', $_POST['nom'], PDO::PARAM_STR);
+			$inscription->bindValue(':ville', $_POST['ville'], PDO::PARAM_STR);
+			$inscription->bindValue(':cp', $_POST['cp'], PDO::PARAM_INT);
+			$inscription->bindValue(':adresse', $_POST['adresse'], PDO::PARAM_STR);
+			$inscription->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
+			$inscription->bindValue(':pseudo', $_POST['pseudo'], PDO::PARAM_STR);
+			$inscription->bindValue(':mdp', $_POST['mdp'], PDO::PARAM_STR);
+			$inscription->bindValue(':sexe', $_POST['sexe'], PDO::PARAM_STR);
+			$inscription->execute();
 		} else { 
 			$msg .= '<p class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Erreur : </span>Veuillez remplir tous les champs !</p>';
 		}	
@@ -43,7 +51,7 @@ echo '</pre>';
 			</div>
 			<div class="form-group">
 				<label id="label-mot-de-passe" class="label-inscription">mot de passe</label>
-				<input type="text" name="mdp" class="form-control" id="mot-de-passe">
+				<input type="password" name="mdp" class="form-control" id="mot-de-passe">
 			</div>
 			<div class="form-group">
 				<label id="label-nom" class="label-inscription">nom</label>
@@ -63,7 +71,7 @@ echo '</pre>';
 				<div>
 					<span class="label-inscription">sexe</span>
 					<label class="label-sexe" for="homme">homme <input class="form-radio" id="homme" type="radio" name="sexe" value="h" <?php echo (!empty($_POST['sexe']) && $_POST['sexe'] === 'm') ? 'checked="checked"' : ''; ?>></label>
-					<label class="label-sexe" for="femme">homme <input class="form-radio" id="femme" type="radio" name="sexe" value="f" <?php echo (!empty($_POST['sexe']) && $_POST['sexe'] === 'f') ? 'checked="checked"' : ''; ?>></label>
+					<label class="label-sexe" for="femme">femme <input class="form-radio" id="femme" type="radio" name="sexe" value="f" <?php echo (!empty($_POST['sexe']) && $_POST['sexe'] === 'f') ? 'checked="checked"' : ''; ?>></label>
 				</div>
 			</div>
 			<div class="form-group">
