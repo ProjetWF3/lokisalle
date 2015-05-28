@@ -853,58 +853,26 @@ Xavier
 /* CONDITIONS */
 #conditions {
 	width: 100%;
-	height: 250px;
+	border: 1px solid black;
+	height: 100px;
 }
-#conditions input {
-	position: relative;
-	top: -10px;
-	left: 420px;
-	width: 20px;
-	height: 20px;
+#conditions_gauche {
+	float: left;
+	width: 50%;
+}
+#conditions_droite {
+	float: right;
+	width: 50%;
 }
 #conditions a {
 	cursor: help;
 }
-#code_promo {
-	width: 100%;
-	position: absolute;
-}
-#code_promo input {
-	position:relative;
-	left: 250px; 
-	width: 190px;
-	height: 30px;
-}
-#code_promo input:nth-child(3) {
-	position:absolute;
-	left: 1070px;
-	width: 230px;
-  	height: 60px;
-	background: #4e99e1;
-	color: white;
-	font-size: 1.4em;
-	border: none;
-}
-#code_promo input:nth-child(3):hover {
-	border: 2px solid black;
-	color: black;
-}
 #conditions_texte {
-	border-top: 1px solid #4e99e1;
-	-webkit-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.38);
-	-moz-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.38);
-	box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.38);
-	padding-top: 10px;
-	width: 60%;
+	clear: left;
 	height: 100px;
-	margin: auto;
-	position: relative;
-	top: 100px;
-	text-align: center;
 }
-#conditions_texte p {
-	font-size: 1em;
-}
+
+
 
 /*****************************************************
 
