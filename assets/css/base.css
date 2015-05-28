@@ -129,7 +129,6 @@ a:hover {
 	margin-top: -1px;
 	line-height: 2.7;
 }
-
 #header-menu a.active {
 	color:#000;
 	background:#bcd4ea;
@@ -1109,10 +1108,7 @@ TB
 		PAGE CONTACT
 
 *******************************************************************/
-#page-contact form {
-	width: 80%;
-	margin: 10% 0; 
-}
+
 
 
 

@@ -15,5 +15,10 @@
 	</footer>
 	<script src="<?php echo BASE_URL; ?>assets/js/jquery.js"></script>
 	<script src="<?php echo BASE_URL; ?>assets/js/app.js"></script>
+	<?php if(substr(strrchr($_SERVER['PHP_SELF'], "/"), 1) == "contact.php"): ?>
+	<script src="<?php echo BASE_URL; ?>assets/js/contactme.js"></script>
+	<script src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
+	<script src="<?php echo BASE_URL; ?>assets/js/jqBootstrapValidation.js"></script>
+	<?php endif; ?>
 	</body>
 </html>
