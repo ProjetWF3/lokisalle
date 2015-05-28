@@ -1,3 +1,11 @@
+<?php 
+	//fichier de configuration
+	$pathConf = "./application/config/config.php";
+	if(file_exists($pathConf)) include_once($pathConf);
+
+	// on inclut le header
+	include_once("./application/theme/header.php"); 
+?>
 <div id="page-reservation">
 	<div id="titre">
 		<h1 class="h1 titre">Réservation <small>> en détail</small></h1>
@@ -119,3 +127,7 @@
 		</div>	
 	</div>
 </div>
+<?php 
+	// on inclut le footer
+	include_once("./application/theme/footer.php"); 
+?>

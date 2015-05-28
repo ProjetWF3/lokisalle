@@ -1,3 +1,11 @@
+<?php 
+  //fichier de configuration
+  $pathConf = "./application/config/config.php";
+  if(file_exists($pathConf)) include_once($pathConf);
+
+  // on inclut le header
+  include_once("./application/theme/header.php"); 
+?>
 <div id="panier_titre">
 	<h1 class="h1 titre">Panier</h1>
 </div>
@@ -43,9 +51,7 @@
 	<span class="panier_titre_rond"><small>2</small></span>
 	<p>J’accepte les conditions générales de vente (voir)</p>
 </div>
-	
-
-
-
-
-
+<?php 
+  // on inclut le footer
+  include_once("./application/theme/footer.php"); 
+?>
