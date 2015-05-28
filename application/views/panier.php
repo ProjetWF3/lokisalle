@@ -1,5 +1,5 @@
 <div id="panier_titre">
-	<h1 class="titre">Panier</h1>
+	<h1 class="h1 titre">Panier</h1>
 </div>
 	<div id="panier_valider">
 	<span class="panier_titre_rond"><small>1</small></span>
@@ -21,14 +21,21 @@
   		</tr>
   		<?php  for ($i=0; $i <10 ; $i++) { ?>
   		<tr>
-    		<td>2</td>
+    		<td>N°2</td>
     		<td>Baron</td>
-    		<td>image1</td>
+    		<td><img src=""></td>
     		<td>Paris</td>
-    		<td>3</td>
+    		<td>
+          <select>
+            <option value="volvo">1</option>
+            <option value="saab">2</option>
+            <option value="opel">3</option>
+            <option value="audi">4</option>
+          </select>
+        </td>
     		<td>27/05/2015</td>
     		<td>30/05/2015</td>
-    		<td><input type="checkbox"></td>
+    		<td><a href=""><span class="glyphicon glyphicon-trash" aria-label="Left Align"></span></a></td>
     		<td>500 €</td>
     		<td>19.6%</td>
   		</tr>
@@ -39,9 +46,21 @@
 		</tr>
 	</table>
 </div>
-<div id="conditions">
+<div id="conditions"class="clearfix">
 	<span class="panier_titre_rond"><small>2</small></span>
-	<p>J’accepte les conditions générales de vente (voir)</p>
+	<p>J’accepte les conditions générales de vente <a>(voir)</a></p>
+  <input type="checkbox"></input>
+  <div id="code_promo">
+    <p>Utiliser un code promo :</p>
+    <input type="text"></input>
+    <input type="submit" value="PAYER"></input>
+  </div>
+  <div id="conditions_texte">
+    <p>Tous nos articles sont calculés avec le taux de TVA à 19,6%</p>
+    <p>Règlement: Par Chèque uniquement</p>
+    <p>Nous attendons votre règlement par chèque à l'adresse suivante:</p>
+    <p>Ma boutique ‐ 1 Rue Boswellia, 75000 Paris, France</p>
+  </div>
 </div>
 	
 
