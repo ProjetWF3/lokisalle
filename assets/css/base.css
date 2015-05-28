@@ -46,7 +46,7 @@ a:hover {
 	width: 1150px;
 }
 .left {
-	float:left;
+	float: left;
 }
 .right {
 	float: right;
@@ -75,6 +75,9 @@ a:hover {
 /********************************************************************
  * 	  Header    *
  *******************************************************************/
+#header {
+	height: 160px;
+}
 #header-menu {
 	margin:auto;
 	width: 100%;
@@ -82,14 +85,8 @@ a:hover {
 #header-banniere {
 	background: #bcd4ea;
 	height: 87px;
-	box-shadow: 0px 1px 16px rgba(0, 0, 0, .5) ;
-	/*position:relative;
-	z-index:999;
-	top:0;
-	left:0;
-	width: 100%;*/
+	box-shadow: 0px 1px 16px rgba(0, 0, 0, .5);
 }
-
 #logo {
 	font-size: 72px;
 	font-family: 'Lobster';
@@ -100,12 +97,10 @@ a:hover {
 	text-decoration: none;
 }
 
+
 /********************************************* 
 		MENU 
 *******************************************/
-#header-menu ul {
-
-}
 #header-menu li {
 	float:left;
 	overflow: hidden;
@@ -1060,23 +1055,6 @@ JB
 		PAGE MENTIONS LEGALES, CGV, plan du site, newsletter
 
 *******************************************************************/
-#titre-mentions,  
-#titre-cgv, 
-#titre-plan, 
-#titre-newsletter {
-	color: #818181;
-	float: left;
-	font: 25px "bebe";
-	text-transform: uppercase;
-	padding-left: 10px;
-}
-#carre-mentions, #carre-cgv, #carre-plan, #carre-newsletter {
-	float: left;
-	width: 20px;
-	height: 20px;
-	background: #5b646c;
-}
-
 #mentions, #cgv, #plan, #newsletter {
 	margin: 100px 190px;
 	width: 900px;

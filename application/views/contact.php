@@ -1,5 +1,3 @@
 <div id="page-contact">
-	<div id="contenu">
-		
-	</div>
+	<h1 class="h1 titre">Contact</h1>
 </div>
