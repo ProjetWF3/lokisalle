@@ -89,7 +89,6 @@ a:hover {
 	left:0;
 	width: 100%;*/
 }
-
 #logo {
 	font-size: 72px;
 	font-family: 'Lobster';
@@ -103,9 +102,6 @@ a:hover {
 /********************************************* 
 		MENU 
 *******************************************/
-#header-menu ul {
-
-}
 #header-menu li {
 	float:left;
 	overflow: hidden;
@@ -134,11 +130,11 @@ a:hover {
 	margin-top: -1px;
 	line-height: 2.7;
 }
+
 #header-menu a.active {
 	color:#000;
 	background:#bcd4ea;
 }
-
 
 /************************************************
 
@@ -155,7 +151,6 @@ a:hover {
 	padding: 20px;
 	float:left;
 }
-
 
 /********************************************
 
@@ -178,26 +173,21 @@ a:hover {
 	bottom: 2px;
 	right: auto;
 }
-
 .offres .cadre {
 	width: 140px;
 	background-image: url('../img/cadre_accueil.png') ;
 	background-repeat:no-repeat;
 	float:left;
 }
-
 .offres .cadre img {
 	margin: 15px 15px;
 }
-
 .offres .infos{
 	margin: 15px 15px 0px 155px;
 }
-
 .offres .infos .infos-details ul li{
 	margin-left: 10px;
 }
-
 .offres .infos .infos-details li {
 	font-size: 20px;
 }
@@ -231,8 +221,6 @@ JB
 	color: #4e99e1;
 	font: italic 20px "bebe";
 }
-
-
 .champs {
 	height: 25px;
 	background: #818181;
@@ -248,7 +236,6 @@ JB
 	font: 20px "bebe";
 	margin-left: 30px;
 }
-
 #formulaire-recherche input[type=text] {
 	height: 25px;
 	width: 280px;
@@ -258,7 +245,6 @@ JB
 	background-color: #818181;
 	border: 1px solid #5b646c;
 }
-
 #formulaire-recherche input[type=text]::-webkit-input-placeholder {
 	padding-left: 2px;
 	opacity: 0.5;
@@ -283,7 +269,6 @@ JB
 	font: 20px "bebe";
 	color: #fff;	
 }
-
 #formulaire-recherche input[type=submit] {
 	background: url(../img/loupe.png) no-repeat center;
 	border: 0;
@@ -291,18 +276,11 @@ JB
 	height: 17px;
 	width: 17px;
 	padding: 6px;
-	/* On change le box-sizing */
 	box-sizing: content-box;
-	/* Pour placer au-dessus de l'input search */
 	position: relative;
 	left: 711px;
 	top: -2px;
 }
-
-
-
-
-
 .offres-recherche {
 	position: relative;
 	height: 175px;
@@ -311,7 +289,6 @@ JB
 	margin:18px 21px 18px 23px;
 	float: left;
 }
-
 .cadre-recherche {
 	width: 336px;
 	height: 174px;
@@ -320,20 +297,16 @@ JB
 	float:left;
 	z-index: 1;
 }
-
 .offres-recherche .cadre-recherche img {
 	margin: 15px 15px;
 }
-
 .offres-recherche .infos {
 	margin: -126px 15px 0px 130px;
 	width: 180px;
 }
-
 .offres-recherche .infos .infos-details ul li {
 	margin-left: 10px;
 }
-
 .offres-recherche .infos .ajout-panier {
 	float:left;
 	background:#5b646c;
@@ -341,7 +314,6 @@ JB
 	color:#bcd4ea;
 	height:25px;
 }
-
 .offres-recherche .infos .infos-details li {
 	font-size: 20px;
 }
@@ -351,7 +323,6 @@ JB
 		PAGE INSCRIPTION
 
 **************************************************/
-
 #page-inscription .encadrement-central {
 	width: 750px;
 }
@@ -360,38 +331,29 @@ JB
 	margin: 15px 8% 15px;
 	float: left;
 }
-
 #formulaire-inscription span {
 	margin: 0 10px 0 0;
 }
-
 #formulaire-inscription .form-group {
 	float: left;
 	width: 100%;
 }
-
 #formulaire-inscription .label-inscription {
 	text-transform: uppercase;
 	color: #5b646c;
 }
-
 #formulaire-inscription .label-sexe {
 	margin: 2px 15px;
 }
-
 #formulaire-inscription .form-control:focus {
 border-color: none;
-/* outline: 0;
--webkit-box-shadow: none; */
 box-shadow: none;
 }
-
 #formulaire-inscription input[type=checkbox], input[type=radio] {
 margin: 4px 0 0 -5px;
 margin-top: 1px \9;
 line-height: normal;
 }
-
 /*  Bootstrap */
 .form-control {
 display: block;
@@ -403,14 +365,13 @@ line-height: 1.42857143;
 color: #555;
 background-color: #fff;
 background-image: none;
-border: 1px solid  #5b646c;
+border: 1px solid  #AFB1B3;
 border-radius: 4px;
 box-shadow: inset 2px 2px 10px rgba(0,0,0,0.35);
 -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
 -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
-
 .form-radio {
 display: block;
 width: 136%;
@@ -420,35 +381,28 @@ font-size: 14px;
 line-height: 1.42857143;
 color: #555;
 }
-
 #formulaire-inscription input[type=radio] {
 margin: 4px 0 0 -5px;
 margin-top: 1px \9;
 line-height: normal;
 border: 1px solid #5b646c;
 }
-
 .btn-default {
-
 background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
 background-repeat: repeat-x;
 border-color: #5b646c;
 }
-
 .btn-default:hover {
-
 background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
 background-repeat: repeat-x;
 border-color: #66afe9;
 }
-
 
 /************************************************
 Xavier
 		MAIN   PAGE : "RESERVATION DETAIL"
 
 **************************************************/
-
 #page-reservation div.left {
 	width: 15%;
 }
@@ -467,7 +421,6 @@ Xavier
 	color: #4e99e1;
 	margin-right: 10px;
 }
-
 
 /********   DIV RESERVATION  *********/
 #reservation {
@@ -502,7 +455,6 @@ Xavier
 	color: #4e99e1;
 }
 
-
 /********   DIV SALLE  *********/
 #salle {
 	position: relative;
@@ -518,7 +470,6 @@ Xavier
 	float:left;
 	margin: 20px 20px;
 }
-
 
 /******** POINT *********/
 #points {
@@ -566,7 +517,6 @@ Xavier
 	color: #4e99e1;
 }
 
-
 /*********    SALLE CAPACITE    ***********/
 #salle-capacite {
 	clear: both;
@@ -584,9 +534,7 @@ Xavier
 	color: #4e99e1;
 }
 
-
 /***********     INFORMATIONS  ---   AVIS     *********/
-
 
 /*******   INFO GAUCHE  *******/
 #infos_gauche {
@@ -603,7 +551,6 @@ Xavier
 #infos_gauche .infos-container li {
 	padding-bottom: 8px;
 }
-
 .infos-container {
 	float: left;
 	width: 100%;
@@ -613,7 +560,6 @@ Xavier
 #infos_titre .carre {
 	margin-left: 0px;
 }
-
 /* INFOS GAUCHE: Titre, H2, UL, Li */
 #infos-container_gauche {
 	float: left;
@@ -640,7 +586,6 @@ Xavier
 .infos-container-span {
 	color: #4e99e1;
 }
-
 /* INFOS DROITE: H2, UL, Li */
 #infos-container_droite {
 	float: left;
@@ -683,137 +628,135 @@ Xavier
  **     MODIFICATIONS LUNDI 25/05/2015     **
  ********************************************/
 
-		#points-ronds2 {
-		float: left;
-		margin-top: 10px;
-		}
-			#points-ronds2 a {
-				display: inline-block;
-				margin: 2px 2px;
-				width: 10px;
-				height: 10px;
-				background: rgb(78, 153, 225) no-repeat ;
-				border-radius: 50%;
-				-moz-border-radius: 50%;
-				-webkit-border-radius: 50%;
-				border: 1px solid #5b646c;
-			}
+#points-ronds2 {
+	float: left;
+	margin-top: 10px;
+}
+#points-ronds2 a {
+	display: inline-block;
+	margin: 2px 2px;
+	width: 10px;
+	height: 10px;
+	background: rgb(78, 153, 225) no-repeat ;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border: 1px solid #5b646c;
+}
 
-			/****    NOUVEAU COMMENTAIRE     ****/
-		#informations-commentaires_first {
-			clear: both;
-			margin: auto;
-			background: #bcd4ea no-repeat;
-			width: 95%;
-			height: 50px;
-		}
-		#informations-commentaires_first img:nth-child(1) {
-			float: left;
-		}
-		#informations-commentaires_first img:nth-child(2) {
-			float: right;
-		}
-			#commentaire-creer {
-				clear: left;
-				margin: auto;
-				width: 95%;
-				height: 80px;
-			}
+/****    NOUVEAU COMMENTAIRE     ****/
+#informations-commentaires_first {
+	clear: both;
+	margin: auto;
+	background: #bcd4ea no-repeat;
+	width: 95%;
+	height: 50px;
+}
+#informations-commentaires_first img:nth-child(1) {
+	float: left;
+}
+#informations-commentaires_first img:nth-child(2) {
+	float: right;
+}
+#commentaire-creer {
+	clear: left;
+	margin: auto;
+	width: 95%;
+	height: 80px;
+}
+#commentaire-creer textarea {
+	margin-top: -30px;
+	width: 100%;
+	height: 60px;
+	resize: none;
+}
+#commentaire-creer p:nth-child(2) {
+	float: left;
+}
+#commentaire-creer input {
+	float: right;
+	margin-top: 10px;
+}
 
-			#commentaire-creer textarea {
-				margin-top: -30px;
-				width: 100%;
-				height: 60px;
-				resize: none;
-			}
-			#commentaire-creer p:nth-child(2) {
-				float: left;
-			}
-			#commentaire-creer input {
-				float: right;
-				margin-top: 10px;
-			}
-
-	/****** SUGGESTION *******/
-	#autres-suggestions {
-		clear: left;
-		float: left;
-		margin-top: 45px;
-  		width: 100%;
-	}
-	#autres-suggestions_titre .carre {
-		margin-left: 0px;
-	} 
-	#suggestions {
-		width:100%;
-		height: 125px;
-		margin: auto;
-		margin-top: -20px;
-	}
-	#suggestions_gauche {
-		clear: left;
-		float: left;
-		width: 10%;
-		height: 125px;
-	}
-		#suggestions_gauche a {
-			display: block;
-			margin: 20px 50px;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 30px 50px 30px 0;
-			border-color: transparent #5b646c transparent transparent;
-			  
-		}
-	#suggestions_milieu {
-		float: left;
-		width: 80%;
-		height: 125px;
-	}
-		#suggestions_offre {
-			float: left;
-			background: #e1e5e8 no-repeat;
-			width: 300px;
-			height: 100px;
-			margin: 12px;
-		}
-			#suggestions_milieu img {
-				float: left;
-			}
-			#suggestions_offre_texte {
-				float: left;
-				margin-top: 5px;
-			}
-			#suggestions_offre_texte p {
-				line-height: 0px;
-				padding-bottom: 14px;
-				margin-left: 10px;
-				font-size: 0.8em;
-			}
-			#suggestions_offre_texte p:nth-child(1) {
-				margin:5px;
-				font-size: 1em;
-				font-weight: bold;
-			}
-			#suggestions_offre_texte a {
-				margin: -10px 0 0 20px;
-			}
-	#suggestions_droite {
-		float: left;
-		width: 10%;
-		height: 125px;
-	}
-		#suggestions_droite a {
-			display: block;
-			margin: 20px 50px;
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-width: 30px 0 30px 50px;
-			border-color: transparent transparent transparent #5b646c;
-		}
-
+/****** SUGGESTION *******/
+#autres-suggestions {
+	clear: left;
+	float: left;
+	margin-top: 45px;
+	width: 100%;
+}
+#autres-suggestions_titre .carre {
+	margin-left: 0px;
+} 
+#suggestions {
+	width:100%;
+	height: 125px;
+	margin: auto;
+	margin-top: -20px;
+}
+#suggestions_gauche {
+	clear: left;
+	float: left;
+	width: 10%;
+	height: 125px;
+}
+#suggestions_gauche a {
+	display: block;
+	margin: 20px 50px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 30px 50px 30px 0;
+	border-color: transparent #5b646c transparent transparent;
+	  
+}
+#suggestions_milieu {
+	float: left;
+	width: 80%;
+	height: 125px;
+}
+#suggestions_offre {
+	float: left;
+	background: #e1e5e8 no-repeat;
+	width: 300px;
+	height: 100px;
+	margin: 12px;
+}
+#suggestions_milieu img {
+	float: left;
+}
+#suggestions_offre_texte {
+	float: left;
+	margin-top: 5px;
+}
+#suggestions_offre_texte p {
+	line-height: 0px;
+	padding-bottom: 14px;
+	margin-left: 10px;
+	font-size: 0.8em;
+}
+#suggestions_offre_texte p:nth-child(1) {
+	margin:5px;
+	font-size: 1em;
+	font-weight: bold;
+}
+#suggestions_offre_texte a {
+	margin: -10px 0 0 20px;
+}
+#suggestions_droite {
+	float: left;
+	width: 10%;
+	height: 125px;
+}
+#suggestions_droite a {
+	display: block;
+	margin: 20px 50px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 30px 0 30px 50px;
+	border-color: transparent transparent transparent #5b646c;
+}
 
 /************************************************
 Xavier
@@ -895,12 +838,9 @@ Xavier
 	text-align: center;
 }
 
-
-
 /*****************************************************
 
 *    cedric PAGE CONNEXION *
-
 
 *****************************************************/
 
@@ -962,10 +902,10 @@ Xavier
  	box-shadow: none;
 }
 #formulaire input{
-	 box-shadow: inset -3px 5px 15px rgba(0,0,0,0.35);
+	box-shadow: inset -3px 5px 15px rgba(0,0,0,0.35);
 }
 
-#formulaire input[type='submit']{
+#formulaire input[type='submit'] {
 	text-transform: uppercase;
 	background:#5b646c;
 	color:#fff;
@@ -1098,10 +1038,10 @@ JB
 }
 
 #plan div, #newsletter div {
-float: left;
-width: 620px;
-margin: 20px 0 0 0;
-font-size: 20px;
+	float: left;
+	width: 620px;
+	margin: 20px 0 0 0;
+	font-size: 20px;
 }
 
 #newsletter a {
