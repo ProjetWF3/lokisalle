@@ -1,5 +1,5 @@
 <div id="panier_titre">
-	<h1 class="titre">Panier</h1>
+	<h1 class="h1 titre">Panier</h1>
 </div>
 	<div id="panier_valider">
 	<span class="panier_titre_rond"><small>1</small></span>

@@ -75,6 +75,10 @@ a:hover {
 /********************************************************************
  * 	  Header    *
  *******************************************************************/
+#header{
+	height: 160px;
+}
+
 #header-menu {
 	margin:auto;
 	width: 100%;
@@ -904,17 +908,6 @@ Xavier
 
 *****************************************************/
 
-/* #connexion h1{
-	color:#818181;
-	font:25px 'Bebe';
-	text-transform: uppercase;
-	padding-left: 10px;
-	padding-top:10px;
-} */
-
-#page-connexion .encadrement {
-
-}
 
 
 /*****************************************************
@@ -969,11 +962,13 @@ Xavier
 	text-transform: uppercase;
 	background:#5b646c;
 	color:#fff;
+	font-size:30px;
 	width: 180px;
 	height:42px;
 	position: absolute;
 	right: 10px;
 	bottom: 10px;
+	border:none;
 }
 
 #formulaire form {
