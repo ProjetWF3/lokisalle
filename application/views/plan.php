@@ -1,6 +1,5 @@
 <div id="page-plan">
-	<div id="carre-plan"></div>
-	<h1 id="titre-plan">Plan du site</h1>
+	<h1 class="h1 titre">Plan du site</h1>
 	<div id="plan">
 		<div id="liens">
 			<a href="">>> Accueil</a>
