@@ -32,11 +32,15 @@ A ce stade vous pouvez travailler sur votre poste en local...
         git checkout developpement
         git status
         git pull origin developpement
+        git pull origin branche_perso
         git push origin developpement (puis mettre son pseudo et son mot de passe)
         git status
 # si c'est toujours okayy on retourne sur sa branche et on continue dessus
         git checkout sa_branche_locale
         ...puis on refait l'avant dernière tétape ainsi de suite...
+        
+# Cas : A et B ont travaillés sur leurs branches perso. Ils veulent tout mettre en commun sur un projet unique
+        
         
         
         
