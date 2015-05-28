@@ -42,7 +42,7 @@ A ce stade vous pouvez travailler sur votre poste en local...
 # Cas : A et B ont travaillés sur leurs branches perso. Ils ont sauvegardé sur la branche developpement chacun de leur coté.
 A veut reprendre le travail fait par B tout en conservant son propre travail (à A). A doit s'assurer d'être sur sa branche et faire :
         git checkout .
-        git checkout developpement (
+        git checkout developpement 
         git pull origin developpement (pour voir ce qui est sur la branche developpement)
         git checkout sa_branche_perso (pour retourner sur sa branche perso)
         git pull origin developpement (pour rappatrier ce qui est sur la branche developpement sur sa branche perso)
