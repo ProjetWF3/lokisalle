@@ -1,3 +1,11 @@
+<?php 
+	//fichier de configuration
+	$pathConf = "./application/config/config.php";
+	if(file_exists($pathConf)) include_once($pathConf);
+
+	// on inclut le header
+	include_once("./application/theme/header.php"); 
+?>
 <div id="page-inscription">
 	<h1 class="h1 titre">Inscription</h1>
 	<form id="formulaire-inscription" class="clearfix encadrement-central">
@@ -50,3 +58,7 @@
 		</div>			
 	</form>
 </div>
+<?php 
+	// on inclut le footer
+	include_once("./application/theme/footer.php"); 
+?>

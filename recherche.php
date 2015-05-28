@@ -1,3 +1,11 @@
+<?php 
+	//fichier de configuration
+	$pathConf = "./application/config/config.php";
+	if(file_exists($pathConf)) include_once($pathConf);
+
+	// on inclut le header
+	include_once("./application/theme/header.php"); 
+?>
 <div id="page-recherche">
 	<h1 class="h1 titre">Recherche</h1>
 
@@ -58,3 +66,7 @@
 	<?php } ?>
 	</div>
 </div>
+<?php 
+	// on inclut le footer
+	include_once("./application/theme/footer.php"); 
+?>
