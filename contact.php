@@ -5,10 +5,6 @@
 
 	// on inclut le header
 	include_once("./application/theme/header.php");
-
-	echo "<pre>";
-	print_r($_POST);
-	echo "</pre>";
 ?>
 <div id="page-contact">
 	<h1 class="h1 titre">Contact</h1>
