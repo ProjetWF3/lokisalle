@@ -14,6 +14,7 @@
 	</div>
 	<div id="sidebar" class="encadrement">
 		<h2 class="h2 titre">Nos 3 dernieres offres</h2>
+		<?php for ($i=0; $i<3; $i++) { ?>
 		<div class="offres">
 			<div class="cadre">
 				<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="110" height="110">
@@ -32,45 +33,11 @@
 				</div>
 			</div>	
 		</div>
-		<div class="offres">
-			<div class="cadre">
-				<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="110" height="110">
-			</div>
-			<div class="infos">
-				<ul class="infos-details">
-					<li><img src="<?php echo BASE_URL; ?>assets/img/calendrier.png" alt="calendrier">  Date:</li>
-					<li><img src="<?php echo BASE_URL; ?>assets/img/lieu.png" alt="lieu">  Lieu:</li>
-					<li><img src="<?php echo BASE_URL; ?>assets/img/prix.png" alt="prix">  Prix:</li>
-					<li><img src="<?php echo BASE_URL; ?>assets/img/nbrepersonnes.png" alt="nbrepersonnes">  Nbre de personnes:</li>
-				</ul>
-				<p> > Fiche detaillée:</p>
-				<div class="panier">
-					<div class="panier-img"></div>
-					<input type="submit" class="ajout-panier" value="Ajouter au panier">
-				</div>
-			</div>	
-		</div>
-		<div class="offres">
-			<div class="cadre">
-					<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="110" height="110">
-			</div>
-			<div class="infos">
-				<ul class="infos-details">
-					<li><img src="<?php echo BASE_URL; ?>assets/img/calendrier.png" alt="calendrier">  Date:</li>
-					<li><img src="<?php echo BASE_URL; ?>assets/img/lieu.png" alt="lieu">  Lieu:</li>
-					<li><img src="<?php echo BASE_URL; ?>assets/img/prix.png" alt="prix">  Prix:</li>
-					<li><img src="<?php echo BASE_URL; ?>assets/img/nbrepersonnes.png" alt="nbrepersonnes">  Nbre de personnes:</li>
-				</ul>
-				<span><p> > Fiche detaillée:</p></span>
-				<div class="panier">
-					<div class="panier-img"></div>
-					<input type="submit" class="ajout-panier" value="Ajouter au panier">
-				</div>
-			</div>	
-		</div>
+		<?php } ?>
 	</div>
 </div>
 <?php 
 	// on inclut le footer
 	include_once("./application/theme/footer.php"); 
 ?>
+		

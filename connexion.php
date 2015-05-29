@@ -5,9 +5,14 @@
 
     // on inclut le header
     include_once("./application/theme/header.php"); 
+
+    //gestion de la connection
+    $msg = '';
+
 ?>
 <div id="page-connexion">
     <div id="connexion">
+        <?php if(!empty($msg)) echo $msg; ?>
         <h1 class="h1 titre">Connexion<h1>
     	<div class="encadrement left">
     		<p>deja membre</p>
