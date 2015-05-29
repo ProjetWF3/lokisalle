@@ -65,7 +65,7 @@
 			<input type="text" id="motclef" name="motclef" placeholder="Ex : Paris">
 			<input type="submit" value="">
 		</form>
-		<div id="resultats-nombre"><?php if (!empty($search_results)){ echo $count_results; ?> résultat<?= ($count_results > 1) ? "s" : ""; ?> pour la recherche <?= !empty($search) ? $search : ''; } ?></div>
+		<div id="resultats-nombre"><?php if (!empty($search_results)){ echo $count_results . " résultat" . (($count_results > 1) ? "s" : ""); } ?></div>
 	</div>
 	
 	<?php 
@@ -89,9 +89,9 @@
 										<li>Nbre de personnes : <?= $salle['capacite'] ?></li>
 									</ul>
 									<p><a href="#"> > Fiche detaillée</a></p>
-									<form class="panier" action="panier.php?id_salle=<?= $salle['id_salle'] ?>" method="get">
+									<form class="panier" action="panier.php?id_salle=<?= $salle['id_salle']; ?>" method="GET">
 										<div class="panier-img"></div>
-										<input type="submit" name="ajoutpanier" class="ajout-panier" value="Ajouter au panier">
+										<input type="submit" class="ajout-panier" value="Ajouter au panier">
 									</form>
 								</div>
 							</div>
