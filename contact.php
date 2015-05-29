@@ -17,10 +17,10 @@
 					<div class="controls">
 						<input 	type="text" 
 								class="form-control" 
-					   				placeholder="Full Name" 
-					   				id="name" 
-					   				required
-				       			data-validation-required-message="Please enter your name" />
+					   			placeholder="Votre Nom" 
+					   			id="name" 
+					   			required
+				       			data-validation-required-message="Entrez votre Nom" />
 						<p class="help-block"></p>
 					</div>
 				</div>
@@ -29,10 +29,10 @@
 					<div class="controls">
 						<input 	type="email" 
 								class="form-control" 
-								placeholder="Email"
+								placeholder="Votre Email"
 								id="email" 
 								required
-								data-validation-required-message="Please enter your email" />
+								data-validation-required-message="Entrez votre email" />
 						<p class="help-block"></p>
 					</div>
 				</div> 	
@@ -42,19 +42,25 @@
 						<textarea 	rows="10"
 									cols="100"
 									class="form-control"
-									placeholder="Message"
+									placeholder="Votre Message"
 									id="message"
 									required
-									data-validation-required-message="Please enter your message" 
+									data-validation-required-message="Laissez votre message" 
 									minlength="5"
-									data-validation-minlength-message="Min 5 characters"
+									data-validation-minlength-message="Minimun 5 caractères"
 									maxlength="999"
 									style="resize:none"></textarea>
 						<p class="help-block"></p>
 					</div>
-				</div> 		 
+				</div>
+
 				<div id="success"></div> <!-- For success/fail messages -->
-				<button type="submit" class="btn btn-primary pull-right">Send</button>
+
+				<div class="control-group" style="overflow:hidden;">
+					<div class="controls">
+						<button type="submit" class="btn btn-primary btn-lg pull-right">Envoyez</button>
+					</div>
+				</div>				
 			</form>
 		</div>
 	</div>
