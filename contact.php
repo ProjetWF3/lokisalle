@@ -4,37 +4,60 @@
 	if(file_exists($pathConf)) include_once($pathConf);
 
 	// on inclut le header
-	include_once("./application/theme/header.php"); 
+	include_once("./application/theme/header.php");
 ?>
 <div id="page-contact">
 	<h1 class="h1 titre">Contact</h1>
-	<form class="form-horizontal">
-		<fieldset>
-			<!-- Text input-->
-			<div class="form-group">
-			  <label class="col-md-4 control-label" for="input-name">Nom</label>  
-			  <div class="col-md-6">
-			  	<input id="input-name" name="input-name" type="text" placeholder="Votre nom" class="form-control input-md" required="">
-			  </div>
-			</div>
+	<div class="row">	
+		 <!-- Alignment -->
+		<div class="col-sm-offset-3 col-sm-6">
+		   <!-- Form itself -->
+			<form name="sentMessage" class="well" id="contactForm"  novalidate>
+				<div class="control-group">
+					<div class="controls">
+						<input 	type="text" 
+								class="form-control" 
+					   				placeholder="Full Name" 
+					   				id="name" 
+					   				required
+				       			data-validation-required-message="Please enter your name" />
+						<p class="help-block"></p>
+					</div>
+				</div>
 
-			<!-- Text input-->
-			<div class="form-group">
-			  <label class="col-md-4 control-label" for="input-email">Email</label>  
-			  <div class="col-md-6">
-			  	<input id="input-email" name="input-email" type="text" placeholder="Votre email" class="form-control input-md" required="">
-			  </div>
-			</div>
-
-			<!-- Button -->
-			<div class="form-group">
-			  <label class="col-md-4 control-label" for="submit-contact"></label>
-			  <div class="col-md-4">
-			    <button id="submit-contact" name="submit-contact" class="btn btn-primary btn-lg">Envoyer</button>
-			  </div>
-			</div>
-		</fieldset>
-	</form>
+				<div class="control-group">
+					<div class="controls">
+						<input 	type="email" 
+								class="form-control" 
+								placeholder="Email"
+								id="email" 
+								required
+								data-validation-required-message="Please enter your email" />
+						<p class="help-block"></p>
+					</div>
+				</div> 	
+				  
+				<div class="control-group">
+					<div class="controls">
+						<textarea 	rows="10"
+									cols="100"
+									class="form-control"
+									placeholder="Message"
+									id="message"
+									required
+									data-validation-required-message="Please enter your message" 
+									minlength="5"
+									data-validation-minlength-message="Min 5 characters"
+									maxlength="999"
+									style="resize:none"></textarea>
+						<p class="help-block"></p>
+					</div>
+				</div> 		 
+				<div id="success"></div> <!-- For success/fail messages -->
+				<button type="submit" class="btn btn-primary pull-right">Send</button>
+			</form>
+		</div>
+	</div>
 </div>
 <?php 
 	// on inclut le footer
