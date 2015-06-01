@@ -828,8 +828,8 @@ Xavier
 	text-align: center;
 }
 #tableau_panier td:nth-child(3) img {
-	width: 100%;
-	height: 50px;
+	max-width: 30%;
+	height: auto;
 }
 /* CAPACITE SELECT */
 #tableau_panier td:nth-child(5) select {
