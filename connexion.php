@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     //fichier de configuration
     $pathConf = "./application/config/config.php";
     if(file_exists($pathConf)) include_once($pathConf);
@@ -9,6 +10,41 @@
     //gestion de la connection
     $msg = '';
 
+    if(!empty($_POST)) {
+   /* $e=extract($_POST);*/
+    if(!empty($_POST['pseudo']) && !empty($_POST['mdp'])) {
+        $verifConnexion = $db->prepare("SELECT id_membre, pseudo, email, prenom, nom, adresse, cp, ville, statut, sexe FROM membre WHERE email = :pseudo && mdp = :mdp");
+        $verifConnexion->bindValue(':pseudo', $_POST['pseudo'], PDO::PARAM_STR);
+        $verifConnexion->bindValue(':mdp', $_POST['mdp'], PDO::PARAM_STR);
+        $verifConnexion->execute();
+       /* var_dump($verifConnexion->rowCount());*/
+        if($verifConnexion->rowCount() === 0) { // si la requete renvoi 0 cela signifie que le mot de passe et l'email ne correspondent pas donc message erreur
+            $msg .= '<p class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Erreur : </span>Votre pseudo ou mots de passe sont incorrects !</p>';
+        } elseif(strlen($_POST['pseudo']) < 3) {
+            $msg .= '<p class="alert alert-danger" role="alert">Le pseudo doit contenir au moins 3 caractères .</p>'; 
+        }elseif(strlen($_POST['mdp']) < 8 || !preg_match('/[0-9]/',$_POST['password'])) {
+            $msg .= '<p class="alert alert-danger" role="alert">Le mot de passe doit contenir au moins 8 caractères dont 1 chiffre .</p>';
+        }else {
+            $profil = $verifConnexion->fetch(PDO::FETCH_ASSOC);
+            foreach($profil as $key => $value) {
+                $_SESSION['utilisateur'][$key] = $value; // je rempli une session avec les infos du profil 
+            }
+            header('location: profil.php'); // si la connexion est OK, je le redirige vers sa page profil
+            exit();
+        }
+
+    } else {
+        $msg .= '<p class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Erreur : </span>Tous les champs doivent être remplis</p>';
+    }
+}
+ 
+
+        echo '<pre>';
+        var_dump($_POST);
+        echo '</pre>';
+        /*echo '<pre>';
+        print_r($verifConnexion);
+        echo '</pre>';*/
 ?>
 <div id="page-connexion">
     <div id="connexion">
@@ -52,4 +88,3 @@
 <?php 
     // on inclut le footer
     include_once("./application/theme/footer.php"); 
-?>
