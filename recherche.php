@@ -15,7 +15,7 @@
 		if (!empty($motclef)) {
 
 			$query = $db->prepare(
-				'	SELECT pays, ville, cp, titre, capacite, categorie FROM salle
+				'	SELECT id_salle, pays, ville, cp, titre, capacite, categorie FROM salle
 					WHERE pays LIKE :motclef 
 					OR ville LIKE :motclef
 					OR cp LIKE :motclef
@@ -74,32 +74,30 @@
 			<?php if (!empty($search_results)): ?>
 
 			<div class="encadrement-central">
-				<div class="search-results list-group">
-					
-					<?php foreach($search_results as $key => $salle): ?>
 
-						<div class="offres-recherche">
-							<div class="cadre-recherche">
-								<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="110" height="110">
-								<div class="infos">
-									<ul class="infos-details">
-										<li>Date : 00 / 00 / 2015</li>
-										<li>Lieu : <?= $salle['ville'] ?></li>
-										<li>Prix : 398 $</li>
-										<li>Nbre de personnes : <?= $salle['capacite'] ?></li>
-									</ul>
-									<p><a href="#"> > Fiche detaillée</a></p>
-									<form class="panier" action="panier.php?id_salle=<?= $salle['id_salle']; ?>" method="GET">
-										<div class="panier-img"></div>
-										<input type="submit" class="ajout-panier" value="Ajouter au panier">
-									</form>
-								</div>
-							</div>
+				<?php foreach($search_results as $key => $salle): ?>
+
+					<div class="offres left">
+						<div class="cadre">
+							<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="110" height="110">
 						</div>
-						
-					<?php endforeach; ?>
+						<div class="infos">
+							<ul class="infos-details">
+								<li class="offres-sprite offres-date">Date: </li>
+								<li class="offres-sprite offres-lieu">Lieu: <?= $salle['ville'] ?></li>
+								<li class="offres-sprite offres-prix">Prix: </li>
+								<li class="offres-sprite offres-personnes">Nb de pers: <?= $salle['capacite'] ?></li>
+							</ul>
+							<p><a href="reservation_details.php?id_salle=<?= $salle['id_salle'] ?>"> > Fiche detaillée</a></p>
+							<div class="panier">
+								<div class="panier-img"></div>
+								<input type="submit" class="ajout-panier" value="Ajouter au panier">
+							</div>
+						</div>	
+					</div>
 					
-				</div>
+				<?php endforeach; ?>					
+
 			</div>
 
 			<?php else: ?>
@@ -111,29 +109,6 @@
 	<?php
 		endif;
 	?>
-
-	<?php //for ($i=0; $i <6 ; $i++) { 	
-	?>
-		<!-- <div class="offres-recherche">
-			<div class="cadre-recherche">
-				<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="110" height="110">
-				<div class="infos">
-					<ul class="infos-details">
-						<li>Date : 00 / 00 / 2015</li>
-						<li>Lieu : Paris</li>
-						<li>Prix : 398 $</li>
-						<li>Nbre de personnes : 25</li>
-					</ul>
-					<p> > Fiche detaillée:</p>
-					<div class="panier">
-						<div class="panier-img"></div>
-						<input type="submit" class="ajout-panier" value="Ajouter au panier">
-					</div>
-				</div>
-			</div>
-		</div> -->
-	<?php //} ?>
-
 
 </div>
 <?php 
