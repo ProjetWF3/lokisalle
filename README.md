@@ -9,6 +9,7 @@ puis taper les commandes suivantes :
         git config --global user.name "Votre nom ou pseudo"
         git config --global user.email "votre@email.com"
         git clone https://github.com/projetWF3/lokisalle.git (creation du repertoire du projet ex: /lokisalle)
+        git branch lokisalle
         git branch -a (permet de voir toutes les branches sur le projet github)
         git checkout -b nom_branche_locale origin/nom_branche_github (recuperer sa branche github sur sa branche locale)
         git branch (permet de voir les branches uniquement en local)
