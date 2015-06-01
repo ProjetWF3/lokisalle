@@ -1,4 +1,6 @@
 <?php
+session_start();
+$msg = '';
 //On définit la connection selon le serveur où le script est executé.
 $pathURL = $_SERVER['HTTP_HOST'];
 
