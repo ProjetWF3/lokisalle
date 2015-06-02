@@ -745,16 +745,19 @@ Xavier
 	margin-left: 0px;
 } 
 #suggestions {
-	width:100%;
 	height: 125px;
-	margin: auto;
-	margin-top: -20px;
+	min-height: inherit;
 }
-#suggestions_gauche {
-	clear: left;
+#suggestions > div {
+	margin-top: 1%;
+	min-height: inherit;
+	height: auto;
+}
+#suggestions > div#suggestions_gauche,
+#suggestions > div#suggestions_droite {
 	float: left;
 	width: 10%;
-	height: 125px;
+	margin-top: 1.4%;
 }
 #suggestions_gauche a {
 	display: block;
@@ -769,7 +772,6 @@ Xavier
 #suggestions_milieu {
 	float: left;
 	width: 80%;
-	height: 125px;
 }
 #suggestions_offre {
 	float: left;
@@ -798,11 +800,6 @@ Xavier
 }
 #suggestions_offre_texte a {
 	margin: -10px 0 0 20px;
-}
-#suggestions_droite {
-	float: left;
-	width: 10%;
-	height: 125px;
 }
 #suggestions_droite a {
 	display: block;

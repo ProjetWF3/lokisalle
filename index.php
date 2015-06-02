@@ -4,7 +4,12 @@
 	if(file_exists($pathConf)) include_once($pathConf);
 
 	// on inclut le header
-	include_once("./application/theme/header.php"); 
+	include_once("./application/theme/header.php");
+
+	//////////////// Partie dediee au traitement top 3 //////////////////////
+	$query = $db->prepare('SELECT * FROM salle ORDER BY id_salle DESC LIMIT 3');	
+	$query->execute();
+	$salles = $query->fetchAll();
 ?>
 <div id="page-accueil">
 	<div id="contenu">
@@ -14,7 +19,29 @@
 	</div>
 	<div id="sidebar" class="encadrement">
 		<h2 class="h2 titre">Nos 3 dernieres offres</h2>
-		
+
+		<?php foreach($salles as $key => $salle): ?>
+
+			<div class="offres left">
+				<div class="cadre">
+					<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="110" height="110">
+				</div>
+				<div class="infos">
+					<ul class="infos-details">
+						<li class="offres-sprite offres-date">Date: </li>
+						<li class="offres-sprite offres-lieu">Lieu: <?= $salle['ville'] ?></li>
+						<li class="offres-sprite offres-prix">Prix: </li>
+						<li class="offres-sprite offres-personnes">Nb de pers: <?= $salle['capacite'] ?></li>
+						<li><a href="reservation_details.php?id_salle=<?= $salle['id_salle'] ?>"> > Fiche detaillée</a></li>
+					</ul>
+					<div class="panier">
+						<div class="panier-img"></div>
+						<input type="submit" class="ajout-panier" value="Ajouter au panier">
+					</div>
+				</div>	
+			</div>
+			
+		<?php endforeach; ?>
 	</div>
 </div>
 <?php 

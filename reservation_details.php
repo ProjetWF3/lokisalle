@@ -50,7 +50,7 @@
 		<div class="clearfix">
 			<!--   2 BLOCS : INFORMATIONS & AVIS -->
 			<div id="infos_gauche">		
-				<h1 class="h1 titre">informations comptémentaires</h1>
+				<h1 class="h1 titre">Informations comptémentaires</h1>
 				<div class="infos-container">
 					<div id="infos-container_gauche">
 						<h2>adresse</h2>
@@ -59,20 +59,19 @@
 							<li>Ville : <span class="infos-container-span" id="ville-maps" data-ville="<?= $salle['ville'] ?>"><?= $salle['ville'] ?></span></li>
 							<li>Adresse : <span class="infos-container-span" id="adresse-maps" data-adress="<?= $salle['adresse'] ?>"><?= $salle['adresse'] ?></span></li>
 							<li>Code postal : <span class="infos-container-span" id="cp-maps" data-cp="<?= $salle['cp'] ?>"><?= $salle['cp'] ?></span></li>
-							<li>Date d'arrivée :<span class="infos-container-span">22/05/2015</span></li>
-							<li>Date de départ :<span class="infos-container-span">23/05/2015</span></li>
+							<li>Date d'arrivée : <span class="infos-container-span">22/05/2015</span></li>
+							<li>Date de départ : <span class="infos-container-span">23/05/2015</span></li>
 							<li>Prix : <span class="infos-container-span">120 €</li>
 						</ul>
 					</div>
 					<div id="infos-container_droite">
-						<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.0039510459223!2d2.3669709722713255!3d48.87720122574424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e4d24f9ad17%3A0xa231db7a5a9dcb43!2s<?= urlencode($salle['adresse']); ?>%2C+<?= $salle['cp']; ?>+<?= ucfirst($salle['ville']); ?>!5e0!3m2!1sfr!2sfr!4v1432725906139" width="100%" height="230" frameborder="0" style="border:0"></iframe> -->
 						<div id="map-canvas"></div>
 					</div>
 				</div>
 			</div>
 
 			<div id="avis_droite">	
-				<h1 class="h1 titre">avis</h1>
+				<h1 class="h1 titre">Avis</h1>
 				<div class="infos-container">
 					<div id="avis-commentaires">
 						<p>David Beckham, le 10/05/15</p>
@@ -110,10 +109,8 @@
 
 	<!--    AUTRES SUGGESTIONS   -->
 	<div id="autres-suggestions">
-		<div id="autres-suggestions_titre">
-			<h1 class="h1 titre">autres suggestions</h1>
-		</div>
-		<div id="suggestions">
+		<h1 class="h1 titre">Autres salles</h1>
+		<div id="suggestions" class="infos-container">
 			<div id="suggestions_gauche">
 				<a href="#"></a>
 			</div>

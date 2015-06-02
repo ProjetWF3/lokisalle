@@ -3,10 +3,6 @@
 	$pathConf = "./application/config/config.php";
 	if(file_exists($pathConf)) include_once($pathConf);
 
-	// on inclut le header
-	include_once("./application/theme/header.php"); 
-
-
 	//////////////// Partie dediee au traitement de la recherche //////////////////////
 	$motclef = !empty($_GET['motclef']) ? $_GET['motclef'] : '';
 
@@ -31,6 +27,9 @@
 		}
 
 	}
+
+	// on inclut le header
+	include_once("./application/theme/header.php");
 ?>
 <div id="page-recherche">
 	<h1 class="h1 titre">Recherche</h1>
@@ -87,8 +86,8 @@
 								<li class="offres-sprite offres-lieu">Lieu: <?= $salle['ville'] ?></li>
 								<li class="offres-sprite offres-prix">Prix: </li>
 								<li class="offres-sprite offres-personnes">Nb de pers: <?= $salle['capacite'] ?></li>
+								<li><a href="reservation_details.php?id_salle=<?= $salle['id_salle'] ?>"> > Fiche detaillée</a></li>
 							</ul>
-							<p><a href="reservation_details.php?id_salle=<?= $salle['id_salle'] ?>"> > Fiche detaillée</a></p>
 							<div class="panier">
 								<div class="panier-img"></div>
 								<input type="submit" class="ajout-panier" value="Ajouter au panier">
