@@ -193,7 +193,7 @@ a:hover {
 	margin-left: 10px;
 }
 .offres .infos .infos-details li {
-	font-size: 20px;
+	font-size: 1.1em;
 }
 
 /**** un ptit sprite pour les offres ***/
@@ -227,9 +227,9 @@ JB
 }
 #page-recherche .offres,
 #page-reservation .offres {
-	width: 29.33333%;
-	margin-left: 1.99999%; 
-	margin-right: 1.99999%; 
+	width: 31.33333%;
+	margin-left: 0.99999%; 
+	margin-right: 0.99999%; 
 }
 .search {
 	width: 930px;

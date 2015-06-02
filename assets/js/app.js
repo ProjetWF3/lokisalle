@@ -15,10 +15,10 @@ var map;
 // initialisation de la carte Google Map de départ
 //function initialiserCarte() {
   geocoder = new google.maps.Geocoder();
-  // Ici j'ai mis la latitude et longitude du vieux Port de Marseille pour centrer la carte de départ
-  var latlng = new google.maps.LatLng(48.876845,2.366322);
+  // Ici j'ai mis la latitude et longitude du 13 rue des ecluses st martin 75010 pour centrer la carte de départ
+  var latlng = new google.maps.LatLng(48.876663,2.366438);
   var mapOptions = {
-    zoom      : 15,
+    zoom      : 13,
     center    : latlng,
     mapTypeId : google.maps.MapTypeId.ROADMAP
   }

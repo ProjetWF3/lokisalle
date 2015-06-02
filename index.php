@@ -14,6 +14,7 @@
 	</div>
 	<div id="sidebar" class="encadrement">
 		<h2 class="h2 titre">Nos 3 dernieres offres</h2>
+		
 	</div>
 </div>
 <?php 

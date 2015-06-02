@@ -55,7 +55,7 @@
 					<div id="infos-container_gauche">
 						<h2>adresse</h2>
 						<ul>
-							<li>Pays : <span class="infos-container-span"><?= $salle['pays'] ?></span></li>
+							<li>Pays : <span class="infos-container-span"><?= strtoupper($salle['pays']) ?></span></li>
 							<li>Ville : <span class="infos-container-span" id="ville-maps" data-ville="<?= $salle['ville'] ?>"><?= $salle['ville'] ?></span></li>
 							<li>Adresse : <span class="infos-container-span" id="adresse-maps" data-adress="<?= $salle['adresse'] ?>"><?= $salle['adresse'] ?></span></li>
 							<li>Code postal : <span class="infos-container-span" id="cp-maps" data-cp="<?= $salle['cp'] ?>"><?= $salle['cp'] ?></span></li>
