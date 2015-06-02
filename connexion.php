@@ -67,13 +67,13 @@
     					<div>
                             <label for="pseudo" id="pseudo">pseudo:</label>
                             <div>
-                                <input type="text" name="pseudo" />
+                                <input type="text" class="form-control" name="pseudo" />
                             </div>
                         </div>
                         <div>
                             <label for="Mot de passe" id="Mot de passe">Mot de passe:</label>
                             <div>
-                                <input type="password" name="mdp" />
+                                <input type="password" class="form-control" name="mdp" />
                                 <a href="">Mot de passe oublier</a>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                                 <input type="checkbox" name="choix" />
                             </div>
                                 <div>
-                                    <input type="submit"  value="connexion" />
+                                    <input type="submit" class="btn btn-default" value="connexion" />
                                 </div>
                         </div>
     				</form>
@@ -98,3 +98,4 @@
 <?php 
     // on inclut le footer
     include_once("./application/theme/footer.php"); 
+?>
