@@ -1007,11 +1007,14 @@ Xavier
 #formulaire input[type='checkbox'] {
 	height: 20px;
  	width: 20px;
- 	margin: -12px;
+ 	margin: -2px;
  	box-shadow: none;
 }
 #formulaire input{
 	box-shadow: inset -3px 5px 15px rgba(0,0,0,0.35);
+	height:27px;
+	font-size:20px;
+	line-height: 12px;
 }
 
 #formulaire input[type='submit'] {
@@ -1025,6 +1028,10 @@ Xavier
 	right: 10px;
 	bottom: 10px;
 	border:none;
+}
+
+#formulaire input[type='submit']:hover{
+	color:#4e99e1;
 }
 
 #formulaire form {
@@ -1050,6 +1057,10 @@ Xavier
 	color:#818181;
 }
 
+#formulaire form > div > div > a:hover{
+	color: #4e99e1;
+}
+
 /***************************************************************
 		* BLOCK DE DROITE CONNEXION *
 
@@ -1065,6 +1076,7 @@ Xavier
 }
 
 
+
 .encadrement.right a{
 	color:#818181;
 	text-transform: uppercase;
@@ -1072,6 +1084,92 @@ Xavier
 	margin-left: 190px;
 	line-height: 190px;
 }
+
+
+.encadrement.right a:hover{
+	color:#4e99e1;
+}
+
+/*****************************************************
+	
+	*********** PAGE  PROFIL.PHP************
+
+*******************************************************/
+/*****************************************************
+		* BLOCK DE GAUCHE PROFIL *
+	
+*********************************************************/
+#informations-profil{
+	width: 545px;
+	height:371px;
+	margin: 15px;
+	border:1px solid black;
+}
+
+#informations-profil ul{
+	margin-top: 70px;
+ 	margin-left: 50px;
+ }
+
+ #informations-profil ul li{
+ 	font-size:25px;
+ 	line-height: 35px;
+ }
+
+ #informations-profil a{
+ 	margin-left: 50px;
+ 	font-size: 29px;
+ 	padding-top: 3.1em;
+  	display: block;
+  	color:#818181;
+ }
+
+#informations-profil a:hover{
+	color:#4e99e1;
+}
+
+
+/***************************************************************
+		* BLOCK DE DROITE PROFIL *
+
+*******************************************************************/
+
+#page-profil .encadrement.right p {
+	color: #818181;
+	font-size: 40px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#last-cmd{
+	width: 545px;
+	height:371px;
+	margin: 15px;
+	border:1px solid black;
+}
+
+#last-cmd table{
+	margin: 80px auto;
+  	width: 470px;
+  	height: 100px;
+  	font-size: 30px
+}
+
+#last-cmd table th,
+#last-cmd table td{
+	text-align:center;
+	border:1px solid black;
+}
+
+
+
+
+
+
+
+
+
 /*****************************************************
  * 	  Footer   *
  ******************************************************/
