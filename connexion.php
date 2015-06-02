@@ -1,4 +1,5 @@
 <?php 
+
     //fichier de configuration
     $pathConf = "./application/config/config.php";
     if(file_exists($pathConf)) include_once($pathConf);
@@ -7,14 +8,19 @@
     include_once("./application/theme/header.php"); 
 
     //gestion de la connection
+
     if(!empty($_POST)) {
    /* $e=extract($_POST);*/
     if(!empty($_POST['pseudo']) && !empty($_POST['mdp'])) {
 
         if(strlen($_POST['pseudo']) < 3) {
 
+
             $msg .= '<p class="alert alert-danger" role="alert">Le pseudo doit contenir au moins 3 caractères .</p>';
         
+
+            $msg .= '<p class="alert alert-danger" role="alert">Le pseudo doit contenir au moins 3 caractères .</p>';
+
         }elseif(strlen($_POST['mdp']) < 8 || !preg_match('/[0-9]/',$_POST['mdp'])){
             
             $msg .= '<p class="alert alert-danger" role="alert">Le mot de passe doit contenir au moins 8 caractères dont 1 chiffre .</p>';

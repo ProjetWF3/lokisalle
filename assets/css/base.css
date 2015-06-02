@@ -968,18 +968,22 @@ Xavier
 	height: 100px;
 
 }
-#conditions_droite input[type=submit] {
+#conditions_droite .payer {
 	position: absolute;
 	right: 0px;
 	bottom: 100px;
 	width: 190px;
   	height: 50px;
+  	text-align: center;
+  	text-transform: uppercase;
+  	padding-top: 12px;
   	font-size: 1.8em;
   	color: white;
   	background: #4e99e1 no-repeat;
   	border: none;
+  	cursor: default;
 }
-#conditions_droite input[type=submit]:hover {
+#conditions_droite .payer:hover {
 	border: 1px solid black;
 	color: black;
 }
@@ -998,7 +1002,6 @@ Xavier
 #conditions_texte p:nth-child(1) {
 	padding-top: 45px;
 }
-
 
 
 /*****************************************************
