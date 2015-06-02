@@ -24,7 +24,8 @@ A ce stade vous pouvez travailler sur votre poste en local...
         git checkout nom_branche_locale (ex: git checkout tanala)
         git status (permet de voir les fichiers modifiés ou supprimer ou ajouter | à faire souvent)
         git add . (si nouveaux fichiers créés, faire cette commande)
-        git commit -am "son_pseudo : dire ce que l'on a fait brievement"
+        git commit -am "son_pseudo : dire ce que l'on a fait brievement QUAND LES FICHIERS SONT "MODIFIED""
+        git commit -m "son_pseudo : dire ce que l'on a fait brievement QUAND LES FICHIERS SONT EN VERTS"
         git pull origin le_nom_de_sa_branche_github
         git push origin le_nom_de_sa_branche_github (puis mettre son pseudo et son mot de passe)
         git status
