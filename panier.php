@@ -84,7 +84,7 @@ if(!empty($_GET['action']) && $_GET['action'] == 'payer') {
 
 
       // INSERT "TABLEAU COMMANDE" 
-      $detailCommande = $pdo->prepare("INSERT INTO details_commande(id_details_commande, id_commande, id_produit) VALUES(".$pdo->lastInsertId().", :id_commande, :montant, :id_membre )");
+      $detailCommande = $bd->prepare("INSERT INTO details_commande(id_details_commande, id_commande, id_produit) VALUES(".$bd->lastInsertId().", :id_commande, :montant, :id_membre )");
 
       for($i=0; $i < count($_SESSION['panier']['id_details_commande']); $i++) { 
         $detailCommande->execute(array(
@@ -133,7 +133,7 @@ if(!empty($_GET['action']) && ($_GET['action'] == 'suppr')) {
 
 if(isset($_POST['ajoutPanier'])) { // si j'ai cliqué sur le bouton "ajoutPanier" qui se toruve dans la fiche article
   $produitAjoute =  recupInfosProduit($_POST['id_produit']); // je recupère les informations en BDD de l'article qui vient de fiche_article.php
-  ajouterCommandeDansPanier($commandeAjoute['titre'], $commandeAjoute['id_produit'], $_POST['quantite'], $commandeAjoute['prix']);
+  ajouterProduitDansPanier($commandeAjoute['titre'], $commandeAjoute['id_produit'], $_POST['quantite'], $commandeAjoute['prix']);
 }
 //debug($_SESSION);
 
@@ -171,7 +171,7 @@ function creationPanier(){
 }
 
 
-function ajouterCommandeDansPanier($id_produit, $montant, $id_membre, $id_commande){
+function ajouterProduitDansPanier($id_produit, $montant, $id_membre, $id_commande){
   // array_search va me retourner la clé associé à la valeur que je recherche.
   $position_produit = array_search($id_produit, $_SESSION['panier']['id_produit']);
   if($position_produit !== false) { // si la position est zero, nous risquons de ne pas rentrer dans la condition car zero correspond à false. En mettant une différence stricte de false, la condition recherche un false explicite
