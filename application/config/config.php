@@ -60,7 +60,6 @@ if($pathURL == "127.0.0.1" || $pathURL == "localhost") {
 
 }
 
-
 /****************** Appel des fonctions *******************/
 $pathFunction = "./application/libraries/fonctions.php");
 if(file_exists($pathFunction)) include_once($pathFunctions); 
