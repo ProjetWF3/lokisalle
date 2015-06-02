@@ -1,5 +1,4 @@
-<?php 
-session_start();
+<?php
 //fichier de configuration
 $pathConf = "./application/config/config.php";
 if(file_exists($pathConf)) include_once($pathConf);
@@ -8,7 +7,7 @@ if(file_exists($pathConf)) include_once($pathConf);
 include_once("./application/theme/header.php"); 
 
 // gestion de l'inscription
-$msg = '';
+
 if(!empty($_POST)) {
 	if(!empty($_POST['prenom']) && !empty($_POST['nom']) && !empty($_POST['ville']) && !empty($_POST['cp']) && !empty($_POST['adresse']) && !empty($_POST['email']) && !empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['sexe'])) {
 		if(strlen($_POST['prenom']) < 2) {
