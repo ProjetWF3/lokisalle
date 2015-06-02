@@ -14,29 +14,10 @@
 	</div>
 	<div id="sidebar" class="encadrement">
 		<h2 class="h2 titre">Nos 3 dernieres offres</h2>
-
-		<div class="offres">
-			<div class="cadre">
-				<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="110" height="110">
-			</div>
-			<div class="infos">
-				<ul class="infos-details">
-					<li class="offres-sprite offres-date">Date:</li>
-					<li class="offres-sprite offres-lieu">Lieu:</li>
-					<li class="offres-sprite offres-prix">Prix:</li>
-					<li class="offres-sprite offres-personnes">Nb de pers:</li>
-				</ul>
-				<p><a href="reservation_details.php?id_salle="> > Fiche detaillée</a></p>
-				<div class="panier">
-					<div class="panier-img"></div>
-					<input type="submit" class="ajout-panier" value="Ajouter au panier">
-				</div>
-			</div>	
-		</div>
-
 	</div>
 </div>
 <?php 
 	// on inclut le footer
 	include_once("./application/theme/footer.php"); 
 ?>
+		

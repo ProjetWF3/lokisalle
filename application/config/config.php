@@ -1,5 +1,11 @@
 <?php
-//On définit la connection selon le serveur où le script est executé.
+
+/****************** Initialisation des variables *******************/
+session_start();
+$msg = '';
+
+
+/****************** On définit la connection selon le serveur où le script est executé. *******************/
 $pathURL = $_SERVER['HTTP_HOST'];
 
 if($pathURL == "127.0.0.1" || $pathURL == "localhost") {
@@ -53,4 +59,8 @@ if($pathURL == "127.0.0.1" || $pathURL == "localhost") {
   }
 
 }
+
+/****************** Appel des fonctions *******************/
+$pathFunction = "./application/libraries/fonctions.php";
+if(file_exists($pathFunction)) include_once($pathFunction); 
 ?>

@@ -81,6 +81,7 @@ a:hover {
 #header {
 	height: 160px;
 }
+
 #header-menu {
 	margin:auto;
 	width: 100%;
@@ -830,8 +831,7 @@ Xavier
 	width: 100%;
   	height: 50px;
 }
-#panier_valider p,
-#conditions p {
+#panier_valider p {
   	position: relative;
   	left: 55px;
   	top: 12px;
@@ -882,8 +882,8 @@ Xavier
 	text-align: center;
 }
 #tableau_panier td:nth-child(3) img {
-	width: 100%;
-	height: 50px;
+	max-width: 30%;
+	height: auto;
 }
 /* CAPACITE SELECT */
 #tableau_panier td:nth-child(5) select {
@@ -905,58 +905,104 @@ Xavier
 /* CONDITIONS */
 #conditions {
 	width: 100%;
-	height: 250px;
-}
-#conditions input {
+	height: 200px;
 	position: relative;
-	top: -10px;
-	left: 420px;
+}
+#conditions_rond {
+	float: left;
+}
+#conditions small {
+	display: block;
+	position: relative;
+	padding-left: 15px;
+  	padding-top: 10px;
+	width: 40px;
+	height: 40px;
+	color: white;
+	font-size: 1.4em;
+	background: #4e99e1 no-repeat ;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	z-index: 0;
+}
+#conditions small::after {
+	content: "";
+	float: left;
+	display: block;
+	font-size: 1.4em;
+	margin-left: 10px;
+	position: absolute;
+}
+#conditions_gauche p {
+	margin-left: 60px;
+}
+#conditions_gauche {
+	float: left;
+	width: 50%;
+	height: 100px;
+}
+#conditions_gauche input[type=checkbox] {
+	float: right;
 	width: 20px;
 	height: 20px;
+	margin-right: 140px;
+	margin-top: -30px;
+}
+#conditions_gauche .conditions_p1 {
+	line-height: 42px;
+	font-size: 1.2em;
+}
+#conditions_gauche .conditions_p2 {
+	clear: both;
+	float: left;
+	line-height: 30px;
+	font-size: 1.2em;
+}
+#conditions_gauche input[type=text] {
+	float: left;
+  	margin-left: 45px;
+  	width: 200px;
+  	height: 30px;
+}
+#conditions_droite {
+	float: right;
+	width: 50%;
+	height: 100px;
+
+}
+#conditions_droite input[type=submit] {
+	position: absolute;
+	right: 0px;
+	bottom: 100px;
+	width: 190px;
+  	height: 50px;
+  	font-size: 1.8em;
+  	color: white;
+  	background: #4e99e1 no-repeat;
+  	border: none;
+}
+#conditions_droite input[type=submit]:hover {
+	border: 1px solid black;
+	color: black;
 }
 #conditions a {
 	cursor: help;
 }
-#code_promo {
-	width: 100%;
-	position: absolute;
-}
-#code_promo input {
-	position:relative;
-	left: 250px; 
-	width: 190px;
-	height: 30px;
-}
-#code_promo input:nth-child(3) {
-	position:absolute;
-	left: 1070px;
-	width: 230px;
-  	height: 60px;
-	background: #4e99e1;
-	color: white;
-	font-size: 1.4em;
-	border: none;
-}
-#code_promo input:nth-child(3):hover {
-	border: 2px solid black;
-	color: black;
-}
 #conditions_texte {
-	border-top: 1px solid #4e99e1;
-	-webkit-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.38);
-	-moz-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.38);
-	box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.38);
-	padding-top: 10px;
-	width: 60%;
-	height: 100px;
+	clear: both;
 	margin: auto;
-	position: relative;
-	top: 100px;
-	text-align: center;
+	width: 50%;
+	height: 150px;
 }
 #conditions_texte p {
-	font-size: 1em;
+	text-align: center;
 }
+#conditions_texte p:nth-child(1) {
+	padding-top: 45px;
+}
+
+
 
 /*****************************************************
 
@@ -964,17 +1010,6 @@ Xavier
 
 *****************************************************/
 
-/* #connexion h1{
-	color:#818181;
-	font:25px 'Bebe';
-	text-transform: uppercase;
-	padding-left: 10px;
-	padding-top:10px;
-} */
-
-#page-connexion .encadrement {
-
-}
 
 
 /*****************************************************
@@ -1029,11 +1064,13 @@ Xavier
 	text-transform: uppercase;
 	background:#5b646c;
 	color:#fff;
+	font-size:30px;
 	width: 180px;
 	height:42px;
 	position: absolute;
 	right: 10px;
 	bottom: 10px;
+	border:none;
 }
 
 #formulaire form {
