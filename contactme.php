@@ -14,7 +14,7 @@ $email_address = $_POST['email'];
 $message = $_POST['message'];
 	
 // create email body and send it	
-$to = 'contact@e-motionweb.fr'; // put your email
+$to = 'email@point.fr'; // put your email
 $email_subject = "Contact Lokisalle:  $name";
 $email_body = "Vous avez un nouveau message. \n\n".
 				  "Name: $name \n ".
