@@ -5,20 +5,20 @@
 
 	// on inclut le header
 	include_once("./application/theme/header.php");
-	echo '<pre>';
+	/*echo '<pre>';
 	print_r($_GET);
-	echo '</pre>';
+	echo '</pre>';*/
 	// AJOUT PANIER
 	if(!empty($_GET['id_produit']) && is_numeric($_GET['id_produit'])) {
 	$_GET['id_produit'] = intval($_GET['id_produit']);
 	$affichageArticle =  recupInfosArticle($_GET['id_produit']);
 	}
 	//////////////// Partie dediee au traitement du GET recupéré //////////////////////
-	$idproduit = !empty($_GET['id_produit']) ? $_GET['id_produit'] : '';
-	$query = $db->prepare('SELECT * FROM produit WHERE id_produit = :idproduit');	
-	$query->bindValue(':idproduit', $idproduit, PDO::PARAM_INT);
+	$idsalle = !empty($_GET['id_salle']) ? $_GET['id_salle'] : '';
+	$query = $db->prepare('SELECT * FROM salle WHERE id_salle = :idsalle');	
+	$query->bindValue(':idsalle', $idsalle, PDO::PARAM_INT);
 	$query->execute();
-	$produit = $query->fetch();
+	$salle = $query->fetch();
 ?>
 <div id="page-reservation-details">
 	<div id="titre">
@@ -29,11 +29,11 @@
 		<div id="salle" class="clearfix">
 			<div class="left">
 				<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="166" height="166">
-				<p>Capacité :<span class="span-capacite"><?= $produit['capacite'] ?></span></p>
-				<p>Catégorie :<span class="span-categorie"><?= $produit['categorie'] ?></span></p>
+				<p>Capacité :<span class="span-capacite"><?= $salle['capacite'] ?></span></p>
+				<p>Catégorie :<span class="span-categorie"><?= $salle['categorie'] ?></span></p>
 			</div>
 			<div class="right">
-				<h2 class="left">Salle <span><?= $produit['titre'] ?></span></h2>
+				<h2 class="left">Salle <span><?= $salle['titre'] ?></span></h2>
 				<div id="points-ronds">
 					<span></span>
 					<span></span>
