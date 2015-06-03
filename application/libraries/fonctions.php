@@ -103,3 +103,15 @@ function ajouterProduitDansPanier($id_produit, $montant, $id_membre, $id_command
 }
 
 
+/*function getCover($id, $cheminPhoto, $nomPhoto) {
+  global $db;
+  $photo = $db->prepare("SELECT photo FROM salle WHERE id_salle = :id");
+  $photo->bindValue(':id',$id,PDO::PARAM_INT);
+  $photo->execute();
+  $photo_results = $photo->fetch();
+  if ($photo_results['photo'] != '') {
+    return $cheminPhoto . $nomPhoto;
+  } else {
+    return $cheminPhoto . "salle_0.jpg";
+  }  
+}*/

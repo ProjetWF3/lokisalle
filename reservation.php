@@ -33,7 +33,7 @@
 								
 				<div class="offres left">
 					<div class="cadre">
-						<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="110" height="110">
+						<img src="<?php echo getCover($salle['id_salle']); ?>" width="110" height="110">
 					</div>
 					<div class="infos">
 						<ul class="infos-details">

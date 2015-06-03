@@ -7,7 +7,7 @@
 	include_once("./application/theme/header.php");
 
 	//////////////// Partie dediee au traitement top 3 //////////////////////
-	$query = $db->prepare('SELECT * FROM salle ORDER BY id_salle DESC LIMIT 3');	
+	$query = $db->prepare('SELECT * FROM salle ORDER BY id_salle LIMIT 3');	
 	$query->execute();
 	$salles = $query->fetchAll();
 ?>
@@ -20,11 +20,16 @@
 	<div id="sidebar" class="encadrement">
 		<h2 class="h2 titre">Nos 3 dernieres offres</h2>
 
-		<?php foreach($salles as $key => $salle): ?>
+		<?php 
+/*		echo '<pre>';
+			var_dump($salles);
+			echo '</pre>';*/
+		foreach($salles as $key => $salle): 
+		?>
 
 			<div class="offres left">
 				<div class="cadre">
-					<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="110" height="110">
+					<img src="<?php echo getCover($salle['id_salle'],'assets/img/', $salle['photo']); ?>" width="110" height="110">
 				</div>
 				<div class="infos">
 					<ul class="infos-details">
