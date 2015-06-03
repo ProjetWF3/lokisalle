@@ -21,10 +21,14 @@
 							$liens = array(
 								array("link" => "", "name" => "Accueil"),
 								array("link" => "reservation", "name" => "Réservation"),
-								array("link" => "recherche", "name" => "Recherche"),
-								array("link" => "connexion", "name" => "Se connecter"),
-								array("link" => "inscription", "name" => "Nouveau compte"),
+								array("link" => "recherche", "name" => "Recherche")
 							);
+							if(userConnected()) {
+								$liens[] = array("link" => "profil", "name" => "Mon profil");
+							} else {
+								$liens[] = array("link" => "connexion", "name" => "Se connecter");
+								$liens[] = array("link" => "inscription", "name" => "Nouveau compte");
+							}
 
 							// on les affiche dans une boucle
 							foreach ($liens as $lien):

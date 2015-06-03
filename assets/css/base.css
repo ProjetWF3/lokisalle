@@ -218,6 +218,23 @@ a:hover {
 
 
 /************************************************
+TB
+		PAGE ACCUEL
+
+**************************************************/
+#page-accueil .offres {
+	margin: 20px;
+	width: 90%;
+}
+
+#page-accueil #contenu p {
+	margin-bottom: 20px;
+}
+
+
+
+
+/************************************************
 JB
 		PAGE RECHERCHE
 
@@ -1009,7 +1026,9 @@ Xavier
 *    cedric PAGE CONNEXION *
 
 *****************************************************/
-
+#page-connexion .encadrement {
+	min-height: 450px;
+}
 
 
 /*****************************************************

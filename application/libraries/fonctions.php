@@ -17,6 +17,12 @@ function userAdmin() {
 	}
 }
 
+function logout() {  
+  unset($_SESSION['utilisateur']);
+  header("Location: connexion.php");
+  exit();  
+}
+
 //------------------- FONCTIONS DIVERS --------------------------- //
 function checkExtensionPhoto() {
 	$extension = strRchr($_FILES['photo']['name'], '.'); // strRchr() trouve le dernier caractère indiqué, et donne la chaine de caractère à partir de ce qu'on lui a indiqué (ici un point) 
