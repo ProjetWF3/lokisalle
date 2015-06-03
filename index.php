@@ -32,11 +32,11 @@
 						<li class="offres-sprite offres-lieu">Lieu: <?= $salle['ville'] ?></li>
 						<li class="offres-sprite offres-prix">Prix: </li>
 						<li class="offres-sprite offres-personnes">Nb de pers: <?= $salle['capacite'] ?></li>
-						<li><a href="reservation_details.php?id_salle=<?= $salle['id_salle'] ?>"> > Fiche detaillée</a></li>
+						<li><a href="reservation_details.php?id_produit=<?= $salle['id_produit'] ?>"> > Fiche detaillée</a></li>
 					</ul>
 					<div class="panier">
 						<div class="panier-img"></div>
-						<input type="submit" class="ajout-panier" value="Ajouter au panier">
+						<input type="submit" name="ajoutPanier" class="ajout-panier" value="Ajouter au panier">
 					</div>
 				</div>	
 			</div>
