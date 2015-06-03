@@ -4,10 +4,16 @@
 	if(file_exists($pathConf)) include_once($pathConf);
 
 	//****** requete pour affiche toutes les offres *****//
-	$query = $db->prepare('	SELECT * FROM salle');
+
+	
+	$query = $db->prepare("
+		SELECT date_format(p.date_arrivee, '%d/%m/%Y %h:%i') as date_arrivee, date_format(p.date_depart, '%d/%m/%Y %h:%i') as date_depart, p.prix, p.id_produit, s.titre, s.capacite, s.photo, s.ville 
+		FROM produit p INNER JOIN salle s ON p.id_salle = s.id_salle 
+		ORDER BY p.id_salle DESC LIMIT 3");	
 	$query->execute();
-	$search_results = $query->fetchAll();
+	$produits = $query->fetchAll();
 	$count_results = $query->rowCount();
+	
 
 	// on inclut le header
 	include_once("./application/theme/header.php");	
@@ -18,7 +24,7 @@
 			<span class="left">Réservation <small>> Toutes nos offres</small></span>
 			<span class="right results">
 				<?php 
-					if (!empty($search_results)){ 
+					if (!empty($produits)){ 
 						echo $count_results . " résultat" . (($count_results > 1) ? "s" : ""); 
 					}
 				?>
@@ -29,7 +35,7 @@
 		
 		<?php			
 
-			foreach($search_results as $key => $salle): ?>
+			foreach($produits as $key => $produit): ?>
 								
 				<div class="offres left">
 					<div class="cadre">
@@ -38,14 +44,14 @@
 					<div class="infos">
 						<ul class="infos-details">
 							<li class="offres-sprite offres-date">Date: </li>
-							<li class="offres-sprite offres-lieu">Lieu: <?= $salle['ville'] ?></li>
+							<li class="offres-sprite offres-lieu">Lieu: <?= $produit['ville'] ?></li>
 							<li class="offres-sprite offres-prix">Prix: </li>
-							<li class="offres-sprite offres-personnes">Nb de pers: <?= $salle['capacite'] ?></li>
-							<li><a href="reservation_details.php?id_salle=<?= $salle['id_salle'] ?>"> > Fiche detaillée</a></li>
+							<li class="offres-sprite offres-personnes">Nb de pers: <?= $produit['capacite'] ?></li>
+							<li><a href="reservation_details.php?id_produit=<?= $produit['id_produit'] ?>"> > Fiche detaillée</a></li>
 						</ul>
 						<div class="panier">
 							<div class="panier-img"></div>
-							<input type="submit" class="ajout-panier" value="Ajouter au panier">
+							<input name="ajoutPanier" type="submit" class="ajout-panier" value="Ajouter au panier">
 						</div>
 					</div>	
 				</div>

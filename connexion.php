@@ -55,9 +55,9 @@
 }
  
 
-        echo '<pre>';
+        /*echo '<pre>';
         var_dump($_POST);
-        echo '</pre>';
+        echo '</pre>';*/
         /*echo '<pre>';
         print_r($verifConnexion);
         echo '</pre>';*/
