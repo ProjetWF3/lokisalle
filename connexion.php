@@ -1,5 +1,4 @@
-<?php 
-
+<?php
     //fichier de configuration
     $pathConf = "./application/config/config.php";
     if(file_exists($pathConf)) include_once($pathConf);
@@ -53,14 +52,6 @@
         $msg .= '<p class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">Erreur : </span>Tous les champs doivent être remplis</p>';
     }
 }
- 
-
-        echo '<pre>';
-        var_dump($_POST);
-        echo '</pre>';
-        /*echo '<pre>';
-        print_r($verifConnexion);
-        echo '</pre>';*/
 ?>
 <div id="page-connexion">
     <div id="connexion">
