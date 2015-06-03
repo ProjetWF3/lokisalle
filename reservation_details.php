@@ -8,11 +8,7 @@
 	/*echo '<pre>';
 	print_r($_GET);
 	echo '</pre>';*/
-	// AJOUT PANIER
-	if(!empty($_GET['id_produit']) && is_numeric($_GET['id_produit'])) {
-	$_GET['id_produit'] = intval($_GET['id_produit']);
-	$affichageArticle =  recupInfosArticle($_GET['id_produit']);
-	}
+
 	//////////////// Partie dediee au traitement du GET recupéré //////////////////////
 	$idsalle = !empty($_GET['id_salle']) ? $_GET['id_salle'] : '';
 	$query = $db->prepare('SELECT * FROM salle WHERE id_salle = :idsalle');	
@@ -27,6 +23,7 @@
 
 
 		<div id="salle" class="clearfix">
+			<form method="post" action="panier.php" >
 			<div class="left">
 				<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="166" height="166">
 				<p>Capacité :<span class="span-capacite"><?= $salle['capacite'] ?></span></p>
@@ -44,13 +41,15 @@
 				<p class="left">Sur 2 avis</p>
 				<div id="points-description">
 					<p>Description</p>
-					<p><?= $salle['description'] ?></p>
+					<p name="decription" ><?= $salle['description'] ?></p>
 				</div>
 			</div>
 			<div id="salle-panier" class="panier">
 				<div class="panier-img"></div>
-				<input type="submit" class="ajout-panier" value="Ajouter au panier">
+				<input type="hidden" name="id_produit" value="<?= $salle['id_produit'] ?>">
+				<input name="ajoutPanier" type="submit" class="ajout-panier" value="Ajouter au panier">
 			</div>
+			</form>
 		</div>
 
 
@@ -62,13 +61,13 @@
 					<div id="infos-container_gauche">
 						<h2>adresse</h2>
 						<ul>
-							<li>Pays : <span class="infos-container-span"><?= strtoupper($salle['pays']) ?></span></li>
-							<li>Ville : <span class="infos-container-span" id="ville-maps" data-ville="<?= $salle['ville'] ?>"><?= $salle['ville'] ?></span></li>
-							<li>Adresse : <span class="infos-container-span" id="adresse-maps" data-adress="<?= $salle['adresse'] ?>"><?= $salle['adresse'] ?></span></li>
-							<li>Code postal : <span class="infos-container-span" id="cp-maps" data-cp="<?= $salle['cp'] ?>"><?= $salle['cp'] ?></span></li>
-							<li>Date d'arrivée : <span class="infos-container-span">22/05/2015</span></li>
-							<li>Date de départ : <span class="infos-container-span">23/05/2015</span></li>
-							<li>Prix : <span class="infos-container-span">120 €</li>
+							<li name="pays">Pays : <span class="infos-container-span"><?php //strtoupper($affichageProduit['pays']) ?></span></li>
+							<li name="ville">Ville : <span class="infos-container-span" id="ville-maps" data-ville="<?= $salle['ville'] ?>"><?= $salle['ville'] ?></span></li>
+							<li name="adresse">Adresse : <span class="infos-container-span" id="adresse-maps" data-adress="<?= $salle['adresse'] ?>"><?= $salle['adresse'] ?></span></li>
+							<li name="cp">Code postal : <span class="infos-container-span" id="cp-maps" data-cp="<?= $salle['cp'] ?>"><?= $salle['cp'] ?></span></li>
+							<li name="date_arrivee">Date d'arrivée : <span class="infos-container-span">22/05/2015</span></li>
+							<li name="date_depart">Date de départ : <span class="infos-container-span">23/05/2015</span></li>
+							<li name="prix">Prix : <span class="infos-container-span">120 €</li>
 						</ul>
 					</div>
 					<div id="infos-container_droite">
@@ -95,6 +94,7 @@
 							<img src="<?php echo BASE_URL; ?>assets/img/guillemet_bas.png">
 						</div>
 						<div id="commentaire-creer">
+							<form>
 							<p>Jean-Baptiste</p>
 							<textarea placeholder="Ajoutez un commentaire"></textarea>
 							<p>Note</p>
@@ -105,7 +105,9 @@
 								<a href=""></a>
 								<a href=""></a>
 							</div>
+							
 							<input type="submit" value="SOUMETTRE">
+							</form>
 						</div>
 					</div>
 				</div>

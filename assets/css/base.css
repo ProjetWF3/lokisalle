@@ -192,10 +192,10 @@ a:hover {
 .offres .infos .infos-details ul li {
 	margin-left: 10px;
 }
-.offres .infos .infos-details li {
+/* .offres .infos .infos-details li {
 	font-size: 1.1em;
 }
-
+ */
 /**** un ptit sprite pour les offres ***/
 .offres-sprite {
 	background: url('../img/sprite-offres.png') no-repeat;

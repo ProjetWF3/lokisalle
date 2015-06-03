@@ -12,22 +12,14 @@
 
 // CREATION PANIER
 creationPanier(); // execution de notre fonction qui fabrique des Arrays à l'interieur de session
-$_SESSION['utilisateur'] = array();
-$_SESSION['utilisateur']['id_membre']= 2;
-$_SESSION['utilisateur']['prenom']= 'xavier';
-$_SESSION['panier']['montant'] = array(100, 120, 130);
-$_SESSION['panier']['id_membre'] = array(2, 2, 2);
-$_SESSION['panier']['id_produit'] = array(1, 2, 3);
-$_SESSION['panier']['titre'] = array('monet', 'cezanne', 'matisse');
-$_SESSION['panier']['photo'] = array('paris-opera.jpg', 'paris-opera.jpg', 'paris-opera.jpg');
-$_SESSION['panier']['ville'] = array('paris', 'paris', 'paris');
-$_SESSION['panier']['capacite'] = array(10, 20, 30);
-$_SESSION['panier']['date_arrivee'] = array('01/06/2015', '07/23/2015', '02/17/2015');
-$_SESSION['panier']['date_depart'] = array('02/06/2015', '07/24/2015', '02/18/2015');
+if(!empty($_POST['ajoutPanier'])) {
 
-echo '<pre>';
+  //ajouterProduitDansPanier()
+}
+/*echo '<pre>';
+print_r($_POST);
 print_r($_SESSION);
-echo '</pre>';
+echo '</pre>';*/
 
 
 /////////////     PAYER      //////////////////////
@@ -56,20 +48,18 @@ $detailCommande->execute(array(
 
 
 // SUPPRESSION PRODUIT DU PANIER
-  if(!empty($_GET['action']) && ($_GET['action'] == 'suppr')) {
+  if(!empty($_POST['action']) && ($_POST['action'] == 'suppr')) {
   retirerProduitDuPanier($_GET['id_produit_panier']);
   }
 
 
 // AJOUTER PRODUIT DANS PANIER
-  if(isset($_POST['ajoutPanier'])) { // si j'ai cliqué sur le bouton "ajoutPanier" qui se toruve dans la fiche article
+  if(!empty($_POST['ajoutPanier'])) { // si j'ai cliqué sur le bouton "ajoutPanier" qui se toruve dans la fiche article
   $produitAjoute =  recupInfosProduit($_POST['id_produit']); // je recupère les informations en BDD de l'article qui vient de fiche_article.php
-  ajouterProduitDansPanier($commandeAjoute['titre'], $commandeAjoute['id_produit'], $_POST['capacite'], $commandeAjoute['prix']);
+  ajouterProduitDansPanier(
+    $produitAjoute['montant'], $produitAjoute['id_membre'], $produitAjoute['id_produit'], $produitAjoute['titre'], $produitAjoute['photo'], $produitAjoute['ville'], $produitAjoute['capacite'], $produitAjoute['date_arrivee'], $produitAjoute['date_depart']);
   }
 }
-echo '<pre>';
-print_r($_SESSION);
-echo '</pre>';
 
 
 
@@ -77,68 +67,6 @@ echo '</pre>';
  *****************            FONCTIONS               ****************
  *********************************************************************/
 
-/*   DEJA SUR FONCTIONS.PHP
-
-function creationPanier(){
-  if(!isset($_SESSION['panier'])) {
-    $_SESSION['panier'] = array();
-    $_SESSION['panier']['id_produit'] = array();
-    $_SESSION['panier']['montant'] = array();
-    $_SESSION['panier']['id_membre'] = array();
-    $_SESSION['panier']['id_commande'] = array();
-    $_SESSION['panier']['id_salle'] = array();
-    $_SESSION['panier']['photo'] = array();
-    $_SESSION['panier']['ville'] = array();
-    $_SESSION['panier']['capacite'] = array();
-    $_SESSION['panier']['date_arrivee'] = array();
-    $_SESSION['panier']['date_depart'] = array();
-  }
-}
-
-
-function recupInfosProduit($id_produit) {
-  global $db;
-  $infosProduit = $db->prepare("SELECT produit.id_produit, salle.photo, salle.ville, salle.capacite, produit.date_arrivee, produit.date_depart, produit.prix
-                                FROM produit, salle 
-                                WHERE produit. id_salle = salle.id_salle
-                              ");
-  $id_produit = intval($id_produit);
-  $infosProduit->bindValue(':id_produit', $id_produit, PDO::PARAM_INT);
-  $infosProduit->execute();
-  if($infosProduit->rowCount() == 1) {
-    $resultat = $infosProduit->fetch(PDO::FETCH_ASSOC);
-  } 
-  else {
-    $resultat = false;
-  }
-
-  return $resultat;
-  }
-
-
-// AJOUTER ARTICLE DANS PANIER
-function ajouterProduitDansPanier($id_produit, $montant, $id_membre, $id_commande, $id_salle, $photo, $ville, $capacite, $date_arrivee, $date_depart){
-  // array_search va me retourner la clé associé à la valeur que je recherche.
-  $position_produit = array_search($id_produit, $_SESSION['panier']['id_produit']);
-  if($position_produit !== false) { // si la position est zero, nous risquons de ne pas rentrer dans la condition car zero correspond à false. En mettant une différence stricte de false, la condition recherche un false explicite
-    $_SESSION['panier']['montant'][$position_produit] += $montant; // 
-
-  } 
-  else {
-    $_SESSION['panier'] = array();
-    $_SESSION['panier']['id_produit'] = array();
-    $_SESSION['panier']['montant'] = array();
-    $_SESSION['panier']['id_membre'] = array();
-    $_SESSION['panier']['id_commande'] = array();
-    $_SESSION['panier']['id_salle'] = array();
-    $_SESSION['panier']['photo'] = array();
-    $_SESSION['panier']['ville'] = array();
-    $_SESSION['panier']['capacite'] = array();
-    $_SESSION['panier']['date_arrivee'] = array();
-    $_SESSION['panier']['date_depart'] = array();
-  }
-}
-*/
 
 function retirerProduitDuPanier($id_a_suppr) {
   $position_produit = array_search($id_a_suppr, $_SESSION['panier']['id_produit']);
