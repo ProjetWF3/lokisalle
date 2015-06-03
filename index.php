@@ -7,9 +7,13 @@
 	include_once("./application/theme/header.php");
 
 	//////////////// Partie dediee au traitement top 3 //////////////////////
-	$query = $db->prepare('SELECT * FROM salle ORDER BY id_salle DESC LIMIT 3');	
-	$query->execute();
-	$salles = $query->fetchAll();
+		$query = $db->prepare("
+			SELECT date_format(p.date_arrivee, '%d/%m/%Y %h:%i') as date_arrivee, date_format(p.date_depart, '%d/%m/%Y %h:%i') as date_depart, p.prix, p.id_produit, s.titre, s.capacite, s.photo, s.ville 
+			FROM produit p INNER JOIN salle s ON p.id_salle = s.id_salle 
+			ORDER BY p.id_salle DESC LIMIT 3");	
+		$query->execute();
+		$produits = $query->fetchAll();
+		
 ?>
 <div id="page-accueil">
 	<div id="contenu">
@@ -20,19 +24,20 @@
 	<div id="sidebar" class="encadrement">
 		<h2 class="h2 titre">Nos 3 dernieres offres</h2>
 
-		<?php foreach($salles as $key => $salle): ?>
-
+		<?php foreach($produits as $key => $produit): ?>
+			<form method="get" action="panier.php" >
 			<div class="offres left">
 				<div class="cadre">
 					<img src="<?php echo BASE_URL; ?>assets/img/photo.png" width="110" height="110">
 				</div>
 				<div class="infos">
 					<ul class="infos-details">
-						<li class="offres-sprite offres-date">Date: </li>
-						<li class="offres-sprite offres-lieu">Lieu: <?= $salle['ville'] ?></li>
+						<li class="offres-sprite offres-date">Du: <?= $produit['date_depart'] ?> </li>
+						<li class="offres-sprite offres-date">Au: <?= $produit['date_arrivee'] ?> </li>
+						<li class="offres-sprite offres-lieu">Lieu: <?= $produit['ville'] ?></li>
 						<li class="offres-sprite offres-prix">Prix: </li>
-						<li class="offres-sprite offres-personnes">Nb de pers: <?= $salle['capacite'] ?></li>
-						<li><a href="reservation_details.php?id_produit=<?= $salle['id_produit'] ?>"> > Fiche detaillée</a></li>
+						<li class="offres-sprite offres-personnes">Nb de pers: <?= $produit['capacite'] ?></li>
+						<li><a href="reservation_details.php?id_produit=<?= $produit['id_produit'] ?>"> > Fiche detaillée</a></li>
 					</ul>
 					<div class="panier">
 						<div class="panier-img"></div>
@@ -40,6 +45,7 @@
 					</div>
 				</div>	
 			</div>
+			</form>
 			
 		<?php endforeach; ?>
 	</div>
